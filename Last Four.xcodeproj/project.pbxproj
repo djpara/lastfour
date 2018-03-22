@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5876FBB2063509000806F48 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5876FBA2063509000806F48 /* Colors.swift */; };
+		F5876FBD2063532C00806F48 /* UICustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5876FBC2063532C00806F48 /* UICustomButton.swift */; };
 		F5B72EB42061FF2000EA58DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B72EB32061FF2000EA58DA /* AppDelegate.swift */; };
-		F5B72EB62061FF2000EA58DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B72EB52061FF2000EA58DA /* ViewController.swift */; };
+		F5B72EB62061FF2000EA58DA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B72EB52061FF2000EA58DA /* WelcomeViewController.swift */; };
 		F5B72EB92061FF2000EA58DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5B72EB72061FF2000EA58DA /* Main.storyboard */; };
 		F5B72EBC2061FF2000EA58DA /* Last_Four.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5B72EBA2061FF2000EA58DA /* Last_Four.xcdatamodeld */; };
 		F5B72EBE2061FF2000EA58DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5B72EBD2061FF2000EA58DA /* Assets.xcassets */; };
@@ -35,9 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F5876FBA2063509000806F48 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		F5876FBC2063532C00806F48 /* UICustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomButton.swift; sourceTree = "<group>"; };
 		F5B72EB02061FF2000EA58DA /* Last Four.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Last Four.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B72EB32061FF2000EA58DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F5B72EB52061FF2000EA58DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F5B72EB52061FF2000EA58DA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		F5B72EB82061FF2000EA58DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5B72EBB2061FF2000EA58DA /* Last_Four.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Last_Four.xcdatamodel; sourceTree = "<group>"; };
 		F5B72EBD2061FF2000EA58DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +80,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F5876FB520634F8F00806F48 /* Custom UI */ = {
+			isa = PBXGroup;
+			children = (
+				F5876FBC2063532C00806F48 /* UICustomButton.swift */,
+			);
+			path = "Custom UI";
+			sourceTree = "<group>";
+		};
+		F5876FB620634F9D00806F48 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F5B72EB52061FF2000EA58DA /* WelcomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F5876FB720634FB200806F48 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5B72EB32061FF2000EA58DA /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5876FB820634FBD00806F48 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F5B72EB72061FF2000EA58DA /* Main.storyboard */,
+				F5B72EBF2061FF2000EA58DA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F5876FB92063507F00806F48 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				F5876FBA2063509000806F48 /* Colors.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 		F5B72EA72061FF2000EA58DA = {
 			isa = PBXGroup;
 			children = (
@@ -99,11 +144,12 @@
 		F5B72EB22061FF2000EA58DA /* Last Four */ = {
 			isa = PBXGroup;
 			children = (
-				F5B72EB32061FF2000EA58DA /* AppDelegate.swift */,
-				F5B72EB52061FF2000EA58DA /* ViewController.swift */,
-				F5B72EB72061FF2000EA58DA /* Main.storyboard */,
+				F5876FB92063507F00806F48 /* Global */,
+				F5876FB820634FBD00806F48 /* Storyboards */,
+				F5876FB720634FB200806F48 /* Supporting Files */,
+				F5876FB620634F9D00806F48 /* Controller */,
+				F5876FB520634F8F00806F48 /* Custom UI */,
 				F5B72EBD2061FF2000EA58DA /* Assets.xcassets */,
-				F5B72EBF2061FF2000EA58DA /* LaunchScreen.storyboard */,
 				F5B72EC22061FF2000EA58DA /* Info.plist */,
 				F5B72EBA2061FF2000EA58DA /* Last_Four.xcdatamodeld */,
 			);
@@ -138,6 +184,7 @@
 				F5B72EAC2061FF2000EA58DA /* Sources */,
 				F5B72EAD2061FF2000EA58DA /* Frameworks */,
 				F5B72EAE2061FF2000EA58DA /* Resources */,
+				F5876FBE2063589800806F48 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -260,13 +307,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F5876FBE2063589800806F48 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F5B72EAC2061FF2000EA58DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5876FBD2063532C00806F48 /* UICustomButton.swift in Sources */,
 				F5B72EBC2061FF2000EA58DA /* Last_Four.xcdatamodeld in Sources */,
-				F5B72EB62061FF2000EA58DA /* ViewController.swift in Sources */,
+				F5876FBB2063509000806F48 /* Colors.swift in Sources */,
+				F5B72EB62061FF2000EA58DA /* WelcomeViewController.swift in Sources */,
 				F5B72EB42061FF2000EA58DA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,6 +583,7 @@
 				F5B72EDD2061FF2000EA58DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5B72EDE2061FF2000EA58DA /* Build configuration list for PBXNativeTarget "Last FourTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +592,7 @@
 				F5B72EE02061FF2000EA58DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5B72EE12061FF2000EA58DA /* Build configuration list for PBXNativeTarget "Last FourUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +601,7 @@
 				F5B72EE32061FF2000EA58DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
