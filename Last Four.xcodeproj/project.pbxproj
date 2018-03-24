@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F54579EF2066B0E200418626 /* Utility.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F54579EE2066B0E200418626 /* Utility.storyboard */; };
+		F54579F12066B7C800418626 /* NumberPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54579F02066B7C800418626 /* NumberPadViewController.swift */; };
+		F54579F32066B86100418626 /* BillTotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54579F22066B86100418626 /* BillTotalViewController.swift */; };
+		F54579F52066B89F00418626 /* GratuityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54579F42066B89F00418626 /* GratuityViewController.swift */; };
+		F54579F72066B8D200418626 /* YourTotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54579F62066B8D200418626 /* YourTotalViewController.swift */; };
+		F54579F92066B90100418626 /* PeopleTotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54579F82066B90100418626 /* PeopleTotalViewController.swift */; };
+		F54579FB2066B92A00418626 /* ItemizedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54579FA2066B92A00418626 /* ItemizedViewController.swift */; };
+		F54579FD2066B94E00418626 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54579FC2066B94E00418626 /* PageViewController.swift */; };
 		F5876FBB2063509000806F48 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5876FBA2063509000806F48 /* Colors.swift */; };
 		F5876FBD2063532C00806F48 /* UICustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5876FBC2063532C00806F48 /* UICustomButton.swift */; };
 		F5B72EB42061FF2000EA58DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B72EB32061FF2000EA58DA /* AppDelegate.swift */; };
@@ -17,6 +25,8 @@
 		F5B72EC12061FF2000EA58DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5B72EBF2061FF2000EA58DA /* LaunchScreen.storyboard */; };
 		F5B72ECC2061FF2000EA58DA /* Last_FourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B72ECB2061FF2000EA58DA /* Last_FourTests.swift */; };
 		F5B72ED72061FF2000EA58DA /* Last_FourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B72ED62061FF2000EA58DA /* Last_FourUITests.swift */; };
+		F5CC11CE2064C00B0082109B /* QuestionSplittingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC11CD2064C00B0082109B /* QuestionSplittingViewController.swift */; };
+		F5CC11D02064C2DD0082109B /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC11CF2064C2DD0082109B /* Notifications.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +47,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F54579EE2066B0E200418626 /* Utility.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Utility.storyboard; sourceTree = "<group>"; };
+		F54579F02066B7C800418626 /* NumberPadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadViewController.swift; sourceTree = "<group>"; };
+		F54579F22066B86100418626 /* BillTotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTotalViewController.swift; sourceTree = "<group>"; };
+		F54579F42066B89F00418626 /* GratuityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratuityViewController.swift; sourceTree = "<group>"; };
+		F54579F62066B8D200418626 /* YourTotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTotalViewController.swift; sourceTree = "<group>"; };
+		F54579F82066B90100418626 /* PeopleTotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTotalViewController.swift; sourceTree = "<group>"; };
+		F54579FA2066B92A00418626 /* ItemizedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemizedViewController.swift; sourceTree = "<group>"; };
+		F54579FC2066B94E00418626 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		F5876FBA2063509000806F48 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F5876FBC2063532C00806F48 /* UICustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomButton.swift; sourceTree = "<group>"; };
 		F5B72EB02061FF2000EA58DA /* Last Four.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Last Four.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +71,8 @@
 		F5B72ED22061FF2000EA58DA /* Last FourUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Last FourUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B72ED62061FF2000EA58DA /* Last_FourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Last_FourUITests.swift; sourceTree = "<group>"; };
 		F5B72ED82061FF2000EA58DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5CC11CD2064C00B0082109B /* QuestionSplittingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionSplittingViewController.swift; sourceTree = "<group>"; };
+		F5CC11CF2064C2DD0082109B /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +111,15 @@
 		F5876FB620634F9D00806F48 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F54579F22066B86100418626 /* BillTotalViewController.swift */,
+				F54579F42066B89F00418626 /* GratuityViewController.swift */,
+				F54579FA2066B92A00418626 /* ItemizedViewController.swift */,
+				F54579F02066B7C800418626 /* NumberPadViewController.swift */,
+				F54579FC2066B94E00418626 /* PageViewController.swift */,
+				F54579F82066B90100418626 /* PeopleTotalViewController.swift */,
+				F5CC11CD2064C00B0082109B /* QuestionSplittingViewController.swift */,
 				F5B72EB52061FF2000EA58DA /* WelcomeViewController.swift */,
+				F54579F62066B8D200418626 /* YourTotalViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -107,8 +135,9 @@
 		F5876FB820634FBD00806F48 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				F5B72EB72061FF2000EA58DA /* Main.storyboard */,
 				F5B72EBF2061FF2000EA58DA /* LaunchScreen.storyboard */,
+				F5B72EB72061FF2000EA58DA /* Main.storyboard */,
+				F54579EE2066B0E200418626 /* Utility.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -117,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				F5876FBA2063509000806F48 /* Colors.swift */,
+				F5CC11CF2064C2DD0082109B /* Notifications.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -286,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5B72EC12061FF2000EA58DA /* LaunchScreen.storyboard in Resources */,
+				F54579EF2066B0E200418626 /* Utility.storyboard in Resources */,
 				F5B72EBE2061FF2000EA58DA /* Assets.xcassets in Resources */,
 				F5B72EB92061FF2000EA58DA /* Main.storyboard in Resources */,
 			);
@@ -328,10 +359,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F54579FB2066B92A00418626 /* ItemizedViewController.swift in Sources */,
+				F54579FD2066B94E00418626 /* PageViewController.swift in Sources */,
 				F5876FBD2063532C00806F48 /* UICustomButton.swift in Sources */,
+				F54579F52066B89F00418626 /* GratuityViewController.swift in Sources */,
+				F54579F72066B8D200418626 /* YourTotalViewController.swift in Sources */,
+				F5CC11D02064C2DD0082109B /* Notifications.swift in Sources */,
 				F5B72EBC2061FF2000EA58DA /* Last_Four.xcdatamodeld in Sources */,
 				F5876FBB2063509000806F48 /* Colors.swift in Sources */,
+				F5CC11CE2064C00B0082109B /* QuestionSplittingViewController.swift in Sources */,
+				F54579F32066B86100418626 /* BillTotalViewController.swift in Sources */,
+				F54579F12066B7C800418626 /* NumberPadViewController.swift in Sources */,
 				F5B72EB62061FF2000EA58DA /* WelcomeViewController.swift in Sources */,
+				F54579F92066B90100418626 /* PeopleTotalViewController.swift in Sources */,
 				F5B72EB42061FF2000EA58DA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

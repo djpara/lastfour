@@ -8,6 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Noteworthy.ttc">
+            <string>Noteworthy-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -21,14 +26,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="I0O-s0-NIa">
-                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Four" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qC-Vm-Y5O">
+                                <rect key="frame" x="100" y="294" width="174" height="79"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="48"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="1" alpha="0.25109696059999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="2"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.019607843140000001" green="0.25882352939999997" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="I0O-s0-NIa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nUC-Zd-NkP"/>
-                            <constraint firstItem="I0O-s0-NIa" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="uPP-IP-BaB"/>
+                            <constraint firstItem="5qC-Vm-Y5O" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="7HM-qT-kMp"/>
+                            <constraint firstItem="5qC-Vm-Y5O" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Fde-Sw-xkA"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -37,7 +47,4 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="logo" width="200" height="200"/>
-    </resources>
 </document>

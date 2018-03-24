@@ -10,52 +10,129 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-    @IBOutlet weak var titleImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var welcomeTextView: UITextView!
     @IBOutlet weak var getstartedButton: UICustomButton!
+    @IBOutlet weak var menuButton: UICustomButton!
     
     @IBOutlet weak var titleYConstraint: NSLayoutConstraint!
+    @IBOutlet weak var titleXConstraint: NSLayoutConstraint!
+    @IBOutlet weak var buttonXConstraint: NSLayoutConstraint!
+    @IBOutlet weak var welcomeTextXConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var containerView: UIView!
+    
+    fileprivate var screenWidth    = UIScreen.main.bounds.width
+    fileprivate var screenHeight   = UIScreen.main.bounds.height
+    
+    // MARK: OVERRIDE FUNCTIONS
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadViews()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         animateViews()
     }
     
-    // MARK: Fileprivate functions
-    fileprivate func loadViews() {
-        
+    // MARK: IBACTION FUNCTIONS
+    @IBAction func getStartedPressed(_ sender: Any) {
+        repositionTitleLeft()
+        showMenuButton()
+        fadeLeftOutWelcomeScreen()
+        fadeInContainerView()
     }
     
+    @IBAction func menuButtonPressed(_ sender: Any) {
+        print("Menu pressed")
+    }
+    
+    // MARK: FILEPRIVATE FUNCTIONS
+    // MARK: Animation functions
     fileprivate func animateViews() {
-        perform(#selector(fadeTitleIn), with: nil, afterDelay: 1.0)
+        perform(#selector(fadeInTitle), with: nil, afterDelay: 1.0)
     }
     
     /**
      Fades the title in
      */
     @objc
-    fileprivate func fadeTitleIn() {
+    fileprivate func fadeInTitle() {
         UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveEaseInOut, animations: {
-            self.titleImage.layer.opacity = 1.0
+            self.titleLabel.layer.opacity = 1.0
         }, completion: { finished in
-            self.repositionTitle()
+            self.repositionTitleUp()
         })
+    }
+    
+    /**
+     Brings container to the forefront. The container view holds the entire app views
+     */
+    fileprivate func fadeInContainerView() {
+        UIView.animate(withDuration: 1, animations: {
+            self.containerView.layer.opacity = 1.0
+            self.view.layoutIfNeeded()
+        }) { finished in
+            notificationCenterDefault.post(NOTIFICATION_CONTAINER_FINISHED_LOADING)
+        }
+    }
+    
+    /**
+     Repositions while animated contents of the welcome screen left and out of view
+     */
+    fileprivate func fadeLeftOutWelcomeScreen() {
+        fadeLeftOutWelcomeText()
+        fadeLeftOutGetStartedButton()
+    }
+    
+    /**
+     Repositions while animating welcome text left and out of view
+     */
+    fileprivate func fadeLeftOutWelcomeText() {
+        UIView.animate(withDuration: 1.0, animations: {
+            self.welcomeTextXConstraint.constant -= self.screenWidth
+            self.view.layoutIfNeeded()
+        }) { finished in
+            self.welcomeTextView.removeFromSuperview()
+            self.welcomeTextView = nil
+        }
+    }
+    
+    /**
+     Repositions while animating get started button left and out of view
+     */
+    fileprivate func fadeLeftOutGetStartedButton() {
+        UIView.animate(withDuration: 1.0, animations: {
+            self.buttonXConstraint.constant
+                -= self.screenWidth
+            self.view.layoutIfNeeded()
+        }) { finished in
+            self.getstartedButton.removeFromSuperview()
+            self.getstartedButton = nil
+        }
     }
     
     /**
      Repositions while animating the title to the top of the page
      */
-    fileprivate func repositionTitle() {
-        let newConstant = ((UIScreen.main.bounds.height / 2) - 56)
+    fileprivate func repositionTitleUp() {
+        let newConstant = ((screenHeight / 2) - 56)
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
             self.titleYConstraint.constant -= newConstant
             self.view.layoutIfNeeded()
-            self.perform(#selector(self.showWelcomeText), with: nil, afterDelay: 1.25)
+            self.perform(#selector(self.showWelcomeText), with: nil, afterDelay: 1.35)
         }, completion: nil)
+    }
+    
+    /**
+     Repositions while animating the title to the left of the page
+     */
+    fileprivate func repositionTitleLeft() {
+        let newConstant = (screenWidth/2) - (titleLabel.intrinsicContentSize.width/2) - 16
+        UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
+            self.titleXConstraint.constant -= newConstant
+            self.view.layoutIfNeeded()
+        }, completion: { finished in
+        })
     }
     
     /**
@@ -72,12 +149,22 @@ class WelcomeViewController: UIViewController {
     }
     
     /**
-     Slowly brings the get started button to view at the bottom right-hand corner of the view
+     Slowly brings the get started button to view at the bottom of the view
      */
     fileprivate func showGetStartedButton() {
         getstartedButton.show()
-        UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 1.0, delay: 0.5, options: .curveEaseInOut, animations: {
             self.getstartedButton.layer.opacity = 1.0
+        }, completion: nil)
+    }
+    
+    /**
+     Slowly brings the menu button to view at the top right-hand corner of the view
+     */
+    fileprivate func showMenuButton() {
+        menuButton.show()
+        UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
+            self.menuButton.layer.opacity = 1.0
         }, completion: nil)
     }
 }
