@@ -15,6 +15,12 @@
 		F54579F92066B90100418626 /* PeopleTotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54579F82066B90100418626 /* PeopleTotalViewController.swift */; };
 		F54579FB2066B92A00418626 /* ItemizedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54579FA2066B92A00418626 /* ItemizedViewController.swift */; };
 		F54579FD2066B94E00418626 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54579FC2066B94E00418626 /* PageViewController.swift */; };
+		F5457A012066BD3500418626 /* UICustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5457A002066BD3500418626 /* UICustomTextField.swift */; };
+		F5457A042066C16B00418626 /* CalculatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5457A032066C16B00418626 /* CalculatorType.swift */; };
+		F5457A092066C7E600418626 /* ViewControllerIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5457A082066C7E600418626 /* ViewControllerIdentifiers.swift */; };
+		F5457A0B2066D16500418626 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5457A0A2066D16500418626 /* HelperFunctions.swift */; };
+		F5457A0D2066D18200418626 /* Shortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5457A0C2066D18200418626 /* Shortcuts.swift */; };
+		F5457A0F20684D4600418626 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5457A0E20684D4600418626 /* Preferences.swift */; };
 		F5876FBB2063509000806F48 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5876FBA2063509000806F48 /* Colors.swift */; };
 		F5876FBD2063532C00806F48 /* UICustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5876FBC2063532C00806F48 /* UICustomButton.swift */; };
 		F5B72EB42061FF2000EA58DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B72EB32061FF2000EA58DA /* AppDelegate.swift */; };
@@ -55,6 +61,12 @@
 		F54579F82066B90100418626 /* PeopleTotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTotalViewController.swift; sourceTree = "<group>"; };
 		F54579FA2066B92A00418626 /* ItemizedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemizedViewController.swift; sourceTree = "<group>"; };
 		F54579FC2066B94E00418626 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		F5457A002066BD3500418626 /* UICustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomTextField.swift; sourceTree = "<group>"; };
+		F5457A032066C16B00418626 /* CalculatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorType.swift; sourceTree = "<group>"; };
+		F5457A082066C7E600418626 /* ViewControllerIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerIdentifiers.swift; sourceTree = "<group>"; };
+		F5457A0A2066D16500418626 /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		F5457A0C2066D18200418626 /* Shortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcuts.swift; sourceTree = "<group>"; };
+		F5457A0E20684D4600418626 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		F5876FBA2063509000806F48 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F5876FBC2063532C00806F48 /* UICustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomButton.swift; sourceTree = "<group>"; };
 		F5B72EB02061FF2000EA58DA /* Last Four.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Last Four.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,15 +112,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F5457A022066C12200418626 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				F5457A032066C16B00418626 /* CalculatorType.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		F5457A052066C45C00418626 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F5457A1020684DAE00418626 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F5457A0E20684D4600418626 /* Preferences.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F5876FB520634F8F00806F48 /* Custom UI */ = {
 			isa = PBXGroup;
 			children = (
 				F5876FBC2063532C00806F48 /* UICustomButton.swift */,
+				F5457A002066BD3500418626 /* UICustomTextField.swift */,
 			);
 			path = "Custom UI";
 			sourceTree = "<group>";
 		};
-		F5876FB620634F9D00806F48 /* Controller */ = {
+		F5876FB620634F9D00806F48 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				F54579F22066B86100418626 /* BillTotalViewController.swift */,
@@ -121,13 +157,16 @@
 				F5B72EB52061FF2000EA58DA /* WelcomeViewController.swift */,
 				F54579F62066B8D200418626 /* YourTotalViewController.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		F5876FB720634FB200806F48 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				F5B72EB32061FF2000EA58DA /* AppDelegate.swift */,
+				F5B72EBD2061FF2000EA58DA /* Assets.xcassets */,
+				F5B72EC22061FF2000EA58DA /* Info.plist */,
+				F5B72EBA2061FF2000EA58DA /* Last_Four.xcdatamodeld */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -146,7 +185,10 @@
 			isa = PBXGroup;
 			children = (
 				F5876FBA2063509000806F48 /* Colors.swift */,
+				F5457A0A2066D16500418626 /* HelperFunctions.swift */,
 				F5CC11CF2064C2DD0082109B /* Notifications.swift */,
+				F5457A0C2066D18200418626 /* Shortcuts.swift */,
+				F5457A082066C7E600418626 /* ViewControllerIdentifiers.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -174,14 +216,14 @@
 		F5B72EB22061FF2000EA58DA /* Last Four */ = {
 			isa = PBXGroup;
 			children = (
+				F5876FB620634F9D00806F48 /* Controllers */,
+				F5876FB520634F8F00806F48 /* Custom UI */,
+				F5457A022066C12200418626 /* Enumerations */,
 				F5876FB92063507F00806F48 /* Global */,
+				F5457A1020684DAE00418626 /* Models */,
+				F5457A052066C45C00418626 /* Protocols */,
 				F5876FB820634FBD00806F48 /* Storyboards */,
 				F5876FB720634FB200806F48 /* Supporting Files */,
-				F5876FB620634F9D00806F48 /* Controller */,
-				F5876FB520634F8F00806F48 /* Custom UI */,
-				F5B72EBD2061FF2000EA58DA /* Assets.xcassets */,
-				F5B72EC22061FF2000EA58DA /* Info.plist */,
-				F5B72EBA2061FF2000EA58DA /* Last_Four.xcdatamodeld */,
 			);
 			path = "Last Four";
 			sourceTree = "<group>";
@@ -360,15 +402,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				F54579FB2066B92A00418626 /* ItemizedViewController.swift in Sources */,
+				F5457A092066C7E600418626 /* ViewControllerIdentifiers.swift in Sources */,
 				F54579FD2066B94E00418626 /* PageViewController.swift in Sources */,
 				F5876FBD2063532C00806F48 /* UICustomButton.swift in Sources */,
 				F54579F52066B89F00418626 /* GratuityViewController.swift in Sources */,
+				F5457A0B2066D16500418626 /* HelperFunctions.swift in Sources */,
 				F54579F72066B8D200418626 /* YourTotalViewController.swift in Sources */,
 				F5CC11D02064C2DD0082109B /* Notifications.swift in Sources */,
+				F5457A0F20684D4600418626 /* Preferences.swift in Sources */,
 				F5B72EBC2061FF2000EA58DA /* Last_Four.xcdatamodeld in Sources */,
+				F5457A0D2066D18200418626 /* Shortcuts.swift in Sources */,
 				F5876FBB2063509000806F48 /* Colors.swift in Sources */,
+				F5457A012066BD3500418626 /* UICustomTextField.swift in Sources */,
 				F5CC11CE2064C00B0082109B /* QuestionSplittingViewController.swift in Sources */,
 				F54579F32066B86100418626 /* BillTotalViewController.swift in Sources */,
+				F5457A042066C16B00418626 /* CalculatorType.swift in Sources */,
 				F54579F12066B7C800418626 /* NumberPadViewController.swift in Sources */,
 				F5B72EB62061FF2000EA58DA /* WelcomeViewController.swift in Sources */,
 				F54579F92066B90100418626 /* PeopleTotalViewController.swift in Sources */,
@@ -525,7 +573,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ETY6J7XEJ7;
-				INFOPLIST_FILE = "Last Four/Info.plist";
+				INFOPLIST_FILE = "Last Four/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Parad.Last-Four";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -538,7 +586,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ETY6J7XEJ7;
-				INFOPLIST_FILE = "Last Four/Info.plist";
+				INFOPLIST_FILE = "Last Four/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Parad.Last-Four";
 				PRODUCT_NAME = "$(TARGET_NAME)";

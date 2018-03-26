@@ -104,7 +104,7 @@
                                 <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="msM-9m-Fsy" kind="embed" id="q1K-7b-qgQ"/>
+                                    <segue destination="61e-Ix-jEd" kind="embed" id="PgO-Mo-X0T"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -143,7 +143,7 @@
         <!--People Total View Controller-->
         <scene sceneID="weY-Wt-AXk">
             <objects>
-                <viewController id="TVC-Dc-isE" customClass="PeopleTotalViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="peopleTotalViewController" id="TVC-Dc-isE" customClass="PeopleTotalViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0UJ-gM-xS5"/>
                         <viewControllerLayoutGuide type="bottom" id="Coi-y9-7Bu"/>
@@ -161,23 +161,42 @@
                                 <color key="textColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="43" translatesAutoresizingMaskIntoConstraints="NO" id="CHY-Lg-S15" customClass="UICustomTextField" customModule="Last_Four" customModuleProvider="target">
+                                <rect key="frame" x="110" y="267.5" width="156" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="a53-66-tFr"/>
+                                </constraints>
+                                <color key="textColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fue-Kk-g4k" firstAttribute="centerX" secondItem="0F8-Aa-OAE" secondAttribute="centerX" id="IVb-m1-QoQ"/>
+                            <constraint firstItem="CHY-Lg-S15" firstAttribute="centerY" secondItem="0F8-Aa-OAE" secondAttribute="centerY" id="L7G-ec-GQO"/>
                             <constraint firstItem="fue-Kk-g4k" firstAttribute="top" secondItem="0UJ-gM-xS5" secondAttribute="bottom" constant="52" id="U9h-1D-F6j"/>
+                            <constraint firstItem="CHY-Lg-S15" firstAttribute="centerX" secondItem="0F8-Aa-OAE" secondAttribute="centerX" id="wKf-cs-2NG"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="375" height="567"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7lb-vm-4bM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-535" y="1874"/>
+            <point key="canvasLocation" x="-537" y="1896"/>
         </scene>
         <!--Itemized View Controller-->
         <scene sceneID="b73-vh-PXH">
             <objects>
-                <viewController id="OU2-jX-YwX" customClass="ItemizedViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="itemizedViewController" id="OU2-jX-YwX" customClass="ItemizedViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x5g-LN-7Wu"/>
                         <viewControllerLayoutGuide type="bottom" id="7g3-hM-kM7"/>
@@ -206,46 +225,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSv-qq-CXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121" y="1874"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Nsi-T4-SfV">
-            <objects>
-                <viewController id="v2X-6r-eGF" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xnb-QF-FHK"/>
-                        <viewControllerLayoutGuide type="bottom" id="FwS-6i-IOS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="BGi-tB-0jk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is gratuity included?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZE-eF-ZI6">
-                                <rect key="frame" x="109.5" y="72" width="156.5" height="88"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="ScG-6o-Ahd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
-                                <color key="textColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="uZE-eF-ZI6" firstAttribute="top" secondItem="xnb-QF-FHK" secondAttribute="bottom" constant="52" id="KK8-yF-8gK"/>
-                            <constraint firstItem="uZE-eF-ZI6" firstAttribute="centerX" secondItem="BGi-tB-0jk" secondAttribute="centerX" id="jEX-dp-XJo"/>
-                        </constraints>
-                    </view>
-                    <size key="freeformSize" width="375" height="567"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MsB-o9-kAL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-535" y="2484"/>
+            <point key="canvasLocation" x="119" y="1288"/>
         </scene>
         <!--Gratuity View Controller-->
         <scene sceneID="Nmk-CK-846">
             <objects>
-                <viewController id="KY8-iU-65d" customClass="GratuityViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gruatuityViewController" id="KY8-iU-65d" customClass="GratuityViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VJM-Cs-doE"/>
                         <viewControllerLayoutGuide type="bottom" id="SrR-aU-lGV"/>
@@ -274,12 +259,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E1O-Nx-BGv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121" y="2483"/>
+            <point key="canvasLocation" x="119" y="1897"/>
         </scene>
         <!--Your Total View Controller-->
         <scene sceneID="Rib-yE-xbz">
             <objects>
-                <viewController id="VqL-Qa-DpS" customClass="YourTotalViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="yourTotalViewController" id="VqL-Qa-DpS" customClass="YourTotalViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ofH-pI-4a8"/>
                         <viewControllerLayoutGuide type="bottom" id="Xg6-xF-duu"/>
@@ -324,12 +309,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bG2-Dc-Jxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="782" y="2483"/>
+            <point key="canvasLocation" x="780" y="1897"/>
         </scene>
         <!--Bill Total View Controller-->
         <scene sceneID="QxQ-g5-Hub">
             <objects>
-                <viewController id="Mjs-3y-RO9" customClass="BillTotalViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="billTotalViewController" id="Mjs-3y-RO9" customClass="BillTotalViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Krv-yP-o6x"/>
                         <viewControllerLayoutGuide type="bottom" id="heS-Bj-iXM"/>
@@ -358,22 +343,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbI-nv-hgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1196" y="2481"/>
+            <point key="canvasLocation" x="-537" y="1287"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="qe8-da-9Kr">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="61e-Ix-jEd" customClass="PageViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="pageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="61e-Ix-jEd" customClass="PageViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
                     <size key="freeformSize" width="375" height="567"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cho-7E-7gh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-207" y="1268"/>
+            <point key="canvasLocation" x="-207" y="699"/>
         </scene>
         <!--Question Splitting View Controller-->
         <scene sceneID="ipR-Fg-Uuc">
             <objects>
-                <viewController id="msM-9m-Fsy" customClass="QuestionSplittingViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="questionSplittingViewController" id="msM-9m-Fsy" customClass="QuestionSplittingViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7AP-HD-Cxn"/>
                         <viewControllerLayoutGuide type="bottom" id="qh1-wI-fP8"/>
@@ -416,6 +401,9 @@
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="msM-9m-Fsy" eventType="touchUpInside" id="rhO-DK-X8G"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s85-Gg-R7I" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="56" width="64" height="48"/>
@@ -435,6 +423,9 @@
                                                 <color key="value" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="msM-9m-Fsy" eventType="touchUpInside" id="eLP-vH-f4m"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -451,16 +442,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="6YO-B4-S50" secondAttribute="trailing" id="ZqN-NH-Xzj"/>
                             <constraint firstItem="Pkx-cL-96d" firstAttribute="centerY" secondItem="9CT-dj-UDR" secondAttribute="centerY" id="hvx-Hg-0t6"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.opacity">
-                                <integer key="value" value="0"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </view>
+                    <size key="freeformSize" width="375" height="567"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5St-DF-2al" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-207" y="663"/>
+            <point key="canvasLocation" x="506" y="699"/>
         </scene>
     </scenes>
 </document>

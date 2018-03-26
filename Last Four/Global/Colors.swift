@@ -9,4 +9,6 @@
 import Foundation
 import UIKit
 
-let ASTRONAUT_BLUE = UIColor(red:0.02, green:0.26, blue:0.40, alpha:1.00)
+let WHITE           = UIColor.white
+let BLACK           = UIColor.black
+let ASTRONAUT_BLUE  = UIColor(red:0.02, green:0.26, blue:0.40, alpha:1.00)

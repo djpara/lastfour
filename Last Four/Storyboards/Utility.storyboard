@@ -21,7 +21,7 @@
         <!--Number Pad View Controller-->
         <scene sceneID="wib-GK-cLf">
             <objects>
-                <viewController id="d4W-dg-E44" customClass="NumberPadViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="numberPadViewController" id="d4W-dg-E44" customClass="NumberPadViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cL8-Iu-oov">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

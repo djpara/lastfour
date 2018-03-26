@@ -10,20 +10,22 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var welcomeTextView: UITextView!
-    @IBOutlet weak var getstartedButton: UICustomButton!
-    @IBOutlet weak var menuButton: UICustomButton!
+    @IBOutlet weak var titleLabel               : UILabel!
+    @IBOutlet weak var welcomeTextView          : UITextView!
+    @IBOutlet weak var getstartedButton         : UICustomButton!
+    @IBOutlet weak var menuButton               : UICustomButton!
     
-    @IBOutlet weak var titleYConstraint: NSLayoutConstraint!
-    @IBOutlet weak var titleXConstraint: NSLayoutConstraint!
-    @IBOutlet weak var buttonXConstraint: NSLayoutConstraint!
-    @IBOutlet weak var welcomeTextXConstraint: NSLayoutConstraint!
+    @IBOutlet weak var titleYConstraint         : NSLayoutConstraint!
+    @IBOutlet weak var titleXConstraint         : NSLayoutConstraint!
+    @IBOutlet weak var buttonXConstraint        : NSLayoutConstraint!
+    @IBOutlet weak var welcomeTextXConstraint   : NSLayoutConstraint!
     
-    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var containerView            : UIView!
     
-    fileprivate var screenWidth    = UIScreen.main.bounds.width
-    fileprivate var screenHeight   = UIScreen.main.bounds.height
+    fileprivate var _screenWidth    = UIScreen.main.bounds.width
+    fileprivate var _screenHeight   = UIScreen.main.bounds.height
+    
+    fileprivate var _orderedControllers: [UIViewController] = []
     
     // MARK: OVERRIDE FUNCTIONS
     override func viewDidLoad() {
@@ -68,6 +70,8 @@ class WelcomeViewController: UIViewController {
      Brings container to the forefront. The container view holds the entire app views
      */
     fileprivate func fadeInContainerView() {
+        
+        
         UIView.animate(withDuration: 1, animations: {
             self.containerView.layer.opacity = 1.0
             self.view.layoutIfNeeded()
@@ -89,7 +93,7 @@ class WelcomeViewController: UIViewController {
      */
     fileprivate func fadeLeftOutWelcomeText() {
         UIView.animate(withDuration: 1.0, animations: {
-            self.welcomeTextXConstraint.constant -= self.screenWidth
+            self.welcomeTextXConstraint.constant -= self._screenWidth
             self.view.layoutIfNeeded()
         }) { finished in
             self.welcomeTextView.removeFromSuperview()
@@ -103,7 +107,7 @@ class WelcomeViewController: UIViewController {
     fileprivate func fadeLeftOutGetStartedButton() {
         UIView.animate(withDuration: 1.0, animations: {
             self.buttonXConstraint.constant
-                -= self.screenWidth
+                -= self._screenWidth
             self.view.layoutIfNeeded()
         }) { finished in
             self.getstartedButton.removeFromSuperview()
@@ -115,7 +119,7 @@ class WelcomeViewController: UIViewController {
      Repositions while animating the title to the top of the page
      */
     fileprivate func repositionTitleUp() {
-        let newConstant = ((screenHeight / 2) - 56)
+        let newConstant = ((_screenHeight / 2) - 56)
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
             self.titleYConstraint.constant -= newConstant
             self.view.layoutIfNeeded()
@@ -127,7 +131,7 @@ class WelcomeViewController: UIViewController {
      Repositions while animating the title to the left of the page
      */
     fileprivate func repositionTitleLeft() {
-        let newConstant = (screenWidth/2) - (titleLabel.intrinsicContentSize.width/2) - 16
+        let newConstant = (_screenWidth/2) - (titleLabel.intrinsicContentSize.width/2) - 16
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
             self.titleXConstraint.constant -= newConstant
             self.view.layoutIfNeeded()
@@ -167,5 +171,6 @@ class WelcomeViewController: UIViewController {
             self.menuButton.layer.opacity = 1.0
         }, completion: nil)
     }
+    
 }
 
