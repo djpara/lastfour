@@ -152,6 +152,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZ9-yl-mFV">
+                                <rect key="frame" x="16" y="20" width="343" height="529"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many people are in your group?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fue-Kk-g4k">
                                 <rect key="frame" x="45.5" y="72" width="284" height="88"/>
                                 <constraints>
@@ -179,11 +188,15 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Coi-y9-7Bu" firstAttribute="top" secondItem="RZ9-yl-mFV" secondAttribute="bottom" constant="18" id="HQI-8P-9sK"/>
                             <constraint firstItem="fue-Kk-g4k" firstAttribute="centerX" secondItem="0F8-Aa-OAE" secondAttribute="centerX" id="IVb-m1-QoQ"/>
                             <constraint firstItem="CHY-Lg-S15" firstAttribute="centerY" secondItem="0F8-Aa-OAE" secondAttribute="centerY" id="L7G-ec-GQO"/>
+                            <constraint firstItem="RZ9-yl-mFV" firstAttribute="leading" secondItem="0F8-Aa-OAE" secondAttribute="leadingMargin" id="SJB-MH-re9"/>
                             <constraint firstItem="fue-Kk-g4k" firstAttribute="top" secondItem="0UJ-gM-xS5" secondAttribute="bottom" constant="52" id="U9h-1D-F6j"/>
+                            <constraint firstItem="RZ9-yl-mFV" firstAttribute="trailing" secondItem="0F8-Aa-OAE" secondAttribute="trailingMargin" id="gp1-Ff-v1p"/>
+                            <constraint firstItem="RZ9-yl-mFV" firstAttribute="top" secondItem="0UJ-gM-xS5" secondAttribute="bottom" id="hN5-gd-Zsd"/>
                             <constraint firstItem="CHY-Lg-S15" firstAttribute="centerX" secondItem="0F8-Aa-OAE" secondAttribute="centerX" id="wKf-cs-2NG"/>
                         </constraints>
                     </view>
@@ -205,6 +218,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8s5-zQ-vKi">
+                                <rect key="frame" x="16" y="20" width="343" height="529"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your itemized order." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ME-Al-mYb">
                                 <rect key="frame" x="59" y="72" width="257" height="88"/>
                                 <constraints>
@@ -215,9 +237,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7ME-Al-mYb" firstAttribute="top" secondItem="x5g-LN-7Wu" secondAttribute="bottom" constant="52" id="6gK-6j-Ylh"/>
+                            <constraint firstItem="7g3-hM-kM7" firstAttribute="top" secondItem="8s5-zQ-vKi" secondAttribute="bottom" constant="18" id="Pmm-4t-q6b"/>
+                            <constraint firstAttribute="trailing" secondItem="8s5-zQ-vKi" secondAttribute="trailing" constant="16" id="RiB-fj-JmH"/>
+                            <constraint firstItem="8s5-zQ-vKi" firstAttribute="top" secondItem="x5g-LN-7Wu" secondAttribute="bottom" id="UkJ-ng-Fnj"/>
+                            <constraint firstItem="8s5-zQ-vKi" firstAttribute="leading" secondItem="08O-Td-CMa" secondAttribute="leading" constant="16" id="gC2-J4-zLO"/>
                             <constraint firstItem="7ME-Al-mYb" firstAttribute="centerX" secondItem="08O-Td-CMa" secondAttribute="centerX" id="zYu-b8-YLh"/>
                         </constraints>
                     </view>
@@ -225,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSv-qq-CXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="119" y="1288"/>
+            <point key="canvasLocation" x="117.59999999999999" y="1287.7061469265368"/>
         </scene>
         <!--Gratuity View Controller-->
         <scene sceneID="Nmk-CK-846">
@@ -239,6 +265,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0by-p6-wnI">
+                                <rect key="frame" x="16" y="20" width="343" height="529"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select or enter the tip amount." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQK-Mk-AFW">
                                 <rect key="frame" x="40.5" y="72" width="294" height="88"/>
                                 <constraints>
@@ -249,9 +284,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="SrR-aU-lGV" firstAttribute="top" secondItem="0by-p6-wnI" secondAttribute="bottom" constant="18" id="9qe-it-Ihn"/>
+                            <constraint firstAttribute="trailing" secondItem="0by-p6-wnI" secondAttribute="trailing" constant="16" id="CKb-P8-yE9"/>
                             <constraint firstItem="PQK-Mk-AFW" firstAttribute="top" secondItem="VJM-Cs-doE" secondAttribute="bottom" constant="52" id="NEW-Bf-BJ7"/>
+                            <constraint firstItem="0by-p6-wnI" firstAttribute="top" secondItem="VJM-Cs-doE" secondAttribute="bottom" id="b3V-7v-4b3"/>
+                            <constraint firstItem="0by-p6-wnI" firstAttribute="leading" secondItem="9bH-ST-XsA" secondAttribute="leading" constant="16" id="qnU-wY-Ltj"/>
                             <constraint firstItem="PQK-Mk-AFW" firstAttribute="centerX" secondItem="9bH-ST-XsA" secondAttribute="centerX" id="udY-bY-AyK"/>
                         </constraints>
                     </view>
@@ -259,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E1O-Nx-BGv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="119" y="1897"/>
+            <point key="canvasLocation" x="117.59999999999999" y="1896.7016491754125"/>
         </scene>
         <!--Your Total View Controller-->
         <scene sceneID="Rib-yE-xbz">
@@ -323,6 +362,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0h-go-YyQ">
+                                <rect key="frame" x="16" y="20" width="343" height="529"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the total bill amount?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCy-g8-XwR">
                                 <rect key="frame" x="72.5" y="72" width="230" height="88"/>
                                 <constraints>
@@ -333,17 +381,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="O0h-go-YyQ" firstAttribute="leading" secondItem="1kh-rO-lx8" secondAttribute="leadingMargin" id="4di-Lj-EMO"/>
                             <constraint firstItem="fCy-g8-XwR" firstAttribute="centerX" secondItem="1kh-rO-lx8" secondAttribute="centerX" id="58c-yd-dOu"/>
                             <constraint firstItem="fCy-g8-XwR" firstAttribute="top" secondItem="Krv-yP-o6x" secondAttribute="bottom" constant="52" id="ACV-dc-m5E"/>
+                            <constraint firstItem="O0h-go-YyQ" firstAttribute="top" secondItem="Krv-yP-o6x" secondAttribute="bottom" id="dbr-Me-HEC"/>
+                            <constraint firstItem="heS-Bj-iXM" firstAttribute="top" secondItem="O0h-go-YyQ" secondAttribute="bottom" constant="18" id="esI-Kk-wOl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O0h-go-YyQ" secondAttribute="trailing" id="mi3-jY-oo4"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="375" height="567"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbI-nv-hgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-537" y="1287"/>
+            <point key="canvasLocation" x="-538.39999999999998" y="1286.8065967016494"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="qe8-da-9Kr">
@@ -367,6 +419,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5z-AD-sIN" customClass="UICustomView" customModule="Last_Four" customModuleProvider="target">
+                                <rect key="frame" x="16" y="20" width="343" height="529"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will you be splitting the bill evenly?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6YO-B4-S50">
                                 <rect key="frame" x="16" y="72" width="343" height="88"/>
                                 <constraints>
@@ -434,20 +495,24 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6YO-B4-S50" firstAttribute="leading" secondItem="9CT-dj-UDR" secondAttribute="leadingMargin" id="3cV-BP-glj"/>
+                            <constraint firstAttribute="trailing" secondItem="d5z-AD-sIN" secondAttribute="trailing" constant="16" id="5NW-BR-9aW"/>
+                            <constraint firstItem="qh1-wI-fP8" firstAttribute="top" secondItem="d5z-AD-sIN" secondAttribute="bottom" constant="18" id="9hj-D0-W3e"/>
                             <constraint firstItem="6YO-B4-S50" firstAttribute="top" secondItem="7AP-HD-Cxn" secondAttribute="bottom" constant="52" id="AiD-ws-eiV"/>
                             <constraint firstItem="Pkx-cL-96d" firstAttribute="centerX" secondItem="9CT-dj-UDR" secondAttribute="centerX" id="LbK-PB-lJG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6YO-B4-S50" secondAttribute="trailing" id="ZqN-NH-Xzj"/>
+                            <constraint firstItem="d5z-AD-sIN" firstAttribute="leading" secondItem="9CT-dj-UDR" secondAttribute="leading" constant="16" id="eAb-CC-0I9"/>
                             <constraint firstItem="Pkx-cL-96d" firstAttribute="centerY" secondItem="9CT-dj-UDR" secondAttribute="centerY" id="hvx-Hg-0t6"/>
+                            <constraint firstItem="d5z-AD-sIN" firstAttribute="top" secondItem="7AP-HD-Cxn" secondAttribute="bottom" id="qz5-5e-2GB"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="375" height="567"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5St-DF-2al" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="506" y="699"/>
+            <point key="canvasLocation" x="504.80000000000001" y="698.5007496251875"/>
         </scene>
     </scenes>
 </document>

@@ -124,9 +124,12 @@ class PageViewController: UIPageViewController {
         _calculatorTypeSelected = true
         UIView.animate(withDuration: 0.5, animations: {
             self._layoverController?.view.subviews.forEach { view in
-                view.layer.opacity = 0.0
+                if type(of: view) != UICustomView.self {
+                    view.layer.opacity = 0.0
+                }
             }
         }, completion: { finished in
+            sleep(1)
             self._layoverController?.view.removeFromSuperview()
             self._layoverController = nil
             self.setControllers()
