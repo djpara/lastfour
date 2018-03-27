@@ -377,7 +377,51 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0h-go-YyQ" customClass="UICustomView" customModule="Last_Four" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="343" height="529"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gX7-oK-Wch" customClass="UICustomView" customModule="Last_Four" customModuleProvider="target">
+                                        <rect key="frame" x="51" y="234" width="240" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rjg-JX-KcY">
+                                                <rect key="frame" x="8" y="8" width="224" height="44"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="32"/>
+                                                <color key="textColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="KKA-Db-Yju"/>
+                                            <constraint firstItem="rjg-JX-KcY" firstAttribute="centerY" secondItem="gX7-oK-Wch" secondAttribute="centerY" id="Ns1-0q-kPR"/>
+                                            <constraint firstItem="rjg-JX-KcY" firstAttribute="top" secondItem="gX7-oK-Wch" secondAttribute="top" constant="8" id="QY4-NM-xU9"/>
+                                            <constraint firstItem="rjg-JX-KcY" firstAttribute="leading" secondItem="gX7-oK-Wch" secondAttribute="leading" constant="8" id="dhx-aN-P5M"/>
+                                            <constraint firstItem="rjg-JX-KcY" firstAttribute="centerX" secondItem="gX7-oK-Wch" secondAttribute="centerX" id="eZO-6R-wYg"/>
+                                            <constraint firstAttribute="bottom" secondItem="rjg-JX-KcY" secondAttribute="bottom" constant="8" id="iSM-1p-xJc"/>
+                                            <constraint firstAttribute="width" constant="240" id="j0l-ts-TKL"/>
+                                            <constraint firstAttribute="trailing" secondItem="rjg-JX-KcY" secondAttribute="trailing" constant="8" id="zsx-MN-eYg"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.2459332191780822" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="bAO-lg-Oir" appends="YES" id="0oF-o8-Psk"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="gX7-oK-Wch" firstAttribute="centerY" secondItem="O0h-go-YyQ" secondAttribute="centerY" id="3cm-Rb-U39"/>
+                                    <constraint firstItem="gX7-oK-Wch" firstAttribute="centerX" secondItem="O0h-go-YyQ" secondAttribute="centerX" id="9tH-Gf-pSN"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="4"/>
@@ -407,6 +451,11 @@
                     <size key="freeformSize" width="375" height="567"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbI-nv-hgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bAO-lg-Oir">
+                    <connections>
+                        <action selector="inputFieldPressed:" destination="Mjs-3y-RO9" id="Pz8-Tf-AZA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-538.39999999999998" y="1286.8065967016494"/>
         </scene>

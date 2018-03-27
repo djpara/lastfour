@@ -22,6 +22,7 @@
 		F5457A0D2066D18200418626 /* Shortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5457A0C2066D18200418626 /* Shortcuts.swift */; };
 		F5457A0F20684D4600418626 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5457A0E20684D4600418626 /* Preferences.swift */; };
 		F5457A122068C52400418626 /* UICustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5457A112068C52400418626 /* UICustomView.swift */; };
+		F57715C62069FF8F0019E261 /* NumberPadDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57715C52069FF8F0019E261 /* NumberPadDelegate.swift */; };
 		F5876FBB2063509000806F48 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5876FBA2063509000806F48 /* Colors.swift */; };
 		F5876FBD2063532C00806F48 /* UICustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5876FBC2063532C00806F48 /* UICustomButton.swift */; };
 		F5B72EB42061FF2000EA58DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B72EB32061FF2000EA58DA /* AppDelegate.swift */; };
@@ -69,6 +70,7 @@
 		F5457A0C2066D18200418626 /* Shortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcuts.swift; sourceTree = "<group>"; };
 		F5457A0E20684D4600418626 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		F5457A112068C52400418626 /* UICustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomView.swift; sourceTree = "<group>"; };
+		F57715C52069FF8F0019E261 /* NumberPadDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadDelegate.swift; sourceTree = "<group>"; };
 		F5876FBA2063509000806F48 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F5876FBC2063532C00806F48 /* UICustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomButton.swift; sourceTree = "<group>"; };
 		F5B72EB02061FF2000EA58DA /* Last Four.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Last Four.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +127,7 @@
 		F5457A052066C45C00418626 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				F57715C52069FF8F0019E261 /* NumberPadDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				F5B72EB62061FF2000EA58DA /* WelcomeViewController.swift in Sources */,
 				F54579F92066B90100418626 /* PeopleTotalViewController.swift in Sources */,
 				F5B72EB42061FF2000EA58DA /* AppDelegate.swift in Sources */,
+				F57715C62069FF8F0019E261 /* NumberPadDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

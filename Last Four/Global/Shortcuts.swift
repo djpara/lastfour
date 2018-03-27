@@ -11,5 +11,5 @@ import UIKit
 
 // MARK: Storyboards
 let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
-let utilityStoryboard = UIStoryboard.init(name: "Custom", bundle: nil)
+let utilityStoryboard = UIStoryboard.init(name: "Utility", bundle: nil)
 

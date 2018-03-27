@@ -30,9 +30,6 @@ class WelcomeViewController: UIViewController {
     // MARK: OVERRIDE FUNCTIONS
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         animateViews()
     }
     
