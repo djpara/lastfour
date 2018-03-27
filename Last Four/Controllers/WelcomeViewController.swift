@@ -51,27 +51,13 @@ class WelcomeViewController: UIViewController {
     // MARK: FILEPRIVATE FUNCTIONS
     // MARK: Animation functions
     fileprivate func animateViews() {
-        perform(#selector(fadeInTitle), with: nil, afterDelay: 1.0)
-    }
-    
-    /**
-     Fades the title in
-     */
-    @objc
-    fileprivate func fadeInTitle() {
-        UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveEaseInOut, animations: {
-            self.titleLabel.layer.opacity = 1.0
-        }, completion: { finished in
-            self.repositionTitleUp()
-        })
+        repositionTitleUp()
     }
     
     /**
      Brings container to the forefront. The container view holds the entire app views
      */
     fileprivate func fadeInContainerView() {
-        
-        
         UIView.animate(withDuration: 1, animations: {
             self.containerView.layer.opacity = 1.0
             self.view.layoutIfNeeded()
@@ -92,7 +78,7 @@ class WelcomeViewController: UIViewController {
      Repositions while animating welcome text left and out of view
      */
     fileprivate func fadeLeftOutWelcomeText() {
-        UIView.animate(withDuration: 1.0, animations: {
+        UIView.animate(withDuration: 0.75, animations: {
             self.welcomeTextXConstraint.constant -= self._screenWidth
             self.view.layoutIfNeeded()
         }) { finished in
@@ -105,7 +91,7 @@ class WelcomeViewController: UIViewController {
      Repositions while animating get started button left and out of view
      */
     fileprivate func fadeLeftOutGetStartedButton() {
-        UIView.animate(withDuration: 1.0, animations: {
+        UIView.animate(withDuration: 0.75, animations: {
             self.buttonXConstraint.constant
                 -= self._screenWidth
             self.view.layoutIfNeeded()
@@ -120,7 +106,7 @@ class WelcomeViewController: UIViewController {
      */
     fileprivate func repositionTitleUp() {
         let newConstant = ((_screenHeight / 2) - 56)
-        UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.75, delay: 1.0, options: .curveEaseInOut, animations: {
             self.titleYConstraint.constant -= newConstant
             self.view.layoutIfNeeded()
             self.perform(#selector(self.showWelcomeText), with: nil, afterDelay: 1.35)
@@ -132,7 +118,7 @@ class WelcomeViewController: UIViewController {
      */
     fileprivate func repositionTitleLeft() {
         let newConstant = (_screenWidth/2) - (titleLabel.intrinsicContentSize.width/2) - 16
-        UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 1.0, options: .curveEaseInOut, animations: {
             self.titleXConstraint.constant -= newConstant
             self.view.layoutIfNeeded()
         }, completion: { finished in
@@ -145,7 +131,7 @@ class WelcomeViewController: UIViewController {
     @objc
     fileprivate func showWelcomeText() {
         welcomeTextView.isHidden = false
-        UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.75, delay: 0.0, options: .curveEaseInOut, animations: {
             self.welcomeTextView.layer.opacity = 1.0
         }, completion: { finished in
             self.showGetStartedButton()
@@ -157,7 +143,7 @@ class WelcomeViewController: UIViewController {
      */
     fileprivate func showGetStartedButton() {
         getstartedButton.show()
-        UIView.animate(withDuration: 1.0, delay: 0.5, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.75, delay: 1.0, options: .curveEaseInOut, animations: {
             self.getstartedButton.layer.opacity = 1.0
         }, completion: nil)
     }
@@ -167,7 +153,7 @@ class WelcomeViewController: UIViewController {
      */
     fileprivate func showMenuButton() {
         menuButton.show()
-        UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 1.0, options: .curveEaseInOut, animations: {
             self.menuButton.layer.opacity = 1.0
         }, completion: nil)
     }

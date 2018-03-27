@@ -152,7 +152,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZ9-yl-mFV">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZ9-yl-mFV" customClass="UICustomView" customModule="Last_Four" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="343" height="529"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -218,7 +218,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8s5-zQ-vKi">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8s5-zQ-vKi" customClass="UICustomView" customModule="Last_Four" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="343" height="529"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -265,7 +265,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0by-p6-wnI">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0by-p6-wnI" customClass="UICustomView" customModule="Last_Four" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="343" height="529"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -312,6 +312,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDP-n8-X1l" customClass="UICustomView" customModule="Last_Four" customModuleProvider="target">
+                                <rect key="frame" x="16" y="20" width="343" height="529"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yMA-Gm-fnF">
                                 <rect key="frame" x="8" y="217.5" width="359" height="132"/>
                                 <subviews>
@@ -336,11 +345,15 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="yDP-n8-X1l" firstAttribute="top" secondItem="ofH-pI-4a8" secondAttribute="bottom" id="0HE-GW-UY0"/>
+                            <constraint firstAttribute="trailing" secondItem="yDP-n8-X1l" secondAttribute="trailing" constant="16" id="Twg-cG-IaT"/>
+                            <constraint firstItem="Xg6-xF-duu" firstAttribute="top" secondItem="yDP-n8-X1l" secondAttribute="bottom" constant="18" id="btN-wK-Qov"/>
                             <constraint firstAttribute="trailing" secondItem="yMA-Gm-fnF" secondAttribute="trailing" constant="8" id="bvJ-aH-ePC"/>
                             <constraint firstItem="yMA-Gm-fnF" firstAttribute="centerX" secondItem="sTu-mk-reh" secondAttribute="centerX" id="gnI-UE-WNn"/>
                             <constraint firstItem="yMA-Gm-fnF" firstAttribute="centerY" secondItem="sTu-mk-reh" secondAttribute="centerY" id="iQC-rF-Y6s"/>
+                            <constraint firstItem="yDP-n8-X1l" firstAttribute="leading" secondItem="sTu-mk-reh" secondAttribute="leading" constant="16" id="kFa-1k-ax5"/>
                             <constraint firstItem="yMA-Gm-fnF" firstAttribute="leading" secondItem="sTu-mk-reh" secondAttribute="leading" constant="8" id="zHY-IX-2jb"/>
                         </constraints>
                     </view>
@@ -348,7 +361,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bG2-Dc-Jxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="1897"/>
+            <point key="canvasLocation" x="780" y="1896.7016491754125"/>
         </scene>
         <!--Bill Total View Controller-->
         <scene sceneID="QxQ-g5-Hub">
@@ -362,7 +375,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0h-go-YyQ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0h-go-YyQ" customClass="UICustomView" customModule="Last_Four" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="343" height="529"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -419,7 +432,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5z-AD-sIN" customClass="UICustomView" customModule="Last_Four" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Qv-PZ-Pvu" customClass="UICustomView" customModule="Last_Four" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="343" height="529"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -498,14 +511,14 @@
                         <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6YO-B4-S50" firstAttribute="leading" secondItem="9CT-dj-UDR" secondAttribute="leadingMargin" id="3cV-BP-glj"/>
-                            <constraint firstAttribute="trailing" secondItem="d5z-AD-sIN" secondAttribute="trailing" constant="16" id="5NW-BR-9aW"/>
-                            <constraint firstItem="qh1-wI-fP8" firstAttribute="top" secondItem="d5z-AD-sIN" secondAttribute="bottom" constant="18" id="9hj-D0-W3e"/>
                             <constraint firstItem="6YO-B4-S50" firstAttribute="top" secondItem="7AP-HD-Cxn" secondAttribute="bottom" constant="52" id="AiD-ws-eiV"/>
+                            <constraint firstItem="qh1-wI-fP8" firstAttribute="top" secondItem="0Qv-PZ-Pvu" secondAttribute="bottom" constant="18" id="Bfk-jA-dWc"/>
+                            <constraint firstItem="0Qv-PZ-Pvu" firstAttribute="leading" secondItem="9CT-dj-UDR" secondAttribute="leading" constant="16" id="GlD-Sq-vHM"/>
                             <constraint firstItem="Pkx-cL-96d" firstAttribute="centerX" secondItem="9CT-dj-UDR" secondAttribute="centerX" id="LbK-PB-lJG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6YO-B4-S50" secondAttribute="trailing" id="ZqN-NH-Xzj"/>
-                            <constraint firstItem="d5z-AD-sIN" firstAttribute="leading" secondItem="9CT-dj-UDR" secondAttribute="leading" constant="16" id="eAb-CC-0I9"/>
                             <constraint firstItem="Pkx-cL-96d" firstAttribute="centerY" secondItem="9CT-dj-UDR" secondAttribute="centerY" id="hvx-Hg-0t6"/>
-                            <constraint firstItem="d5z-AD-sIN" firstAttribute="top" secondItem="7AP-HD-Cxn" secondAttribute="bottom" id="qz5-5e-2GB"/>
+                            <constraint firstItem="0Qv-PZ-Pvu" firstAttribute="top" secondItem="7AP-HD-Cxn" secondAttribute="bottom" id="tix-Q6-8g1"/>
+                            <constraint firstAttribute="trailing" secondItem="0Qv-PZ-Pvu" secondAttribute="trailing" constant="16" id="yUI-s5-FkQ"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="375" height="567"/>

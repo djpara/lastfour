@@ -39,14 +39,17 @@ class PageViewController: UIPageViewController {
         super.viewDidLoad()
         setUpPageViewController()
         addObservers()
-        
-        // This will be done once at viewDidLoad
-        presentQuestionSplittingViewController()
     }
     
     override func loadView() {
         super.loadView()
+        presentQuestionSplittingViewController()
+        
         configureViews()
+        
+        if _calculatorTypeSelected {
+            perform(#selector(fadeOutLayoverControllerView))
+        }
     }
     
     // MARK: FILEPRIVATE FUNCTIONS
@@ -104,36 +107,41 @@ class PageViewController: UIPageViewController {
         _layoverController = mainStoryboard.instantiateViewController(withIdentifier: QUESTION_SPLITTING_VIEW_CONTROLLER)
         if let layoverController = _layoverController {
             layoverController.view.frame = view.bounds
-            layoverController.view.layer.opacity = 0.0
-            view.addSubview(layoverController.view)
-            UIView.animate(withDuration: 1.0) {
-                layoverController.view.layer.opacity = 1.0
+            
+            if !_calculatorTypeSelected {
+                layoverController.view.layer.opacity = 0.0
+                view.addSubview(layoverController.view)
+                UIView.animate(withDuration: 1.0) {
+                    layoverController.view.layer.opacity = 1.0
+                }
+            } else {
+                view.addSubview(layoverController.view)
             }
+            
         }
     }
     
     @objc
     fileprivate func showView() {
-        UIView.animate(withDuration: 1.0, animations: {
+        UIView.animate(withDuration: 0.75, animations: {
             self.view.layer.opacity = 1.0
+        })
+    }
+    
+    @objc
+    fileprivate func fadeOutLayoverControllerView() {
+        UIView.animate(withDuration: 0.25, animations: {
+            self._layoverController?.view.layer.opacity = 0.0
+        }, completion: { finished in
+            self._layoverController?.view.removeFromSuperview()
+            self._layoverController = nil
         })
     }
     
     @objc
     fileprivate func reloadControllers() {
         _calculatorTypeSelected = true
-        UIView.animate(withDuration: 0.5, animations: {
-            self._layoverController?.view.subviews.forEach { view in
-                if type(of: view) != UICustomView.self {
-                    view.layer.opacity = 0.0
-                }
-            }
-        }, completion: { finished in
-            sleep(1)
-            self._layoverController?.view.removeFromSuperview()
-            self._layoverController = nil
-            self.setControllers()
-        })
+        self.setControllers()
     }
     
     // MARK: INTERNAL FUNCTIONS
