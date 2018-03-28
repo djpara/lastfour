@@ -15,16 +15,6 @@ class NumberPadViewController: UIViewController {
     
     fileprivate var _calculatorType: CalculatorType = .evenSplit
     
-    fileprivate var _currentFigure: String = ""
-    
-    fileprivate var _figurePassedMaxCheck: Bool {
-        get { return _currentFigure.count <= 10 }
-    }
-    
-    fileprivate var _figureContainsDecimal: Bool {
-        get { return _currentFigure.contains(".") }
-    }
-    
     // MARK: INTERNAL PROPERTIES
     internal var numberPadDelegate: NumberPadDelegate? {
         get { return _numberPadDelegate }
@@ -34,11 +24,17 @@ class NumberPadViewController: UIViewController {
     // MARK: IBOUTLET PROPERTIES
     @IBOutlet var evenSplitButtons: [UICustomButton]!
     @IBOutlet var itemizedSplitButtons: [UICustomButton]!
+    @IBOutlet var utilityButtons: [UICustomButton]!
+    
     
     // MARK: OVERRIDE FUNCTIONS
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureViews()
+        configureCalc()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
     // MARK: IBACTION FUNCTIONS
@@ -46,33 +42,31 @@ class NumberPadViewController: UIViewController {
     }
     
     @IBAction func cancelPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        numberPadDelegate?.close()
     }
     
     @IBAction func addItemPressed(_ sender: Any) {
     }
     
     @IBAction func enterPressed(_ sender: Any) {
+        numberPadDelegate?.enter()
+        numberPadDelegate?.close()
     }
     
     @IBAction func numericPressed(_ sender: UICustomButton) {
-        guard _figurePassedMaxCheck else { return }
         numberPadDelegate?.insertKey("\(sender.tag)")
     }
     
     @IBAction func doubleZeroPressed(_ sender: UICustomButton) {
-        guard _figurePassedMaxCheck else { return }
         numberPadDelegate?.insertKey("00")
     }
     
     @IBAction func decimalPressed(_ sender: UICustomButton) {
-        guard _figurePassedMaxCheck && !_figureContainsDecimal else { return }
         numberPadDelegate?.insertKey(".")
     }
     
     // MARK: FILEPRIVATE FUNCTIONS
-    fileprivate func configureViews() {
-        
+    fileprivate func configureCalc() {
         switch _calculatorType {
         case .evenSplit:
             showEvenSplitButtons()
@@ -82,22 +76,18 @@ class NumberPadViewController: UIViewController {
     }
     
     fileprivate func showEvenSplitButtons() {
-        evenSplitButtons.forEach { button in
-            button.layer.opacity = 1.0
+        Array(Set(evenSplitButtons).symmetricDifference(utilityButtons)).forEach { button in
+            button.layer.opacity = 0.0
         }
     }
     
     fileprivate func showItemizedSplitButtons() {
-        itemizedSplitButtons.forEach { button in
-            button.layer.opacity = 1.0
+        Array(Set(itemizedSplitButtons).symmetricDifference(utilityButtons)).forEach { button in
+            button.layer.opacity = 0.0
         }
     }
     
     // MARK: INTERNAL FUNCTIONS
-    internal func deleteLastKey() {
-        _currentFigure.removeLast()
-    }
-    
     internal func setType(_ type: CalculatorType) {
         _calculatorType = type
     }

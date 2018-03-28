@@ -346,7 +346,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="9ok-VL-hDV">
                                         <rect key="frame" x="0.0" y="12.5" width="115" height="226"/>
                                         <subviews>
-                                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esz-GV-s9U" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esz-GV-s9U" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="115" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="vuu-LV-65F"/>
@@ -370,7 +370,7 @@
                                                     <action selector="removeLastPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="i36-Jj-2eU"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Q-AE-Nkp" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Q-AE-Nkp" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="46" width="115" height="42"/>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                                 <state key="normal" title="Cancel">
@@ -391,7 +391,7 @@
                                                     <action selector="cancelPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="ZgU-TB-L3G"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtC-KV-gpC" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtC-KV-gpC" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="92" width="115" height="42"/>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                                 <state key="normal" title="Add Item">
@@ -412,7 +412,7 @@
                                                     <action selector="addItemPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="FJ1-f4-1X0"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXe-X3-f10" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXe-X3-f10" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="138" width="115" height="42"/>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                                 <state key="normal" title="Enter">
@@ -433,7 +433,7 @@
                                                     <action selector="enterPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="4qV-Qt-KJJ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-Af-NGm" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-Af-NGm" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="184" width="115" height="42"/>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                                 <state key="normal" title="⬇︎">
@@ -501,6 +501,11 @@
                         <outletCollection property="itemizedSplitButtons" destination="gtC-KV-gpC" collectionClass="NSMutableArray" id="1mv-w4-FHy"/>
                         <outletCollection property="evenSplitButtons" destination="nXe-X3-f10" collectionClass="NSMutableArray" id="fJh-Ah-akh"/>
                         <outletCollection property="itemizedSplitButtons" destination="Esz-GV-s9U" collectionClass="NSMutableArray" id="Lg6-kZ-bQc"/>
+                        <outletCollection property="utilityButtons" destination="Esz-GV-s9U" collectionClass="NSMutableArray" id="7wh-bv-vey"/>
+                        <outletCollection property="utilityButtons" destination="Q8Q-AE-Nkp" collectionClass="NSMutableArray" id="TR4-aZ-uHT"/>
+                        <outletCollection property="utilityButtons" destination="gtC-KV-gpC" collectionClass="NSMutableArray" id="z2M-0y-PfY"/>
+                        <outletCollection property="utilityButtons" destination="nXe-X3-f10" collectionClass="NSMutableArray" id="yNt-to-v8E"/>
+                        <outletCollection property="utilityButtons" destination="pcd-Af-NGm" collectionClass="NSMutableArray" id="ttl-hh-Fny"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIu-qA-Qcu" userLabel="First Responder" sceneMemberID="firstResponder"/>

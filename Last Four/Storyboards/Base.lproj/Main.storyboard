@@ -30,13 +30,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydH-jz-J1h">
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" indicatorStyle="white" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydH-jz-J1h">
                                 <rect key="frame" x="67" y="238" width="240" height="192"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="192" id="B2c-st-Li9"/>
                                     <constraint firstAttribute="width" constant="240" id="yGd-Co-P9g"/>
                                 </constraints>
-                                <string key="text">Last Four is a way to help split the check quicky and efficiently among the entire group. Whether you're dining in, ordering out, or having a night on the town, use Last Four the help you calculate splitting the bill!</string>
+                                <string key="text">Last Four is a way to help split the check quicky and efficiently among the entire group. Whether you're dining in, ordering out, or having a night on the town, use Last Four the help you calculate splitting the bill!
+
+
+
+
+CHEERS!
+
+
+
+</string>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -72,7 +81,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgX-gm-m2N" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                <rect key="frame" x="123.5" y="579" width="128" height="48"/>
+                                <rect key="frame" x="123.5" y="595" width="128" height="48"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.2519798801369863" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Hg4-Gx-Ukl"/>
@@ -114,7 +123,7 @@
                             <constraint firstItem="Ejg-83-HCH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7Wp-ke-TWA"/>
                             <constraint firstAttribute="trailing" secondItem="Ejg-83-HCH" secondAttribute="trailing" id="7un-yU-2TI"/>
                             <constraint firstItem="pgX-gm-m2N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A4B-j9-qnJ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pgX-gm-m2N" secondAttribute="bottom" constant="40" id="DWP-0e-qep"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pgX-gm-m2N" secondAttribute="bottom" constant="24" id="DWP-0e-qep"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ejg-83-HCH" secondAttribute="bottom" id="Gvn-Y2-yXj"/>
                             <constraint firstItem="ydH-jz-J1h" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZUm-Gy-sZ9"/>
                             <constraint firstItem="dA5-RV-Lbb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="b2v-Yh-MiK"/>
@@ -381,8 +390,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gX7-oK-Wch" customClass="UICustomView" customModule="Last_Four" customModuleProvider="target">
                                         <rect key="frame" x="51" y="234" width="240" height="60"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rjg-JX-KcY">
-                                                <rect key="frame" x="8" y="8" width="224" height="44"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Orh-2S-MyH">
+                                                <rect key="frame" x="8" y="4" width="18.5" height="51.5"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="32"/>
+                                                <color key="textColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rjg-JX-KcY">
+                                                <rect key="frame" x="30.5" y="8" width="201.5" height="44"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="32"/>
                                                 <color key="textColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -395,10 +410,11 @@
                                             <constraint firstAttribute="height" constant="60" id="KKA-Db-Yju"/>
                                             <constraint firstItem="rjg-JX-KcY" firstAttribute="centerY" secondItem="gX7-oK-Wch" secondAttribute="centerY" id="Ns1-0q-kPR"/>
                                             <constraint firstItem="rjg-JX-KcY" firstAttribute="top" secondItem="gX7-oK-Wch" secondAttribute="top" constant="8" id="QY4-NM-xU9"/>
-                                            <constraint firstItem="rjg-JX-KcY" firstAttribute="leading" secondItem="gX7-oK-Wch" secondAttribute="leading" constant="8" id="dhx-aN-P5M"/>
-                                            <constraint firstItem="rjg-JX-KcY" firstAttribute="centerX" secondItem="gX7-oK-Wch" secondAttribute="centerX" id="eZO-6R-wYg"/>
+                                            <constraint firstItem="rjg-JX-KcY" firstAttribute="leading" secondItem="Orh-2S-MyH" secondAttribute="trailing" constant="4" id="g2D-bC-bG3"/>
                                             <constraint firstAttribute="bottom" secondItem="rjg-JX-KcY" secondAttribute="bottom" constant="8" id="iSM-1p-xJc"/>
+                                            <constraint firstItem="Orh-2S-MyH" firstAttribute="leading" secondItem="gX7-oK-Wch" secondAttribute="leading" constant="8" id="ilr-Ag-NhI"/>
                                             <constraint firstAttribute="width" constant="240" id="j0l-ts-TKL"/>
+                                            <constraint firstItem="Orh-2S-MyH" firstAttribute="centerY" secondItem="gX7-oK-Wch" secondAttribute="centerY" id="sem-xK-3Zm"/>
                                             <constraint firstAttribute="trailing" secondItem="rjg-JX-KcY" secondAttribute="trailing" constant="8" id="zsx-MN-eYg"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -414,6 +430,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="bAO-lg-Oir" appends="YES" id="0oF-o8-Psk"/>
+                                            <outletCollection property="gestureRecognizers" destination="E15-q2-ZjF" appends="YES" id="2sZ-09-Ae9"/>
                                         </connections>
                                     </view>
                                 </subviews>
@@ -449,6 +466,11 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="375" height="567"/>
+                    <connections>
+                        <outlet property="inputField" destination="gX7-oK-Wch" id="fFK-kE-Zxh"/>
+                        <outlet property="inputFieldCenterYConstraint" destination="3cm-Rb-U39" id="gW7-F6-rhV"/>
+                        <outlet property="inputText" destination="rjg-JX-KcY" id="TCc-fN-ZNN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbI-nv-hgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="bAO-lg-Oir">
@@ -456,6 +478,11 @@
                         <action selector="inputFieldPressed:" destination="Mjs-3y-RO9" id="Pz8-Tf-AZA"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="E15-q2-ZjF">
+                    <connections>
+                        <action selector="backspaceSwipe:" destination="Mjs-3y-RO9" id="cWy-qM-8Ne"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-538.39999999999998" y="1286.8065967016494"/>
         </scene>
