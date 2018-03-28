@@ -346,6 +346,10 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esz-GV-s9U" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="Nmy-Me-9g4"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="c7l-3U-0Ue"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                         <state key="normal" title="Remove Last">
                                             <color key="titleColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -367,6 +371,9 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Q-AE-Nkp" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
                                         <rect key="frame" x="74" y="0.0" width="70.5" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="qgl-Rn-Z9H"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -388,6 +395,9 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtC-KV-gpC" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
                                         <rect key="frame" x="148.5" y="0.0" width="70" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="JHU-Wi-0v5"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                         <state key="normal" title="Add Item">
                                             <color key="titleColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -409,6 +419,9 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXe-X3-f10" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
                                         <rect key="frame" x="222.5" y="0.0" width="70.5" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="gKm-w3-8qs"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                         <state key="normal" title="Enter">
                                             <color key="titleColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -430,6 +443,9 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-Af-NGm" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
                                         <rect key="frame" x="297" y="0.0" width="70" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="NRj-Sh-krA"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                         <state key="normal" title="⬇︎">
                                             <color key="titleColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -461,7 +477,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gJ6-Qd-Vdg" firstAttribute="trailing" secondItem="9ok-VL-hDV" secondAttribute="trailing" constant="4" id="MiV-yS-Bu0"/>
-                            <constraint firstItem="gJ6-Qd-Vdg" firstAttribute="bottom" secondItem="Xwt-z1-Ijx" secondAttribute="bottom" constant="4" id="TlO-ZR-xHY"/>
+                            <constraint firstItem="gJ6-Qd-Vdg" firstAttribute="bottom" secondItem="Xwt-z1-Ijx" secondAttribute="bottom" priority="250" constant="4" id="TlO-ZR-xHY"/>
                             <constraint firstItem="Xwt-z1-Ijx" firstAttribute="top" secondItem="9ok-VL-hDV" secondAttribute="bottom" constant="4" id="Xr5-cs-6T9"/>
                             <constraint firstItem="9ok-VL-hDV" firstAttribute="top" secondItem="gJ6-Qd-Vdg" secondAttribute="top" constant="4" id="ie8-CD-dfC"/>
                             <constraint firstItem="9ok-VL-hDV" firstAttribute="leading" secondItem="gJ6-Qd-Vdg" secondAttribute="leading" constant="4" id="x0V-xl-8Zh"/>
@@ -478,6 +494,11 @@
                         <outletCollection property="evenSplitButtons" destination="Q8Q-AE-Nkp" collectionClass="NSMutableArray" id="Do2-ou-MMx"/>
                         <outletCollection property="itemizedSplitButtons" destination="pcd-Af-NGm" collectionClass="NSMutableArray" id="Lzh-nT-euK"/>
                         <outletCollection property="evenSplitButtons" destination="nXe-X3-f10" collectionClass="NSMutableArray" id="fJh-Ah-akh"/>
+                        <outletCollection property="utilityButtons" destination="Esz-GV-s9U" collectionClass="NSMutableArray" id="Edr-ad-Ech"/>
+                        <outletCollection property="utilityButtons" destination="Q8Q-AE-Nkp" collectionClass="NSMutableArray" id="as4-PP-mdc"/>
+                        <outletCollection property="utilityButtons" destination="gtC-KV-gpC" collectionClass="NSMutableArray" id="6fS-YM-Ilo"/>
+                        <outletCollection property="utilityButtons" destination="nXe-X3-f10" collectionClass="NSMutableArray" id="EjX-1y-0Mj"/>
+                        <outletCollection property="utilityButtons" destination="pcd-Af-NGm" collectionClass="NSMutableArray" id="rqw-D8-bUa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIu-qA-Qcu" userLabel="First Responder" sceneMemberID="firstResponder"/>

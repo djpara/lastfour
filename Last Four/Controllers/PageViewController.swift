@@ -130,7 +130,7 @@ class PageViewController: UIPageViewController {
     
     @objc
     fileprivate func fadeOutLayoverControllerView() {
-        UIView.animate(withDuration: 0.25, animations: {
+        UIView.animate(withDuration: 0.5, animations: {
             self._layoverController?.view.layer.opacity = 0.0
         }, completion: { finished in
             self._layoverController?.view.removeFromSuperview()

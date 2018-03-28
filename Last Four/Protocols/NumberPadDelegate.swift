@@ -11,7 +11,7 @@ import Foundation
 protocol NumberPadDelegate {
     func insertKey(_ num: String)
     func removeLast()
-    func cancel()
+    func close()
     func addItem()
     func enter()
     func keyboardDown()
