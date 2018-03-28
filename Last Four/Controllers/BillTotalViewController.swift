@@ -97,7 +97,7 @@ extension BillTotalViewController: NumberPadDelegate {
         let single0 = "0"
         
         // Check conditions
-        if let text = inputText.text, text.contains(p), (num == p || text.index(of: Character(p)) == String.Index.init(encodedOffset: (text.count - 3))) { return }
+        if let text = inputText.text, text.contains(p), (num == p || (text.count > 2 && text.index(of: Character(p)) == String.Index.init(encodedOffset: (text.count - 3)))) { return }
         if let text = inputText.text, text.contains(p), (num == double0 && text.index(of: Character(p)) == String.Index.init(encodedOffset: (text.count - 2))) { inputText.text?.append(single0); return }
         if let text = inputText.text, text.count > 9 && (text.index(of: Character(p)) != String.Index.init(encodedOffset: (text.count - 1)) && text.index(of: Character(p)) != String.Index.init(encodedOffset: (text.count - 2))) { return }
         if let count = inputText.text?.count, count > 8 && num == double0 { inputText.text?.append(single0); return }
