@@ -105,7 +105,7 @@ extension BillTotalViewController: NumberPadDelegate {
         inputText.text?.append(num)
     }
     
-    func removeLast() {
+    func enter() {
         // TODO:
     }
     
@@ -126,16 +126,15 @@ extension BillTotalViewController: NumberPadDelegate {
     }
     
     func addItem() {
-        // TODO:
-    }
-    
-    func enter() {
-        // TODO:
+        // Not implemented
     }
     
     func keyboardDown() {
-        // TODO:
+        // Not implemented
     }
     
-    
+    func removeLast() {
+        // Not implemented
+    }
+     
 }

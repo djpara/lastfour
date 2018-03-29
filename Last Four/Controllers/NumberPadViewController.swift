@@ -77,13 +77,13 @@ class NumberPadViewController: UIViewController {
     
     fileprivate func showEvenSplitButtons() {
         Array(Set(evenSplitButtons).symmetricDifference(utilityButtons)).forEach { button in
-            button.layer.opacity = 0.0
+            button.hide()
         }
     }
     
     fileprivate func showItemizedSplitButtons() {
         Array(Set(itemizedSplitButtons).symmetricDifference(utilityButtons)).forEach { button in
-            button.layer.opacity = 0.0
+            button.hide()
         }
     }
     

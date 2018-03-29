@@ -23,7 +23,7 @@ public class Preferences {
         get { return _instance }
     }
     
-    // MARK: Instance public getters and setters
+    // MARK: Public getters and setters
     internal var calculatorType: CalculatorType {
         get {
             if let type = _calculatorType {

@@ -526,15 +526,15 @@ CHEERS!
                                 <color key="textColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Pkx-cL-96d">
-                                <rect key="frame" x="155.5" y="231.5" width="64" height="104"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Pkx-cL-96d">
+                                <rect key="frame" x="137.5" y="227.5" width="100" height="112"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nM-5C-BDE" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="64" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="48"/>
                                         <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.2501872859589041" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="7GN-WM-neX"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="FZn-31-xcM"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="FZn-31-xcM"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                         <state key="normal" title="Yes">
@@ -556,7 +556,7 @@ CHEERS!
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s85-Gg-R7I" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="64" height="48"/>
+                                        <rect key="frame" x="0.0" y="64" width="100" height="48"/>
                                         <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.2501872859589041" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                         <state key="normal" title="No">
