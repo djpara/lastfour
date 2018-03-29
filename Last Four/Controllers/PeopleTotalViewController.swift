@@ -10,6 +10,7 @@ import UIKit
 
 class PeopleTotalViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
