@@ -32,7 +32,13 @@ class PageViewController: UIPageViewController {
     fileprivate var _calculatorTypeSelected = false
     fileprivate var _readyForTotal = false
     
-    //MARK: INTERNAL PROPERTIES
+    // MARK: INTERNAL PROPERTIES
+    // MARK: Internal getter and setter properties
+    internal var orderedSequence: [UIViewController] {
+        get {
+            return _orderedSequence ?? []
+        }
+    }
     
     // MARK: OVERRIDE FUNCTIONS
     override func viewDidLoad() {

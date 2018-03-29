@@ -106,22 +106,23 @@ extension BillTotalViewController: NumberPadDelegate {
     }
     
     func enter() {
-        // TODO:
+        if let text = inputText.text, let sum = Double(text) {
+            Brain.instance.billSum = sum
+        }
+        
+        animateNumberPadClose()
+        animateInputFieldDown()
+        
+        guard let pageViewController = (parent as? PageViewController) else { return }
+        
+        pageViewController.setViewControllers([pageViewController.orderedSequence[1]], direction: .forward, animated: true, completion: nil)
     }
     
     func close() {
         _numberPad?.numberPadDelegate = nil
         inputText.text = ""
         
-        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-            let target = self.view.frame.height + (self._numberPad?.preferredContentSize.height ?? 0)
-            self._numberPad?.view.frame.origin.y = target
-        }) { finished in
-            self._numberPad?.willMove(toParentViewController: nil)
-            self._numberPad?.view.removeFromSuperview()
-            self._numberPad?.removeFromParentViewController()
-            self._numberPad = nil
-        }
+        animateNumberPadClose()
         animateInputFieldDown()
     }
     
@@ -135,6 +136,19 @@ extension BillTotalViewController: NumberPadDelegate {
     
     func removeLast() {
         // Not implemented
+    }
+    
+    // MARK: Number Pad Delegate Helper Functions
+    fileprivate func animateNumberPadClose() {
+        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            let target = self.view.frame.height + (self._numberPad?.preferredContentSize.height ?? 0)
+            self._numberPad?.view.frame.origin.y = target
+        }) { finished in
+            self._numberPad?.willMove(toParentViewController: nil)
+            self._numberPad?.view.removeFromSuperview()
+            self._numberPad?.removeFromParentViewController()
+            self._numberPad = nil
+        }
     }
      
 }

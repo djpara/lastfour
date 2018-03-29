@@ -50,7 +50,6 @@ class NumberPadViewController: UIViewController {
     
     @IBAction func enterPressed(_ sender: Any) {
         numberPadDelegate?.enter()
-        numberPadDelegate?.close()
     }
     
     @IBAction func numericPressed(_ sender: UICustomButton) {
