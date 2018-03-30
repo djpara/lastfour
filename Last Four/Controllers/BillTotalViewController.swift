@@ -21,7 +21,7 @@ class BillTotalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        _ogBorderColor = inputField.borderColor
+        configureViews()
     }
 
     // MARK: IBACTION FUNCTIONS
@@ -33,6 +33,17 @@ class BillTotalViewController: UIViewController {
     
     @IBAction func backspaceSwipe(_ sender: Any) {
         inputText.text?.removeLast()
+    }
+    
+    @IBAction func nextPressed(_ sender: Any) {
+        guard let pageViewController = (parent as? PageViewController) else { return }
+        
+        pageViewController.setViewControllers([pageViewController.orderedSequence[1]], direction: .forward, animated: true, completion: nil)
+    }
+    
+    // MARK: FILEPRIVATE VIEWS
+    fileprivate func configureViews() {
+        _ogBorderColor = inputField.borderColor
     }
     
     fileprivate func animateInputFieldUp() {
@@ -139,10 +150,6 @@ extension BillTotalViewController: NumberPadDelegate {
         
         hideNumberPad()
         animateInputFieldDown()
-        
-        guard let pageViewController = (parent as? PageViewController) else { return }
-        
-        pageViewController.setViewControllers([pageViewController.orderedSequence[1]], direction: .forward, animated: true, completion: nil)
     }
     
     func close() {

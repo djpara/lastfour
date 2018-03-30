@@ -33,12 +33,18 @@ class Brain {
     
     internal var tipAmount: Double {
         get { return _tipAmount }
-        set { _tipAmount = newValue }
+        set {
+            _tipPercentage = 0.0
+            _tipAmount = newValue
+        }
     }
     
     internal var tipPercentage: Double {
         get { return _tipPercentage }
-        set { _tipPercentage = newValue }
+        set {
+            _tipAmount = 0.0
+            _tipPercentage = newValue
+        }
     }
     
     internal var totalPlayers: Int {
@@ -51,12 +57,16 @@ class Brain {
     private init() {}
     
     // MARK: FILEPRIVATE FUNCTIONS
+    fileprivate func getTipUsingAmount() -> Double {
+        return tipAmount
+    }
+    
+    fileprivate func getTipUsingPercentage() -> Double {
+        return billSum * tipPercentage
+    }
     
     // MARK: INTERNAL FUNCTIONS
-    internal func getTipAmount(using percentage: Double? = nil) -> String {
-        if let percent = percentage {
-            return (billSum * percent).toDollarFormat()
-        }
-        return (billSum * tipPercentage).toDollarFormat()
+    internal func getTipAmount() -> String {
+        return _tipAmount > _tipPercentage ? getTipUsingAmount().toDollarFormat() : getTipUsingPercentage().toDollarFormat()
     }
 }

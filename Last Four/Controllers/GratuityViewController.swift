@@ -25,17 +25,23 @@ class GratuityViewController: UIViewController {
     
     fileprivate var _ogBorderColor: UIColor?
     
+    fileprivate var _willLeaveCustomPercentage = false
+    
     // MARK: IBOUTLET PROPERTIES
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var yesNoButtonsStack: UIStackView!
     @IBOutlet weak var tipButtonsStack: UIStackView!
-    @IBOutlet weak var noTipButton: UICustomButton!
+    @IBOutlet weak var nextStack: UIStackView!
     @IBOutlet weak var leaveTipButton: UICustomButton!
     
     @IBOutlet weak var inputField: UICustomView!
     @IBOutlet weak var tipButtonsStackYConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var inputText: UILabel!
+    @IBOutlet weak var inputTextDollar: UILabel!
+    @IBOutlet weak var inputTextPercent: UILabel!
+    
+    @IBOutlet weak var dollarSign: UILabel!
+    @IBOutlet weak var percentSign: UILabel!
     
     // MARK: OVERRIDE FUNCTIONS
     override func viewDidLoad() {
@@ -66,6 +72,20 @@ class GratuityViewController: UIViewController {
         }
     }
     
+    @IBAction func inputFieldPressed(_ sender: Any) {
+        guard _numberPad == nil else { return }
+        showNumberPad()
+        animateInputFieldUp()
+    }
+    
+    @IBAction func backspaceSwipe(_ sender: Any) {
+        if _willLeaveCustomPercentage {
+            inputTextPercent.text?.removeLast()
+        } else {
+            inputTextDollar.text?.removeLast()
+        }
+    }
+    
     @IBAction func leaveTipPressed(_ sender: Any) {
         willLeaveTip = true
         animateMessage(TIP_AMOUNT)
@@ -82,24 +102,58 @@ class GratuityViewController: UIViewController {
     
     @IBAction func fifteenPressed(_ sender: Any) {
         Brain.instance.tipPercentage = 0.15
-        inputText.text = Brain.instance.getTipAmount()
+        if _willLeaveCustomPercentage {
+            inputTextPercent.text = "15"
+        } else {
+            inputTextDollar.text = Brain.instance.getTipAmount()
+        }
+        // TODO:
+        test()
     }
     
     @IBAction func eighteenPressed(_ sender: Any) {
         Brain.instance.tipPercentage = 0.18
-        inputText.text = Brain.instance.getTipAmount()
+        if _willLeaveCustomPercentage {
+            inputTextPercent.text = "18"
+        } else {
+            inputTextDollar.text = Brain.instance.getTipAmount()
+        }
+        // TODO:
+        test()
     }
     
     @IBAction func twentyPressed(_ sender: Any) {
         Brain.instance.tipPercentage = 0.2
-        inputText.text = Brain.instance.getTipAmount()
+        if _willLeaveCustomPercentage {
+            inputTextPercent.text = "20"
+        } else {
+            inputTextDollar.text = Brain.instance.getTipAmount()
+        }
+        // TODO:
+        test()
     }
     
     @IBAction func customPressed(_ sender: Any) {
+        guard _numberPad == nil else {
+            _willLeaveCustomPercentage = true
+            animateShowPercentInput()
+            return
+        }
+        _willLeaveCustomPercentage = true
+        animateShowPercentInput()
+        showNumberPad()
+        animateInputFieldUp()
+    }
+    
+    @IBAction func nextPressed(_ sender: Any) {
+        guard let pageViewController = (parent as? PageViewController) else { return }
+        
+        pageViewController.setViewControllers([pageViewController.orderedSequence[2]], direction: .forward, animated: true, completion: nil)
     }
     
     // MARK: FILEPRIVATE FUNCTIONS
     fileprivate func configureViews() {
+        _ogBorderColor = inputField.borderColor
         questionLabel.text = GRATUITY_INCLUDED
     }
     
@@ -121,7 +175,7 @@ class GratuityViewController: UIViewController {
         }, completion: { finished in
             UIView.animate(withDuration: 0.25, animations: {
                 self.tipButtonsStack.layer.opacity = 1.0
-                self.noTipButton.layer.opacity = 1.0
+                self.nextStack.layer.opacity = 1.0
             })
         })
     }
@@ -130,12 +184,63 @@ class GratuityViewController: UIViewController {
         UIView.animate(withDuration: 0.25, animations: {
             self.yesNoButtonsStack.layer.opacity = 0.0
             self.tipButtonsStack.layer.opacity = 0.0
-            self.noTipButton.layer.opacity = 0.0
+            self.nextStack.layer.opacity = 0.0
         }, completion: { finished in
             UIView.animate(withDuration: 0.25, animations: {
                 self.leaveTipButton.layer.opacity = 1.0
             })
         })
+    }
+    
+    fileprivate func animateInputFieldUp() {
+        // Bring inputfield up a bit
+        inputField.borderColor = ASTRONAUT_BLUE
+        UIView.animate(withDuration: 0.5, animations: {
+            self.tipButtonsStackYConstraint.constant -= self.inputField.frame.height
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    fileprivate func animateInputFieldDown() {
+        // Bring inputfield down a bit
+        if let ogBorderColor = self._ogBorderColor {
+            self.inputField.borderColor = ogBorderColor
+        }
+        UIView.animate(withDuration: 0.5, animations: {
+            self.tipButtonsStackYConstraint.constant += self.inputField.frame.height
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    fileprivate func animateShowPercentInput() {
+        UIView.animate(withDuration: 0.1, animations: {
+            self.percentSign.layer.opacity = 1.0
+            self.inputTextPercent.layer.opacity = 1.0
+        }, completion: { finished in
+            UIView.animate(withDuration: 0.1, animations: {
+                self.dollarSign.layer.opacity = 0.0
+                self.inputTextDollar.layer.opacity = 0.0
+            })
+        })
+    }
+    
+    fileprivate func animateShowDollarInput() {
+        UIView.animate(withDuration: 0.1, animations: {
+            self.dollarSign.layer.opacity = 1.0
+            self.inputTextDollar.layer.opacity = 1.0
+        }, completion: { finished in
+            UIView.animate(withDuration: 0.1, animations: {
+                self.percentSign.layer.opacity = 0.0
+                self.inputTextPercent.layer.opacity = 0.0
+            })
+        })
+    }
+    
+    // TODO:
+    fileprivate func test() {
+        let bill = Brain.instance.billSum
+        let tip = Double(Brain.instance.getTipAmount()) ?? 0
+        print("Total so far = \((bill+tip).toDollarFormat())")
     }
     
     // MARK: INTERNAL FUNCTIONS
@@ -175,24 +280,58 @@ extension GratuityViewController: NumberPadDelegate {
     }
     
     func insertKey(_ num: String) {
-        // TODO:
+        
+        if _willLeaveCustomPercentage {
+            insertKey(num, into: inputTextPercent)
+        } else {
+            insertKey(num, into: inputTextDollar)
+        }
     }
     
     func enter() {
         _numberPad?.numberPadDelegate = nil
         
+        // TODO: Implement brain logic
+        if _willLeaveCustomPercentage {
+            if let text = inputTextPercent.text, let percent = Double(text) {
+                Brain.instance.tipPercentage = percent/100
+                inputTextDollar.text = Brain.instance.getTipAmount()
+                animateShowDollarInput()
+                inputTextPercent.text = ""
+                _willLeaveCustomPercentage = false
+            }
+        } else {
+            if let text = inputTextDollar.text, let amount = Double(text) {
+                Brain.instance.tipAmount = amount
+            }
+        }
+        
         // TODO:
+        test()
+        
+        hideNumberPad()
+        animateInputFieldDown()
     }
     
     func close() {
         _numberPad?.numberPadDelegate = nil
         
-        clear()
+        // TODO: Implement brain logic - see BillTotalViewController
+        if _willLeaveCustomPercentage {
+            animateShowDollarInput()
+            _willLeaveCustomPercentage = false
+        }
+        
         hideNumberPad()
+        animateInputFieldDown()
     }
     
     func clear() {
-        inputText.text = ""
+        if _willLeaveCustomPercentage {
+            inputTextPercent.text = ""
+        } else {
+            inputTextDollar.text = ""
+        }
     }
     
     func removeLast() {
@@ -207,5 +346,29 @@ extension GratuityViewController: NumberPadDelegate {
         // Not implemented
     }
     
+    // MARK: EXTENSION HELPER FUNCTIONS
+    fileprivate func insertKey(_ num: String, into label: UILabel) {
+        // Local helper variables
+        let p = "."
+        let d = "00"
+        
+        guard let text = label.text else { return }
+        
+        if text.contains(p) {
+            let split = text.split(separator: Character(p))
+            
+            if split.count > 1 && (split[1].count > 1
+                || (split[1].count > 0 && num == d)) {} // Fall to return
+            else if num == p {} // Fall to return
+            else { label.text?.append(num) }
+            
+            return
+        }
+        
+        if text.count > 9, num != p { return }
+        if text.count > 13 { return }
+        
+        label.text?.append(num)
+    }
     
 }
