@@ -53,4 +53,10 @@ class Brain {
     // MARK: FILEPRIVATE FUNCTIONS
     
     // MARK: INTERNAL FUNCTIONS
+    internal func getTipAmount(using percentage: Double? = nil) -> String {
+        if let percent = percentage {
+            return (billSum * percent).toDollarFormat()
+        }
+        return (billSum * tipPercentage).toDollarFormat()
+    }
 }

@@ -344,8 +344,58 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="9ok-VL-hDV" userLabel="Utility Buttons Stack View">
                                 <rect key="frame" x="4" y="4" width="367" height="36"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Q-AE-Nkp" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="70.5" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="0.24526434075342465" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="qgl-Rn-Z9H"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="cancelPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="ZgU-TB-L3G"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-Af-NGm" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
+                                        <rect key="frame" x="74.5" y="0.0" width="70" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="0.24526434075342465" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="NRj-Sh-krA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
+                                        <state key="normal" title="Clear">
+                                            <color key="titleColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clearPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="Ap8-pb-BXF"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esz-GV-s9U" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="36"/>
+                                        <rect key="frame" x="148.5" y="0.0" width="70" height="36"/>
                                         <color key="backgroundColor" white="1" alpha="0.24526434075342465" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="Nmy-Me-9g4"/>
@@ -370,33 +420,8 @@
                                             <action selector="removeLastPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="i36-Jj-2eU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Q-AE-Nkp" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                        <rect key="frame" x="74" y="0.0" width="70.5" height="36"/>
-                                        <color key="backgroundColor" white="1" alpha="0.24526434075342465" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="36" id="qgl-Rn-Z9H"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
-                                        <state key="normal" title="Cancel">
-                                            <color key="titleColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="cancelPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="ZgU-TB-L3G"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtC-KV-gpC" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                        <rect key="frame" x="148.5" y="0.0" width="70" height="36"/>
+                                        <rect key="frame" x="222.5" y="0.0" width="70" height="36"/>
                                         <color key="backgroundColor" white="1" alpha="0.24526434075342465" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="JHU-Wi-0v5"/>
@@ -421,7 +446,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXe-X3-f10" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                        <rect key="frame" x="222.5" y="0.0" width="70.5" height="36"/>
+                                        <rect key="frame" x="296.5" y="0.0" width="70.5" height="36"/>
                                         <color key="backgroundColor" white="1" alpha="0.24526434075342465" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="gKm-w3-8qs"/>
@@ -443,31 +468,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="enterPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="4qV-Qt-KJJ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-Af-NGm" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                        <rect key="frame" x="297" y="0.0" width="70" height="36"/>
-                                        <color key="backgroundColor" white="1" alpha="0.24526434075342465" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="36" id="NRj-Sh-krA"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
-                                        <state key="normal" title="⬇︎">
-                                            <color key="titleColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="cancelPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="w65-v1-DmY"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -504,6 +504,7 @@
                         <outletCollection property="utilityButtons" destination="gtC-KV-gpC" collectionClass="NSMutableArray" id="6fS-YM-Ilo"/>
                         <outletCollection property="utilityButtons" destination="nXe-X3-f10" collectionClass="NSMutableArray" id="EjX-1y-0Mj"/>
                         <outletCollection property="utilityButtons" destination="pcd-Af-NGm" collectionClass="NSMutableArray" id="rqw-D8-bUa"/>
+                        <outletCollection property="evenSplitButtons" destination="pcd-Af-NGm" collectionClass="NSMutableArray" id="w4X-Rl-I3r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIu-qA-Qcu" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -45,6 +45,10 @@ class NumberPadViewController: UIViewController {
         numberPadDelegate?.close()
     }
     
+    @IBAction func clearPressed(_ sender: Any) {
+        numberPadDelegate?.clear()
+    }
+    
     @IBAction func addItemPressed(_ sender: Any) {
     }
     

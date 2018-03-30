@@ -318,7 +318,7 @@ CHEERS!
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jlf-Kv-aGq">
-                                        <rect key="frame" x="43" y="206" width="256" height="116"/>
+                                        <rect key="frame" x="43" y="178" width="256" height="172"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xmf-qi-q1g" customClass="UICustomView" customModule="Last_Four" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="256" height="60"/>
@@ -386,6 +386,9 @@ CHEERS!
                                                                 <real key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="fifteenPressed:" destination="KY8-iU-65d" eventType="touchUpInside" id="e6O-Ao-Sq3"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdW-ZP-tq4" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
                                                         <rect key="frame" x="88" y="0.0" width="80" height="48"/>
@@ -408,6 +411,9 @@ CHEERS!
                                                                 <real key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="eighteenPressed:" destination="KY8-iU-65d" eventType="touchUpInside" id="AiU-3Z-yRJ"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsN-iP-AdO" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
                                                         <rect key="frame" x="176" y="0.0" width="80" height="48"/>
@@ -430,6 +436,9 @@ CHEERS!
                                                                 <real key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="twentyPressed:" destination="KY8-iU-65d" eventType="touchUpInside" id="3BA-Ca-LB0"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -437,9 +446,36 @@ CHEERS!
                                                     <constraint firstItem="rdW-ZP-tq4" firstAttribute="width" secondItem="gfU-Qa-FDr" secondAttribute="width" id="EzB-Gi-1Rl"/>
                                                 </constraints>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75h-IE-cwy" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="124" width="256" height="48"/>
+                                                <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="UMB-Wq-2Uv"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
+                                                <state key="normal" title="Custom %">
+                                                    <color key="titleColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="customPressed:" destination="KY8-iU-65d" eventType="touchUpInside" id="4IK-Tg-bqE"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="cx7-TI-VnW" firstAttribute="width" secondItem="Xmf-qi-q1g" secondAttribute="width" id="9OG-48-PDn"/>
+                                            <constraint firstItem="75h-IE-cwy" firstAttribute="leading" secondItem="Jlf-Kv-aGq" secondAttribute="leading" id="BLm-yB-06V"/>
+                                            <constraint firstAttribute="trailing" secondItem="75h-IE-cwy" secondAttribute="trailing" id="kf4-T4-5JT"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.opacity">
@@ -565,10 +601,13 @@ CHEERS!
                     </view>
                     <size key="freeformSize" width="375" height="567"/>
                     <connections>
+                        <outlet property="inputField" destination="Xmf-qi-q1g" id="KMI-bG-tsP"/>
+                        <outlet property="inputText" destination="lr0-Hp-PbV" id="vUW-B9-pOY"/>
                         <outlet property="leaveTipButton" destination="jSn-1f-4mR" id="M8I-Kc-gRW"/>
                         <outlet property="noTipButton" destination="uB1-72-1he" id="hAf-6z-eG4"/>
                         <outlet property="questionLabel" destination="PQK-Mk-AFW" id="9Eg-os-CwI"/>
                         <outlet property="tipButtonsStack" destination="Jlf-Kv-aGq" id="gmb-My-eKO"/>
+                        <outlet property="tipButtonsStackYConstraint" destination="QeC-WM-gz1" id="qCF-22-Gvq"/>
                         <outlet property="yesNoButtonsStack" destination="K7h-xJ-I3Y" id="Bf9-RS-xlR"/>
                     </connections>
                 </viewController>

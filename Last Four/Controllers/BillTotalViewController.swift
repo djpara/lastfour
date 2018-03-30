@@ -35,25 +35,6 @@ class BillTotalViewController: UIViewController {
         inputText.text?.removeLast()
     }
     
-    fileprivate func showNumberPad() {
-        _numberPad = utilityStoryboard.instantiateViewController(withIdentifier: NUMBER_PAD_VIEW_CONTROLLER) as? NumberPadViewController
-        _numberPad?.numberPadDelegate = self
-        _numberPad?.setType(.evenSplit)
-        
-        _numberPad?.view.frame.origin.y = view.frame.height + (_numberPad?.preferredContentSize.height)!
-        
-        view.insertSubview((_numberPad?.view)!, at: 10)
-        
-        addChildViewController(_numberPad!)
-        view.addSubview((_numberPad?.view)!)
-        _numberPad?.didMove(toParentViewController: self)
-        
-        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-            let target = self.view.frame.height - (self._numberPad?.preferredContentSize.height ?? 0)
-            self._numberPad?.view.frame.origin.y = target
-        }, completion: nil)
-    }
-    
     fileprivate func animateInputFieldUp() {
         // Bring inputfield up a bit
         inputField.borderColor = ASTRONAUT_BLUE
@@ -90,27 +71,73 @@ class BillTotalViewController: UIViewController {
 }
 
 extension BillTotalViewController: NumberPadDelegate {
+    
+    func showNumberPad() {
+        _numberPad = utilityStoryboard.instantiateViewController(withIdentifier: NUMBER_PAD_VIEW_CONTROLLER) as? NumberPadViewController
+        _numberPad?.numberPadDelegate = self
+        _numberPad?.setType(.evenSplit)
+        
+        _numberPad?.view.frame.origin.y = view.frame.height + (_numberPad?.preferredContentSize.height)!
+        
+        view.insertSubview((_numberPad?.view)!, at: 10)
+        
+        addChildViewController(_numberPad!)
+        view.addSubview((_numberPad?.view)!)
+        _numberPad?.didMove(toParentViewController: self)
+        
+        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            let target = self.view.frame.height - (self._numberPad?.preferredContentSize.height ?? 0)
+            self._numberPad?.view.frame.origin.y = target
+        }, completion: nil)
+    }
+    
+    func hideNumberPad() {
+        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            let target = self.view.frame.height + (self._numberPad?.preferredContentSize.height ?? 0)
+            self._numberPad?.view.frame.origin.y = target
+        }) { finished in
+            self._numberPad?.willMove(toParentViewController: nil)
+            self._numberPad?.view.removeFromSuperview()
+            self._numberPad?.removeFromParentViewController()
+            self._numberPad = nil
+        }
+    }
+    
     func insertKey(_ num: String) {
         // Local helper variables
         let p = "."
-        let double0 = "00"
-        let single0 = "0"
+        let d = "00"
         
-        // Check conditions
-        if let text = inputText.text, text.contains(p), (num == p || (text.count > 2 && text.index(of: Character(p)) == String.Index.init(encodedOffset: (text.count - 3)))) { return }
-        if let text = inputText.text, text.contains(p), (num == double0 && text.index(of: Character(p)) == String.Index.init(encodedOffset: (text.count - 2))) { inputText.text?.append(single0); return }
-        if let text = inputText.text, text.count > 9 && (text.index(of: Character(p)) != String.Index.init(encodedOffset: (text.count - 1)) && text.index(of: Character(p)) != String.Index.init(encodedOffset: (text.count - 2))) { return }
-        if let count = inputText.text?.count, count > 8 && num == double0 { inputText.text?.append(single0); return }
+        guard let text = inputText.text else { return }
+        
+        if text.contains(p) {
+            let split = text.split(separator: Character(p))
+            
+            if split.count > 1 && (split[1].count > 1
+            || (split[1].count > 0 && num == d)) {} // Fall to return
+            else if num == p {} // Fall to return
+            else { inputText.text?.append(num) }
+            
+            return
+        }
+        
+        if text.count > 9, num != p { return }
+        if text.count > 13 { return }
         
         inputText.text?.append(num)
     }
     
     func enter() {
+        _numberPad?.numberPadDelegate = nil
+        
         if let text = inputText.text, let sum = Double(text) {
             Brain.instance.billSum = sum
+            inputText.text = sum.toDollarFormat()
+        } else {
+            inputText.text = Brain.instance.billSum.toDollarFormat()
         }
         
-        animateNumberPadClose()
+        hideNumberPad()
         animateInputFieldDown()
         
         guard let pageViewController = (parent as? PageViewController) else { return }
@@ -120,10 +147,20 @@ extension BillTotalViewController: NumberPadDelegate {
     
     func close() {
         _numberPad?.numberPadDelegate = nil
-        inputText.text = ""
         
-        animateNumberPadClose()
+        // If going back to the box after already pressing enter, this will not affect what's currently stored
+        if Brain.instance.billSum == 0.0 {
+            clear()
+        } else {
+            inputText.text = Brain.instance.billSum.toDollarFormat()
+        }
+        
+        hideNumberPad()
         animateInputFieldDown()
+    }
+    
+    func clear() {
+        inputText.text = ""
     }
     
     func addItem() {
@@ -136,19 +173,6 @@ extension BillTotalViewController: NumberPadDelegate {
     
     func removeLast() {
         // Not implemented
-    }
-    
-    // MARK: Number Pad Delegate Helper Functions
-    fileprivate func animateNumberPadClose() {
-        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-            let target = self.view.frame.height + (self._numberPad?.preferredContentSize.height ?? 0)
-            self._numberPad?.view.frame.origin.y = target
-        }) { finished in
-            self._numberPad?.willMove(toParentViewController: nil)
-            self._numberPad?.view.removeFromSuperview()
-            self._numberPad?.removeFromParentViewController()
-            self._numberPad = nil
-        }
     }
      
 }

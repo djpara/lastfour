@@ -9,9 +9,12 @@
 import Foundation
 
 protocol NumberPadDelegate {
+    func showNumberPad()
+    func hideNumberPad()
     func insertKey(_ num: String)
     func removeLast()
     func close()
+    func clear()
     func addItem()
     func enter()
     func keyboardDown()
