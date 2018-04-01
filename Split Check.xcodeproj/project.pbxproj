@@ -10,7 +10,7 @@
 		F52EDF5F206C6511004EB025 /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52EDF5E206C6511004EB025 /* Brain.swift */; };
 		F54579EF2066B0E200418626 /* Utility.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F54579EE2066B0E200418626 /* Utility.storyboard */; };
 		F54579F12066B7C800418626 /* NumberPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54579F02066B7C800418626 /* NumberPadViewController.swift */; };
-		F54579F32066B86100418626 /* BillTotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54579F22066B86100418626 /* BillTotalViewController.swift */; };
+		F54579F32066B86100418626 /* BillSumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54579F22066B86100418626 /* BillSumViewController.swift */; };
 		F54579F52066B89F00418626 /* GratuityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54579F42066B89F00418626 /* GratuityViewController.swift */; };
 		F54579F72066B8D200418626 /* YourTotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54579F62066B8D200418626 /* YourTotalViewController.swift */; };
 		F54579F92066B90100418626 /* PeopleTotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54579F82066B90100418626 /* PeopleTotalViewController.swift */; };
@@ -60,7 +60,7 @@
 		F52EDF5E206C6511004EB025 /* Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
 		F54579EE2066B0E200418626 /* Utility.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Utility.storyboard; sourceTree = "<group>"; };
 		F54579F02066B7C800418626 /* NumberPadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadViewController.swift; sourceTree = "<group>"; };
-		F54579F22066B86100418626 /* BillTotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTotalViewController.swift; sourceTree = "<group>"; };
+		F54579F22066B86100418626 /* BillSumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillSumViewController.swift; sourceTree = "<group>"; };
 		F54579F42066B89F00418626 /* GratuityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratuityViewController.swift; sourceTree = "<group>"; };
 		F54579F62066B8D200418626 /* YourTotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTotalViewController.swift; sourceTree = "<group>"; };
 		F54579F82066B90100418626 /* PeopleTotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTotalViewController.swift; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 		F5876FB620634F9D00806F48 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F54579F22066B86100418626 /* BillTotalViewController.swift */,
+				F54579F22066B86100418626 /* BillSumViewController.swift */,
 				F54579F42066B89F00418626 /* GratuityViewController.swift */,
 				F54579FA2066B92A00418626 /* ItemizedViewController.swift */,
 				F54579F02066B7C800418626 /* NumberPadViewController.swift */,
@@ -429,7 +429,7 @@
 				F5457A012066BD3500418626 /* UICustomTextField.swift in Sources */,
 				F52EDF5F206C6511004EB025 /* Brain.swift in Sources */,
 				F5CC11CE2064C00B0082109B /* QuestionSplittingViewController.swift in Sources */,
-				F54579F32066B86100418626 /* BillTotalViewController.swift in Sources */,
+				F54579F32066B86100418626 /* BillSumViewController.swift in Sources */,
 				F5457A042066C16B00418626 /* CalculatorType.swift in Sources */,
 				F54579F12066B7C800418626 /* NumberPadViewController.swift in Sources */,
 				F56D5F56206DAA54002F69E9 /* Extensions.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BillTotalViewController: UIViewController {
+class BillSumViewController: UIViewController {
 
     // MARK: FILEPRIVATE PROPERTIES
     fileprivate weak var _numberPad: NumberPadViewController?
@@ -25,6 +25,11 @@ class BillTotalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        inputText.text = Brain.instance.billSum.toDollarFormat()
     }
 
     // MARK: IBACTION FUNCTIONS
@@ -86,7 +91,7 @@ class BillTotalViewController: UIViewController {
 }
 
 // MARK: Number Pad Delegate extension
-extension BillTotalViewController: NumberPadDelegate {
+extension BillSumViewController: NumberPadDelegate {
     
     func showNumberPad() {
         _numberPad = utilityStoryboard.instantiateViewController(withIdentifier: NUMBER_PAD_VIEW_CONTROLLER) as? NumberPadViewController
@@ -121,11 +126,35 @@ extension BillTotalViewController: NumberPadDelegate {
     
     func insertKey(_ num: String) {
         // Local helper variables
+        let e = ""
         let p = "."
+        let s = "0"
         let d = "00"
         
         guard let text = inputText.text else { return }
         
+        // CASE: Current input is zero. User taps zero or point
+        if Double(text) == 0.0 || text == e {
+            if num == p {
+                inputText.text = s+p
+            } else if num == d || num == s {
+                if text == s+p {
+                    inputText.text?.append(num)
+                } else {
+                    inputText.text = (s)
+                }
+            } else {
+                if text == s+p+d {
+                    inputText.text = num
+                } else {
+                    inputText.text?.append(num)
+                }
+            }
+            
+            return
+        }
+        
+        // CASE: User taps point
         if text.contains(p) {
             let split = text.split(separator: Character(p))
             
@@ -137,7 +166,10 @@ extension BillTotalViewController: NumberPadDelegate {
             return
         }
         
+        // CASE: Total digits exceeds 10 and the next tap is not point
         if text.count > 9, num != p { return }
+        
+        // CASE: Total digits exceeds 14
         if text.count > 13 { return }
         
         inputText.text?.append(num)
@@ -163,13 +195,12 @@ extension BillTotalViewController: NumberPadDelegate {
         // If going back to the box after already pressing enter, this will not affect what's currently stored
         if Brain.instance.billSum == 0.0 {
             clear()
-        } else {
-            inputText.text = Brain.instance.billSum.toDollarFormat()
         }
+        
+        inputText.text = Brain.instance.billSum.toDollarFormat()
         
         hideNumberPad()
         animateInputFieldDown()
-        test()
     }
     
     func clear() {

@@ -18,11 +18,12 @@ class Brain {
     // MARK: Instance properties
     fileprivate var _billSum: Double = 0.0
     fileprivate var _tipAmount: Double = 0.0
-    fileprivate var _tipPercentage: Double = 0.0
+    fileprivate var _tipPercentage: Double = 0.0 {
+        didSet {
+            print(_tipPercentage)
+        }
+    }
     fileprivate var _totalPlayers: Int = 1
-    
-    // TODO: Might not even need the subsribeers property
-    fileprivate var _subscribers: [UIViewController] = []
     
     // MARK: Instance getter
     static internal var instance: Brain {
@@ -46,8 +47,9 @@ class Brain {
     internal var tipPercentage: Double {
         get { return _tipPercentage }
         set {
-            _tipAmount = 0.0
             _tipPercentage = newValue
+            _tipAmount = _billSum*_tipPercentage
+            _tipPercentage = 0.0
         }
     }
     
@@ -70,20 +72,18 @@ class Brain {
     }
     
     // MARK: INTERNAL FUNCTIONS
-    // TODO: Might not even need the subsribe function
-    internal func subscribe(_ controller: UIViewController) {
-        _subscribers.append(controller)
-    }
-    
     internal func getTipAmount() -> String {
         return _tipAmount > _tipPercentage ? getTipUsingAmount().toDollarFormat() : getTipUsingPercentage().toDollarFormat()
     }
     
     internal func getTotal() -> String {
-        if _tipAmount > _tipPercentage {
-            return ((_tipAmount+_billSum)/Double(_totalPlayers)).toDollarFormat()
-        } else {
-            return (((_tipPercentage*_billSum)+billSum)/Double(_totalPlayers)).toDollarFormat()
-        }
+        return ((_tipAmount+_billSum)/Double(_totalPlayers)).toDollarFormat()
+    }
+    
+    internal func clear() {
+        _billSum        = 0.0
+        _tipAmount      = 0.0
+        _tipPercentage  = 0.0
+        _totalPlayers   = 1
     }
 }

@@ -12,7 +12,7 @@ class PageViewController: UIPageViewController {
 
     //MARK: FILEPRIVATE PROPERTIES
     fileprivate lazy var _evenSplitSequence: [UIViewController] = {
-        let billTotalViewController = mainStoryboard.instantiateViewController(withIdentifier: BILL_TOTAL_VIEW_CONTROLLER) as! BillTotalViewController
+        let billTotalViewController = mainStoryboard.instantiateViewController(withIdentifier: BILL_TOTAL_VIEW_CONTROLLER) as! BillSumViewController
         let gratuityViewController = mainStoryboard.instantiateViewController(withIdentifier: GRATUITY_VIEW_CONTROLLER) as! GratuityViewController
         let peopleTotalViewController = mainStoryboard.instantiateViewController(withIdentifier: PEOPLE_TOTAL_VIEW_CONTROLLER) as! PeopleTotalViewController
         

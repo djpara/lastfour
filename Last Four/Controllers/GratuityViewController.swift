@@ -49,6 +49,11 @@ class GratuityViewController: UIViewController {
         configureViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        inputTextDollar.text = Brain.instance.tipAmount.toDollarFormat()
+    }
+    
     // MARK: IBACTION FUNCTIONS
     @IBAction func yesPressed(_ sender: Any) {
         if wasGratuityIncluded == nil {
@@ -115,8 +120,6 @@ class GratuityViewController: UIViewController {
         } else {
             inputTextDollar.text = Brain.instance.getTipAmount()
         }
-        // TODO:
-        test()
     }
     
     @IBAction func eighteenPressed(_ sender: Any) {
@@ -126,8 +129,6 @@ class GratuityViewController: UIViewController {
         } else {
             inputTextDollar.text = Brain.instance.getTipAmount()
         }
-        // TODO:
-        test()
     }
     
     @IBAction func twentyPressed(_ sender: Any) {
@@ -137,8 +138,6 @@ class GratuityViewController: UIViewController {
         } else {
             inputTextDollar.text = Brain.instance.getTipAmount()
         }
-        // TODO:
-        test()
     }
     
     @IBAction func customPressed(_ sender: Any) {
@@ -289,7 +288,6 @@ extension GratuityViewController: NumberPadDelegate {
     func enter() {
         _numberPad?.numberPadDelegate = nil
         
-        // TODO: Implement brain logic
         if _willLeaveCustomPercentage {
             if let text = inputTextPercent.text, let percent = Double(text) {
                 Brain.instance.tipPercentage = percent/100
@@ -304,9 +302,6 @@ extension GratuityViewController: NumberPadDelegate {
             }
         }
         
-        // TODO:
-        test()
-        
         hideNumberPad()
         animateInputFieldDown()
     }
@@ -314,7 +309,6 @@ extension GratuityViewController: NumberPadDelegate {
     func close() {
         _numberPad?.numberPadDelegate = nil
         
-        // TODO: Implement brain logic - see BillTotalViewController
         if _willLeaveCustomPercentage {
             animateShowDollarInput()
             _willLeaveCustomPercentage = false
@@ -322,8 +316,6 @@ extension GratuityViewController: NumberPadDelegate {
         
         hideNumberPad()
         animateInputFieldDown()
-        // TODO:
-        test()
     }
     
     func clear() {
@@ -351,11 +343,35 @@ extension GratuityViewController: NumberPadDelegate {
     // MARK: EXTENSION HELPER FUNCTIONS
     fileprivate func insertKey(_ num: String, into label: UILabel) {
         // Local helper variables
+        let e = ""
         let p = "."
+        let s = "0"
         let d = "00"
         
         guard let text = label.text else { return }
         
+        // CASE: Current input is zero. User taps zero or point
+        if Double(text) == 0.0 || text == e {
+            if num == p {
+                label.text = s+p
+            } else if num == d || num == s {
+                if text == s+p {
+                    label.text?.append(num)
+                } else {
+                    label.text = (s)
+                }
+            } else {
+                if text == s+p+d {
+                    label.text = num
+                } else {
+                    label.text?.append(num)
+                }
+            }
+            
+            return
+        }
+        
+        // CASE: User taps point
         if text.contains(p) {
             let split = text.split(separator: Character(p))
             
@@ -367,15 +383,13 @@ extension GratuityViewController: NumberPadDelegate {
             return
         }
         
+        // CASE: Total digits exceeds 10 and the next tap is not point
         if text.count > 9, num != p { return }
+        
+        // CASE: Total digits exceeds 14
         if text.count > 13 { return }
         
         label.text?.append(num)
     }
     
-}
-
-// TODO:
-public func test() {
-    print("Total so far = \(Brain.instance.getTotal())")
 }

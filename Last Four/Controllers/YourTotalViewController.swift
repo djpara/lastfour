@@ -15,8 +15,12 @@ class YourTotalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    @IBAction func backPressed(_ sender: Any) {
+        notificationCenterDefault.post(NOTIFICATION_YOUR_TOTAL_BACK_PRESSED)
+    }
+    
     @IBAction func closePressed(_ sender: Any) {
-        notificationCenterDefault.post(NOTIFICATION_CLOSE_YOUR_TOTAL_CONTROLLER)
+        notificationCenterDefault.post(NOTIFICATION_YOUR_TOTAL_DONE_PRESSED)
     }
 }

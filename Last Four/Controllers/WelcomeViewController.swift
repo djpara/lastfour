@@ -44,7 +44,8 @@ class WelcomeViewController: UIViewController {
     fileprivate func addObservers() {
         notificationCenterDefault.addObserver(self, selector: #selector(hideLayoverContainerView), name: .newCalculatorTypeElected, object: nil)
         notificationCenterDefault.addObserver(self, selector: #selector(processNewTotalRequest), name: .requestCalculation, object: nil)
-        notificationCenterDefault.addObserver(self, selector: #selector(processCloseTotal), name: .closeYourTotalController, object: nil)
+        notificationCenterDefault.addObserver(self, selector: #selector(processCloseTotalAndRestart), name: .yourTotalDonePressed, object: nil)
+        notificationCenterDefault.addObserver(self, selector: #selector(processCloseTotal), name: .yourTotalBackPressed, object: nil)
     }
     
     fileprivate func removeObservers() {
@@ -102,6 +103,18 @@ class WelcomeViewController: UIViewController {
     }
     
     /**
+     Restarts the application at a clean slate
+     */
+    fileprivate func restartApplication() {
+        Brain.instance.clear()
+        _calculatorTypeElectionNeeded = true
+        configureLayoverView()
+        layoverContainerView.fadeIn(duration: 0.5, completion: { finished in
+            self.pageContainerView.fadeIn(duration: 0.0)
+        })
+    }
+    
+    /**
      Loads and displays the total view controller
      */
     @objc
@@ -112,20 +125,29 @@ class WelcomeViewController: UIViewController {
         layoverContainerView.fadeIn(duration: 0.5)
     }
     
+    /**
+     Closes the layover container and restarts the application
+     */
     @objc
-    fileprivate func processCloseTotal() {
+    fileprivate func processCloseTotalAndRestart() {
         pageContainerView.layer.opacity = 0.0
         layoverContainerView.fadeOut(duration: 0.5, completion: { finished in
             self.removeLayoverContainerViewSubviews()
             self._layoverViewController?.removeFromParentViewController()
-            self._calculatorTypeElectionNeeded = true
-            self.configureLayoverView()
-            self.layoverContainerView.fadeIn(duration: 0.5, completion: { finished in
-                self.pageContainerView.fadeIn(duration: 0.0)
-            })
+            self.restartApplication()
         })
     }
     
+    /**
+     Closes the layover container
+     */
+    @objc
+    fileprivate func processCloseTotal() {
+        layoverContainerView.fadeOut(duration: 0.5, completion: { finished in
+            self.removeLayoverContainerViewSubviews()
+            self._layoverViewController?.removeFromParentViewController()
+        })
+    }
     /**
      Removes the layover container view from the forefront of the view hierarchy
      */

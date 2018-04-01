@@ -27,11 +27,17 @@ class PeopleTotalViewController: UIViewController {
         configureViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        inputText.text = String(Brain.instance.totalPlayers)
+    }
+    
     // MARK: IBACTION FUNCTIONS
     @IBAction func inputFieldPressed(_ sender: Any) {
         guard _numberPad == nil else { return }
         showNumberPad()
         animateInputFieldUp()
+        inputText.text = ""
     }
     
     @IBAction func backspaceSwipe(_ sender: Any) {
@@ -104,9 +110,16 @@ extension PeopleTotalViewController: NumberPadDelegate {
     
     func insertKey(_ num: String) {
         // Local helper variables
+        let e = ""
         let p = "."
+        let s = "0"
+        let d = "00"
         
         guard let text = inputText.text else { return }
+        
+        if text == e || Int(text) == 0 {
+            if num == s || num == d { return }
+        }
         
         if num == p { return }
         
@@ -122,21 +135,6 @@ extension PeopleTotalViewController: NumberPadDelegate {
             inputText.text = String(num)
             Brain.instance.totalPlayers = num
         } else {
-            inputText.text = String(0)
-        }
-        
-        hideNumberPad()
-        animateInputFieldDown()
-        // TODO:
-        test()
-    }
-    
-    func close() {
-        _numberPad?.numberPadDelegate = nil
-        
-        if Brain.instance.totalPlayers == 1 {
-            clear()
-        } else {
             inputText.text = String(Brain.instance.totalPlayers)
         }
         
@@ -144,9 +142,21 @@ extension PeopleTotalViewController: NumberPadDelegate {
         animateInputFieldDown()
     }
     
+    func close() {
+        _numberPad?.numberPadDelegate = nil
+        
+        inputText.text = String(Brain.instance.totalPlayers)
+        
+        hideNumberPad()
+        animateInputFieldDown()
+    }
+    
     func clear() {
+        if inputText.text == "" {
+            return
+        }
         Brain.instance.totalPlayers = 1
-        inputText.text  = ""
+        inputText.text = ""
     }
     
     func addItem() {
@@ -158,7 +168,7 @@ extension PeopleTotalViewController: NumberPadDelegate {
     }
     
     func keyboardDown() {
-        // Not Implemented
+        // Not Implemented  
     }
      
 }
