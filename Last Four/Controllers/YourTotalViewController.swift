@@ -10,8 +10,13 @@ import UIKit
 
 class YourTotalViewController: UIViewController {
 
+    @IBOutlet weak var totalLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
+    @IBAction func closePressed(_ sender: Any) {
+        notificationCenterDefault.post(NOTIFICATION_CLOSE_YOUR_TOTAL_CONTROLLER)
+    }
 }

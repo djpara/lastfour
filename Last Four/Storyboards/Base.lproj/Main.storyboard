@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Noteworthy.ttc">
-            <string>Noteworthy-Light</string>
-        </array>
-        <array key="Thonburi.ttc">
-            <string>Thonburi</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="Split_Check" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -30,40 +22,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" indicatorStyle="white" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydH-jz-J1h">
-                                <rect key="frame" x="67" y="238" width="240" height="192"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split Check" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA5-RV-Lbb">
+                                <rect key="frame" x="85" y="294" width="206" height="79"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="192" id="B2c-st-Li9"/>
-                                    <constraint firstAttribute="width" constant="240" id="yGd-Co-P9g"/>
+                                    <constraint firstAttribute="width" constant="206" id="FTy-2a-qph"/>
+                                    <constraint firstAttribute="height" constant="79" id="zdX-90-Ae5"/>
                                 </constraints>
-                                <string key="text">Last Four is a way to help split the check quicky and efficiently among the entire group. Whether you're dining in, ordering out, or having a night on the town, use Last Four the help you calculate splitting the bill!
-
-
-
-
-CHEERS!
-
-
-
-</string>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.opacity">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Four" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA5-RV-Lbb">
-                                <rect key="frame" x="101" y="294" width="174" height="79"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="1" alpha="0.25109696061643838" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="2"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMy-AY-Dpn" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMy-AY-Dpn" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                 <rect key="frame" x="327" y="20" width="32" height="76"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="40"/>
                                 <size key="titleShadowOffset" width="1" height="2"/>
@@ -80,41 +51,16 @@ CHEERS!
                                     <action selector="menuButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wcZ-dj-rB0"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgX-gm-m2N" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                <rect key="frame" x="123.5" y="595" width="128" height="48"/>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.2519798801369863" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="Hg4-Gx-Ukl"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="QPa-Rj-i2U"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
-                                <state key="normal" title="Get Started ">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.opacity">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="getStartedPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hTV-ic-VhT"/>
-                                </connections>
-                            </button>
-                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ejg-83-HCH">
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ejg-83-HCH" userLabel="Page Container View">
                                 <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="61e-Ix-jEd" kind="embed" id="PgO-Mo-X0T"/>
                                 </connections>
+                            </containerView>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v94-7B-Saj" userLabel="Layover Container View">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <color key="backgroundColor" red="0.017987977713346481" green="0.26000535488128662" blue="0.40128949284553528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.019607843137254902" green="0.25882352941176467" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -122,37 +68,34 @@ CHEERS!
                             <constraint firstItem="Ejg-83-HCH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="5co-98-aky"/>
                             <constraint firstItem="Ejg-83-HCH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7Wp-ke-TWA"/>
                             <constraint firstAttribute="trailing" secondItem="Ejg-83-HCH" secondAttribute="trailing" id="7un-yU-2TI"/>
-                            <constraint firstItem="pgX-gm-m2N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A4B-j9-qnJ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pgX-gm-m2N" secondAttribute="bottom" constant="24" id="DWP-0e-qep"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ejg-83-HCH" secondAttribute="bottom" id="Gvn-Y2-yXj"/>
-                            <constraint firstItem="ydH-jz-J1h" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZUm-Gy-sZ9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="v94-7B-Saj" secondAttribute="bottom" id="INw-22-zDn"/>
+                            <constraint firstAttribute="trailing" secondItem="v94-7B-Saj" secondAttribute="trailing" id="Ums-hO-uPZ"/>
                             <constraint firstItem="dA5-RV-Lbb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="b2v-Yh-MiK"/>
+                            <constraint firstItem="v94-7B-Saj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gGI-Dq-gqF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YMy-AY-Dpn" secondAttribute="trailing" id="nNx-eY-m4W"/>
                             <constraint firstItem="YMy-AY-Dpn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qxe-pQ-1UE"/>
-                            <constraint firstItem="ydH-jz-J1h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t1X-AG-Ole"/>
+                            <constraint firstItem="v94-7B-Saj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="rCd-fV-KfF"/>
                             <constraint firstItem="dA5-RV-Lbb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zuX-F9-Dm0"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="buttonXConstraint" destination="A4B-j9-qnJ" id="zlI-XT-VSJ"/>
-                        <outlet property="containerView" destination="Ejg-83-HCH" id="SQp-ED-yzX"/>
-                        <outlet property="getstartedButton" destination="pgX-gm-m2N" id="4TY-Jw-x3Q"/>
+                        <outlet property="layoverContainerView" destination="v94-7B-Saj" id="vS4-8B-Sbx"/>
                         <outlet property="menuButton" destination="YMy-AY-Dpn" id="LfC-8U-Dgn"/>
+                        <outlet property="pageContainerView" destination="Ejg-83-HCH" id="SQp-ED-yzX"/>
                         <outlet property="titleLabel" destination="dA5-RV-Lbb" id="of9-uP-Wbr"/>
                         <outlet property="titleXConstraint" destination="zuX-F9-Dm0" id="a8n-Oa-Lsn"/>
                         <outlet property="titleYConstraint" destination="b2v-Yh-MiK" id="j8P-88-1Jg"/>
-                        <outlet property="welcomeTextView" destination="ydH-jz-J1h" id="sEH-Wn-R9Y"/>
-                        <outlet property="welcomeTextXConstraint" destination="t1X-AG-Ole" id="ftt-ly-mVZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-207" y="44"/>
+            <point key="canvasLocation" x="-207.19999999999999" y="43.628185907046479"/>
         </scene>
         <!--People Total View Controller-->
         <scene sceneID="weY-Wt-AXk">
             <objects>
-                <viewController storyboardIdentifier="peopleTotalViewController" id="TVC-Dc-isE" customClass="PeopleTotalViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="peopleTotalViewController" id="TVC-Dc-isE" customClass="PeopleTotalViewController" customModule="Split_Check" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0UJ-gM-xS5"/>
                         <viewControllerLayoutGuide type="bottom" id="Coi-y9-7Bu"/>
@@ -161,7 +104,7 @@ CHEERS!
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZ9-yl-mFV" customClass="UICustomView" customModule="Last_Four" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZ9-yl-mFV" customClass="UICustomView" customModule="Split_Check" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="343" height="529"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -169,6 +112,44 @@ CHEERS!
                                         <integer key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wj5-Hr-xR4" customClass="UICustomView" customModule="Split_Check" customModuleProvider="target">
+                                <rect key="frame" x="137.5" y="253.5" width="100" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gX0-nI-3x4">
+                                        <rect key="frame" x="8" y="8" width="84" height="44"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="32"/>
+                                        <color key="textColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="gX0-nI-3x4" firstAttribute="top" secondItem="Wj5-Hr-xR4" secondAttribute="top" constant="8" id="4ew-G9-F9g"/>
+                                    <constraint firstItem="gX0-nI-3x4" firstAttribute="leading" secondItem="Wj5-Hr-xR4" secondAttribute="leading" constant="8" id="6Yn-6H-o8U"/>
+                                    <constraint firstAttribute="height" constant="60" id="F94-eF-brY"/>
+                                    <constraint firstItem="gX0-nI-3x4" firstAttribute="centerY" secondItem="Wj5-Hr-xR4" secondAttribute="centerY" id="Y18-dY-yU8"/>
+                                    <constraint firstAttribute="width" constant="100" id="d3T-50-NVv"/>
+                                    <constraint firstAttribute="trailing" secondItem="gX0-nI-3x4" secondAttribute="trailing" constant="8" id="elC-gS-5ER"/>
+                                    <constraint firstAttribute="bottom" secondItem="gX0-nI-3x4" secondAttribute="bottom" constant="8" id="ltt-mu-rHh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.2459332192" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8Gi-oV-N6W" appends="YES" id="Ia0-TE-9ZD"/>
+                                    <outletCollection property="gestureRecognizers" destination="lgF-tg-hYb" appends="YES" id="p6f-vX-yhJ"/>
+                                </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many people are in your group?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fue-Kk-g4k">
                                 <rect key="frame" x="59.5" y="72" width="256" height="88"/>
@@ -180,46 +161,72 @@ CHEERS!
                                 <color key="textColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="43" translatesAutoresizingMaskIntoConstraints="NO" id="CHY-Lg-S15" customClass="UICustomTextField" customModule="Last_Four" customModuleProvider="target">
-                                <rect key="frame" x="110" y="267.5" width="156" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzp-qT-gmz" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                <rect key="frame" x="59.5" y="449" width="256" height="48"/>
+                                <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="156" id="a53-66-tFr"/>
+                                    <constraint firstAttribute="height" constant="48" id="NYL-TM-sXt"/>
                                 </constraints>
-                                <color key="textColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="24"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
+                                <state key="normal" title="Calculate My Total">
+                                    <color key="titleColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </textField>
+                                <connections>
+                                    <action selector="calculateTotalPressed:" destination="TVC-Dc-isE" eventType="touchUpInside" id="mpM-Lj-zO4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fue-Kk-g4k" firstAttribute="centerX" secondItem="0F8-Aa-OAE" secondAttribute="centerX" id="1Mi-Dq-SHH"/>
+                            <constraint firstItem="hzp-qT-gmz" firstAttribute="leading" secondItem="fue-Kk-g4k" secondAttribute="leading" id="4bX-zd-JKL"/>
+                            <constraint firstItem="Coi-y9-7Bu" firstAttribute="top" secondItem="hzp-qT-gmz" secondAttribute="bottom" constant="70" id="7mP-wg-8r4"/>
                             <constraint firstItem="Coi-y9-7Bu" firstAttribute="top" secondItem="RZ9-yl-mFV" secondAttribute="bottom" constant="18" id="HQI-8P-9sK"/>
-                            <constraint firstItem="CHY-Lg-S15" firstAttribute="centerY" secondItem="0F8-Aa-OAE" secondAttribute="centerY" id="L7G-ec-GQO"/>
+                            <constraint firstItem="hzp-qT-gmz" firstAttribute="trailing" secondItem="fue-Kk-g4k" secondAttribute="trailing" id="McX-bf-zsH"/>
                             <constraint firstItem="RZ9-yl-mFV" firstAttribute="leading" secondItem="0F8-Aa-OAE" secondAttribute="leadingMargin" id="SJB-MH-re9"/>
                             <constraint firstItem="fue-Kk-g4k" firstAttribute="top" secondItem="0UJ-gM-xS5" secondAttribute="bottom" constant="52" id="U9h-1D-F6j"/>
                             <constraint firstItem="RZ9-yl-mFV" firstAttribute="trailing" secondItem="0F8-Aa-OAE" secondAttribute="trailingMargin" id="gp1-Ff-v1p"/>
                             <constraint firstItem="RZ9-yl-mFV" firstAttribute="top" secondItem="0UJ-gM-xS5" secondAttribute="bottom" id="hN5-gd-Zsd"/>
-                            <constraint firstItem="CHY-Lg-S15" firstAttribute="centerX" secondItem="0F8-Aa-OAE" secondAttribute="centerX" id="wKf-cs-2NG"/>
+                            <constraint firstItem="Wj5-Hr-xR4" firstAttribute="centerX" secondItem="0F8-Aa-OAE" secondAttribute="centerX" id="kNv-NF-nRe"/>
+                            <constraint firstItem="Wj5-Hr-xR4" firstAttribute="centerY" secondItem="0F8-Aa-OAE" secondAttribute="centerY" id="pVx-NZ-AtR"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="375" height="567"/>
+                    <connections>
+                        <outlet property="inputField" destination="Wj5-Hr-xR4" id="koN-aJ-SIN"/>
+                        <outlet property="inputFieldCenterYConstraint" destination="pVx-NZ-AtR" id="rBd-m5-etP"/>
+                        <outlet property="inputText" destination="gX0-nI-3x4" id="TJy-Lx-SvT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7lb-vm-4bM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8Gi-oV-N6W">
+                    <connections>
+                        <action selector="inputFieldPressed:" destination="TVC-Dc-isE" id="T27-fa-KEe"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="lgF-tg-hYb">
+                    <connections>
+                        <action selector="backspaceSwipe:" destination="TVC-Dc-isE" id="xh3-8r-8BR"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="118" y="1857"/>
+            <point key="canvasLocation" x="-631" y="1931"/>
         </scene>
         <!--Itemized View Controller-->
         <scene sceneID="b73-vh-PXH">
             <objects>
-                <viewController storyboardIdentifier="itemizedViewController" id="OU2-jX-YwX" customClass="ItemizedViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="itemizedViewController" id="OU2-jX-YwX" customClass="ItemizedViewController" customModule="Split_Check" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x5g-LN-7Wu"/>
                         <viewControllerLayoutGuide type="bottom" id="7g3-hM-kM7"/>
@@ -228,7 +235,7 @@ CHEERS!
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8s5-zQ-vKi" customClass="UICustomView" customModule="Last_Four" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8s5-zQ-vKi" customClass="UICustomView" customModule="Split_Check" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="343" height="529"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -262,12 +269,12 @@ CHEERS!
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSv-qq-CXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="1281"/>
+            <point key="canvasLocation" x="-631" y="1355"/>
         </scene>
         <!--Gratuity View Controller-->
         <scene sceneID="Nmk-CK-846">
             <objects>
-                <viewController storyboardIdentifier="gruatuityViewController" id="KY8-iU-65d" customClass="GratuityViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gruatuityViewController" id="KY8-iU-65d" customClass="GratuityViewController" customModule="Split_Check" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VJM-Cs-doE"/>
                         <viewControllerLayoutGuide type="bottom" id="SrR-aU-lGV"/>
@@ -276,7 +283,7 @@ CHEERS!
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0by-p6-wnI" customClass="UICustomView" customModule="Last_Four" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0by-p6-wnI" customClass="UICustomView" customModule="Split_Check" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="343" height="529"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Was gratuity included?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQK-Mk-AFW">
@@ -289,39 +296,71 @@ CHEERS!
                                         <color key="textColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSn-1f-4mR" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                        <rect key="frame" x="121" y="240" width="100" height="48"/>
-                                        <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="kDJ-vJ-nHr"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="l0p-jE-agu"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
-                                        <state key="normal" title="Leave Tip">
-                                            <color key="titleColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="b5R-Hz-IYW">
+                                        <rect key="frame" x="121" y="208.5" width="100" height="112"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSn-1f-4mR" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="48"/>
+                                                <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="kDJ-vJ-nHr"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="l0p-jE-agu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
+                                                <state key="normal" title="Leave Tip">
+                                                    <color key="titleColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="leaveTipPressed:" destination="KY8-iU-65d" eventType="touchUpInside" id="Snb-Pg-NSb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTQ-Ug-cYs" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="64" width="100" height="48"/>
+                                                <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="67O-ug-FfT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
+                                                <state key="normal" title="Next">
+                                                    <color key="titleColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="nextPressed:" destination="KY8-iU-65d" eventType="touchUpInside" id="DqY-pk-lbJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.opacity">
                                                 <integer key="value" value="0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="leaveTipPressed:" destination="KY8-iU-65d" eventType="touchUpInside" id="Snb-Pg-NSb"/>
-                                        </connections>
-                                    </button>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jlf-Kv-aGq">
                                         <rect key="frame" x="43" y="178" width="256" height="172"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xmf-qi-q1g" customClass="UICustomView" customModule="Last_Four" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xmf-qi-q1g" customClass="UICustomView" customModule="Split_Check" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="256" height="60"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCG-bA-rZA">
@@ -399,7 +438,7 @@ CHEERS!
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cx7-TI-VnW">
                                                 <rect key="frame" x="0.0" y="68" width="256" height="48"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfU-Qa-FDr" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfU-Qa-FDr" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="48"/>
                                                         <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -425,7 +464,7 @@ CHEERS!
                                                             <action selector="fifteenPressed:" destination="KY8-iU-65d" eventType="touchUpInside" id="e6O-Ao-Sq3"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdW-ZP-tq4" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdW-ZP-tq4" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                         <rect key="frame" x="88" y="0.0" width="80" height="48"/>
                                                         <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -450,7 +489,7 @@ CHEERS!
                                                             <action selector="eighteenPressed:" destination="KY8-iU-65d" eventType="touchUpInside" id="AiU-3Z-yRJ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsN-iP-AdO" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsN-iP-AdO" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                         <rect key="frame" x="176" y="0.0" width="80" height="48"/>
                                                         <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -481,7 +520,7 @@ CHEERS!
                                                     <constraint firstItem="rdW-ZP-tq4" firstAttribute="width" secondItem="gfU-Qa-FDr" secondAttribute="width" id="EzB-Gi-1Rl"/>
                                                 </constraints>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75h-IE-cwy" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75h-IE-cwy" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="124" width="256" height="48"/>
                                                 <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -521,7 +560,7 @@ CHEERS!
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="K7h-xJ-I3Y">
                                         <rect key="frame" x="121" y="208" width="100" height="112"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRf-hi-Kmr" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRf-hi-Kmr" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="48"/>
                                                 <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -547,7 +586,7 @@ CHEERS!
                                                     <action selector="yesPressed:" destination="KY8-iU-65d" eventType="touchUpInside" id="wPT-pL-dcl"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-cd-IAD" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-cd-IAD" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="64" width="100" height="48"/>
                                                 <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
@@ -578,7 +617,7 @@ CHEERS!
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lyG-zP-2ZZ" userLabel="Next Stack View">
                                         <rect key="frame" x="43" y="429" width="256" height="48"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uB1-72-1he" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uB1-72-1he" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="124" height="48"/>
                                                 <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -603,11 +642,11 @@ CHEERS!
                                                     <action selector="noTipPressed:" destination="KY8-iU-65d" eventType="touchUpInside" id="qNj-oY-EcT"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTQ-Ug-cYs" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLA-e5-tcd" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                 <rect key="frame" x="132" y="0.0" width="124" height="48"/>
                                                 <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="48" id="67O-ug-FfT"/>
+                                                    <constraint firstAttribute="height" constant="48" id="PNJ-84-Z2Y"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                                 <state key="normal" title="Next">
@@ -625,12 +664,13 @@ CHEERS!
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="nextPressed:" destination="KY8-iU-65d" eventType="touchUpInside" id="DqY-pk-lbJ"/>
+                                                    <action selector="nextPressed:" destination="KY8-iU-65d" eventType="touchUpInside" id="UI2-OC-1UH"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="yTQ-Ug-cYs" firstAttribute="width" secondItem="uB1-72-1he" secondAttribute="width" id="OHe-NC-dUf"/>
+                                            <constraint firstItem="hLA-e5-tcd" firstAttribute="height" secondItem="uB1-72-1he" secondAttribute="height" id="W4g-4j-hjT"/>
+                                            <constraint firstItem="hLA-e5-tcd" firstAttribute="width" secondItem="uB1-72-1he" secondAttribute="width" id="lgA-8k-rHj"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.opacity">
@@ -642,15 +682,15 @@ CHEERS!
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="K7h-xJ-I3Y" firstAttribute="centerY" secondItem="0by-p6-wnI" secondAttribute="centerY" id="2Gr-YF-CuJ"/>
-                                    <constraint firstItem="jSn-1f-4mR" firstAttribute="centerY" secondItem="0by-p6-wnI" secondAttribute="centerY" id="4ki-ar-QqO"/>
                                     <constraint firstAttribute="bottom" secondItem="lyG-zP-2ZZ" secondAttribute="bottom" constant="52" id="E6u-Ja-jg0"/>
                                     <constraint firstItem="lyG-zP-2ZZ" firstAttribute="trailing" secondItem="Jlf-Kv-aGq" secondAttribute="trailing" id="PeP-0X-sPd"/>
                                     <constraint firstItem="lyG-zP-2ZZ" firstAttribute="centerX" secondItem="0by-p6-wnI" secondAttribute="centerX" id="QP3-ew-eHI"/>
                                     <constraint firstItem="Jlf-Kv-aGq" firstAttribute="centerY" secondItem="0by-p6-wnI" secondAttribute="centerY" id="QeC-WM-gz1"/>
                                     <constraint firstItem="PQK-Mk-AFW" firstAttribute="centerX" secondItem="0by-p6-wnI" secondAttribute="centerX" id="WEu-bI-nxT"/>
                                     <constraint firstItem="K7h-xJ-I3Y" firstAttribute="centerX" secondItem="0by-p6-wnI" secondAttribute="centerX" id="dp3-hX-Zo0"/>
+                                    <constraint firstItem="b5R-Hz-IYW" firstAttribute="centerX" secondItem="0by-p6-wnI" secondAttribute="centerX" id="eGd-23-L9R"/>
                                     <constraint firstItem="lyG-zP-2ZZ" firstAttribute="leading" secondItem="Jlf-Kv-aGq" secondAttribute="leading" id="rcc-Hc-Uop"/>
-                                    <constraint firstItem="jSn-1f-4mR" firstAttribute="centerX" secondItem="0by-p6-wnI" secondAttribute="centerX" id="t4J-g4-ONJ"/>
+                                    <constraint firstItem="b5R-Hz-IYW" firstAttribute="centerY" secondItem="0by-p6-wnI" secondAttribute="centerY" id="sM0-1x-wuy"/>
                                     <constraint firstItem="Jlf-Kv-aGq" firstAttribute="centerX" secondItem="0by-p6-wnI" secondAttribute="centerX" id="y2G-pB-arO"/>
                                     <constraint firstItem="PQK-Mk-AFW" firstAttribute="top" secondItem="0by-p6-wnI" secondAttribute="top" constant="52" id="yyX-Ih-VIA"/>
                                 </constraints>
@@ -675,7 +715,7 @@ CHEERS!
                         <outlet property="inputField" destination="Xmf-qi-q1g" id="KMI-bG-tsP"/>
                         <outlet property="inputTextDollar" destination="lr0-Hp-PbV" id="vUW-B9-pOY"/>
                         <outlet property="inputTextPercent" destination="61G-dr-hCO" id="Jkx-WD-0Ix"/>
-                        <outlet property="leaveTipButton" destination="jSn-1f-4mR" id="M8I-Kc-gRW"/>
+                        <outlet property="leaveTipButton" destination="b5R-Hz-IYW" id="wrA-FH-t6E"/>
                         <outlet property="nextStack" destination="lyG-zP-2ZZ" id="p6W-N9-udO"/>
                         <outlet property="percentSign" destination="bQG-nO-xXd" id="Xyf-Qy-3Ub"/>
                         <outlet property="questionLabel" destination="PQK-Mk-AFW" id="9Eg-os-CwI"/>
@@ -696,12 +736,12 @@ CHEERS!
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-538" y="1857"/>
+            <point key="canvasLocation" x="-1287" y="1931"/>
         </scene>
         <!--Your Total View Controller-->
         <scene sceneID="Rib-yE-xbz">
             <objects>
-                <viewController storyboardIdentifier="yourTotalViewController" id="VqL-Qa-DpS" customClass="YourTotalViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="yourTotalViewController" modalTransitionStyle="crossDissolve" id="VqL-Qa-DpS" customClass="YourTotalViewController" customModule="Split_Check" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ofH-pI-4a8"/>
                         <viewControllerLayoutGuide type="bottom" id="Xg6-xF-duu"/>
@@ -710,7 +750,7 @@ CHEERS!
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDP-n8-X1l" customClass="UICustomView" customModule="Last_Four" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDP-n8-X1l" customClass="UICustomView" customModule="Split_Check" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="343" height="529"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -720,10 +760,10 @@ CHEERS!
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yMA-Gm-fnF">
-                                <rect key="frame" x="8" y="217.5" width="359" height="132"/>
+                                <rect key="frame" x="108.5" y="194" width="158.5" height="75.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your portion is" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fm9-Xm-Mmq">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="158.5" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="kFc-B4-mfO"/>
                                         </constraints>
@@ -732,39 +772,65 @@ CHEERS!
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$999,999.00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3L8-pM-8yG">
-                                        <rect key="frame" x="0.0" y="44" width="359" height="88"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="88" id="jHB-E0-XWk"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="24"/>
+                                        <rect key="frame" x="0.0" y="44" width="158.5" height="31.5"/>
+                                        <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="24"/>
                                         <color key="textColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57Z-0z-D5w" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                <rect key="frame" x="59" y="449" width="256" height="48"/>
+                                <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="UsE-iA-toM"/>
+                                    <constraint firstAttribute="height" constant="48" id="hZL-hl-mJ8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closePressed:" destination="VqL-Qa-DpS" eventType="touchUpInside" id="BdC-tX-ABg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yDP-n8-X1l" firstAttribute="top" secondItem="ofH-pI-4a8" secondAttribute="bottom" id="0HE-GW-UY0"/>
+                            <constraint firstItem="Xg6-xF-duu" firstAttribute="top" secondItem="57Z-0z-D5w" secondAttribute="bottom" constant="70" id="BWx-dW-Gg1"/>
+                            <constraint firstItem="57Z-0z-D5w" firstAttribute="centerX" secondItem="sTu-mk-reh" secondAttribute="centerX" id="Fd6-qB-6Ro"/>
+                            <constraint firstItem="yMA-Gm-fnF" firstAttribute="centerY" secondItem="sTu-mk-reh" secondAttribute="centerY" constant="-52" id="LRQ-mS-VOv"/>
+                            <constraint firstItem="yMA-Gm-fnF" firstAttribute="centerX" secondItem="sTu-mk-reh" secondAttribute="centerX" id="MsJ-Wf-wrz"/>
                             <constraint firstAttribute="trailing" secondItem="yDP-n8-X1l" secondAttribute="trailing" constant="16" id="Twg-cG-IaT"/>
                             <constraint firstItem="Xg6-xF-duu" firstAttribute="top" secondItem="yDP-n8-X1l" secondAttribute="bottom" constant="18" id="btN-wK-Qov"/>
-                            <constraint firstAttribute="trailing" secondItem="yMA-Gm-fnF" secondAttribute="trailing" constant="8" id="bvJ-aH-ePC"/>
-                            <constraint firstItem="yMA-Gm-fnF" firstAttribute="centerX" secondItem="sTu-mk-reh" secondAttribute="centerX" id="gnI-UE-WNn"/>
-                            <constraint firstItem="yMA-Gm-fnF" firstAttribute="centerY" secondItem="sTu-mk-reh" secondAttribute="centerY" id="iQC-rF-Y6s"/>
                             <constraint firstItem="yDP-n8-X1l" firstAttribute="leading" secondItem="sTu-mk-reh" secondAttribute="leading" constant="16" id="kFa-1k-ax5"/>
-                            <constraint firstItem="yMA-Gm-fnF" firstAttribute="leading" secondItem="sTu-mk-reh" secondAttribute="leading" constant="8" id="zHY-IX-2jb"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="375" height="567"/>
+                    <connections>
+                        <outlet property="totalLabel" destination="3L8-pM-8yG" id="rAK-pX-BE5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bG2-Dc-Jxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="777" y="1858"/>
+            <point key="canvasLocation" x="236" y="1353"/>
         </scene>
         <!--Bill Total View Controller-->
         <scene sceneID="QxQ-g5-Hub">
             <objects>
-                <viewController storyboardIdentifier="billTotalViewController" id="Mjs-3y-RO9" customClass="BillTotalViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="billTotalViewController" id="Mjs-3y-RO9" customClass="BillTotalViewController" customModule="Split_Check" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Krv-yP-o6x"/>
                         <viewControllerLayoutGuide type="bottom" id="heS-Bj-iXM"/>
@@ -773,10 +839,10 @@ CHEERS!
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0h-go-YyQ" customClass="UICustomView" customModule="Last_Four" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0h-go-YyQ" customClass="UICustomView" customModule="Split_Check" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="343" height="529"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gX7-oK-Wch" customClass="UICustomView" customModule="Last_Four" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gX7-oK-Wch" customClass="UICustomView" customModule="Split_Check" customModuleProvider="target">
                                         <rect key="frame" x="51" y="234" width="240" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Orh-2S-MyH">
@@ -822,7 +888,7 @@ CHEERS!
                                             <outletCollection property="gestureRecognizers" destination="E15-q2-ZjF" appends="YES" id="2sZ-09-Ae9"/>
                                         </connections>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mv1-wa-Hyz" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mv1-wa-Hyz" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                         <rect key="frame" x="51" y="429" width="240" height="48"/>
                                         <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -903,22 +969,22 @@ CHEERS!
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-538" y="1280"/>
+            <point key="canvasLocation" x="-1287" y="1354"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="qe8-da-9Kr">
             <objects>
-                <pageViewController storyboardIdentifier="pageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="61e-Ix-jEd" customClass="PageViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="pageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="61e-Ix-jEd" customClass="PageViewController" customModule="Split_Check" customModuleProvider="target" sceneMemberID="viewController">
                     <size key="freeformSize" width="375" height="567"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cho-7E-7gh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-207" y="699"/>
+            <point key="canvasLocation" x="-631" y="772"/>
         </scene>
         <!--Question Splitting View Controller-->
         <scene sceneID="ipR-Fg-Uuc">
             <objects>
-                <viewController storyboardIdentifier="questionSplittingViewController" id="msM-9m-Fsy" customClass="QuestionSplittingViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="questionSplittingViewController" id="msM-9m-Fsy" customClass="QuestionSplittingViewController" customModule="Split_Check" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7AP-HD-Cxn"/>
                         <viewControllerLayoutGuide type="bottom" id="qh1-wI-fP8"/>
@@ -927,7 +993,7 @@ CHEERS!
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Qv-PZ-Pvu" customClass="UICustomView" customModule="Last_Four" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Qv-PZ-Pvu" customClass="UICustomView" customModule="Split_Check" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="343" height="529"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -949,7 +1015,7 @@ CHEERS!
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Pkx-cL-96d">
                                 <rect key="frame" x="137.5" y="227.5" width="100" height="112"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nM-5C-BDE" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nM-5C-BDE" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="48"/>
                                         <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.2501872859589041" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -975,7 +1041,7 @@ CHEERS!
                                             <action selector="buttonPressed:" destination="msM-9m-Fsy" eventType="touchUpInside" id="rhO-DK-X8G"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s85-Gg-R7I" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s85-Gg-R7I" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="64" width="100" height="48"/>
                                         <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.2501872859589041" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
@@ -1017,10 +1083,13 @@ CHEERS!
                         </constraints>
                     </view>
                     <size key="freeformSize" width="375" height="567"/>
+                    <connections>
+                        <outlet property="noButton" destination="s85-Gg-R7I" id="sRH-Zz-Fse"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5St-DF-2al" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="452" y="699"/>
+            <point key="canvasLocation" x="236" y="771"/>
         </scene>
     </scenes>
 </document>

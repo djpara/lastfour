@@ -10,15 +10,18 @@ import UIKit
 
 class BillTotalViewController: UIViewController {
 
+    // MARK: FILEPRIVATE PROPERTIES
     fileprivate weak var _numberPad: NumberPadViewController?
     
     fileprivate var _ogBorderColor: UIColor?
     
+    // MARK: IBOUTLET PROPERTIES
     @IBOutlet weak var inputField: UICustomView!
     @IBOutlet weak var inputFieldCenterYConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var inputText: UILabel!
     
+    // MARK: OVERRIDE FUNCTIONS
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
@@ -32,6 +35,7 @@ class BillTotalViewController: UIViewController {
     }
     
     @IBAction func backspaceSwipe(_ sender: Any) {
+        guard inputText.text != "" else { return }
         inputText.text?.removeLast()
     }
     
@@ -81,6 +85,7 @@ class BillTotalViewController: UIViewController {
     
 }
 
+// MARK: Number Pad Delegate extension
 extension BillTotalViewController: NumberPadDelegate {
     
     func showNumberPad() {
@@ -164,6 +169,7 @@ extension BillTotalViewController: NumberPadDelegate {
         
         hideNumberPad()
         animateInputFieldDown()
+        test()
     }
     
     func clear() {

@@ -29,9 +29,6 @@ class PageViewController: UIPageViewController {
     fileprivate var _orderedSequence: [UIViewController]?
     fileprivate var _layoverController: UIViewController?
     
-    fileprivate var _calculatorTypeSelected = false
-    fileprivate var _readyForTotal = false
-    
     // MARK: INTERNAL PROPERTIES
     // MARK: Internal getter and setter properties
     internal var orderedSequence: [UIViewController] {
@@ -43,34 +40,26 @@ class PageViewController: UIPageViewController {
     // MARK: OVERRIDE FUNCTIONS
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpPageViewController()
+        setControllers()
         addObservers()
     }
     
-    override func loadView() {
-        super.loadView()
-        presentQuestionSplittingViewController()
-        
-        configureViews()
-        
-        if _calculatorTypeSelected {
-            perform(#selector(fadeOutLayoverControllerView))
-        }
-    }
-    
     // MARK: FILEPRIVATE FUNCTIONS
-    fileprivate func configureViews() {
-        if !_calculatorTypeSelected {
-            // Make view transparent
-            view.layer.opacity = 0.0
-        }
+    fileprivate func resetExtension() {
+        // Clear the extensions
+        delegate = nil
+        dataSource = nil
+        
+        // Set the extensions
+        delegate = self
+        dataSource = self
     }
     
-    fileprivate func setUpPageViewController() {
-        // Load and set the ordered controllers
-        setControllers()
+    fileprivate func addObservers() {
+        notificationCenterDefault.addObserver(self, selector: #selector(setControllers), name: .newCalculatorTypeElected, object: nil)
     }
     
+    @objc
     fileprivate func setControllers() {
         
         switch Preferences.instance.calculatorType {
@@ -85,73 +74,12 @@ class PageViewController: UIPageViewController {
                 setViewControllers([first], direction: .forward, animated: true, completion: nil)
             }
         }
-    
+        
         resetExtension()
         loadView()
     }
     
-    fileprivate func resetExtension() {
-        // Clear the extensions
-        delegate = nil
-        dataSource = nil
-        
-        // Set the extensions
-        delegate = self
-        dataSource = self
-    }
-    
-    fileprivate func addObservers() {
-        notificationCenterDefault.addObserver(self, selector: #selector(showView), name: .containerFinishedLoading, object: nil)
-        notificationCenterDefault.addObserver(self, selector: #selector(reloadControllers), name: .newCalculatorTypeElected, object: nil)
-    }
-    
-    fileprivate func removeObservers() {
-        notificationCenterDefault.removeObserver(self)
-    }
-    
-    fileprivate func presentQuestionSplittingViewController() {
-        _layoverController = mainStoryboard.instantiateViewController(withIdentifier: QUESTION_SPLITTING_VIEW_CONTROLLER)
-        if let layoverController = _layoverController {
-            layoverController.view.frame = view.bounds
-            
-            if !_calculatorTypeSelected {
-                layoverController.view.layer.opacity = 0.0
-                view.addSubview(layoverController.view)
-                UIView.animate(withDuration: 1.0) {
-                    layoverController.view.layer.opacity = 1.0
-                }
-            } else {
-                view.addSubview(layoverController.view)
-            }
-            
-        }
-    }
-    
-    @objc
-    fileprivate func showView() {
-        UIView.animate(withDuration: 0.75, animations: {
-            self.view.layer.opacity = 1.0
-        })
-    }
-    
-    @objc
-    fileprivate func fadeOutLayoverControllerView() {
-        UIView.animate(withDuration: 0.5, animations: {
-            self._layoverController?.view.layer.opacity = 0.0
-        }, completion: { finished in
-            self._layoverController?.view.removeFromSuperview()
-            self._layoverController = nil
-        })
-    }
-    
-    @objc
-    fileprivate func reloadControllers() {
-        _calculatorTypeSelected = true
-        self.setControllers()
-    }
-    
     // MARK: INTERNAL FUNCTIONS
-
 }
 
 // MARK: EXTENSIONS

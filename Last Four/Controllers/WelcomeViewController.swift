@@ -10,35 +10,30 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-    @IBOutlet weak var titleLabel               : UILabel!
-    @IBOutlet weak var welcomeTextView          : UITextView!
-    @IBOutlet weak var getstartedButton         : UICustomButton!
-    @IBOutlet weak var menuButton               : UICustomButton!
+    @IBOutlet weak var titleLabel                           : UILabel!
+    @IBOutlet weak var menuButton                           : UICustomButton!
     
-    @IBOutlet weak var titleYConstraint         : NSLayoutConstraint!
-    @IBOutlet weak var titleXConstraint         : NSLayoutConstraint!
-    @IBOutlet weak var buttonXConstraint        : NSLayoutConstraint!
-    @IBOutlet weak var welcomeTextXConstraint   : NSLayoutConstraint!
+    @IBOutlet weak var titleYConstraint                     : NSLayoutConstraint!
+    @IBOutlet weak var titleXConstraint                     : NSLayoutConstraint!
     
-    @IBOutlet weak var containerView            : UIView!
+    @IBOutlet weak var pageContainerView                    : UIView!
+    @IBOutlet weak var layoverContainerView                 : UIView!
+    
+    fileprivate weak var _questionSplittingViewController    : QuestionSplittingViewController?
+    fileprivate weak var _yourTotalViewController            : YourTotalViewController?
+    
+    fileprivate weak var _layoverViewController             : UIViewController?
     
     fileprivate var _screenWidth    = UIScreen.main.bounds.width
     fileprivate var _screenHeight   = UIScreen.main.bounds.height
     
-    fileprivate var _orderedControllers: [UIViewController] = []
+    fileprivate var _calculatorTypeElectionNeeded = false
     
     // MARK: OVERRIDE FUNCTIONS
     override func viewDidLoad() {
         super.viewDidLoad()
-        animateViews()
-    }
-    
-    // MARK: IBACTION FUNCTIONS
-    @IBAction func getStartedPressed(_ sender: Any) {
-        repositionTitleLeft()
-        showMenuButton()
-        fadeLeftOutWelcomeScreen()
-        fadeInContainerView()
+        repositionTitle()
+        addObservers()
     }
     
     @IBAction func menuButtonPressed(_ sender: Any) {
@@ -46,113 +41,108 @@ class WelcomeViewController: UIViewController {
     }
     
     // MARK: FILEPRIVATE FUNCTIONS
+    fileprivate func addObservers() {
+        notificationCenterDefault.addObserver(self, selector: #selector(hideLayoverContainerView), name: .newCalculatorTypeElected, object: nil)
+        notificationCenterDefault.addObserver(self, selector: #selector(processNewTotalRequest), name: .requestCalculation, object: nil)
+        notificationCenterDefault.addObserver(self, selector: #selector(processCloseTotal), name: .closeYourTotalController, object: nil)
+    }
+    
+    fileprivate func removeObservers() {
+        notificationCenterDefault.removeObserver(self)
+    }
+    
+    fileprivate func configureLayoverView() {
+        if _calculatorTypeElectionNeeded {
+            presentViewControllerInLayoverContainer(withIdentifier: QUESTION_SPLITTING_VIEW_CONTROLLER)
+            _calculatorTypeElectionNeeded = false
+        }
+    }
+    
     // MARK: Animation functions
-    fileprivate func animateViews() {
-        repositionTitleUp()
-    }
-    
-    /**
-     Brings container to the forefront. The container view holds the entire app views
-     */
-    fileprivate func fadeInContainerView() {
-        UIView.animate(withDuration: 1, animations: {
-            self.containerView.layer.opacity = 1.0
-            self.view.layoutIfNeeded()
-        }) { finished in
-            notificationCenterDefault.post(NOTIFICATION_CONTAINER_FINISHED_LOADING)
-        }
-    }
-    
-    /**
-     Repositions while animated contents of the welcome screen left and out of view
-     */
-    fileprivate func fadeLeftOutWelcomeScreen() {
-        fadeLeftOutWelcomeText()
-        fadeLeftOutGetStartedButton()
-    }
-    
-    /**
-     Repositions while animating welcome text left and out of view
-     */
-    fileprivate func fadeLeftOutWelcomeText() {
-        UIView.animate(withDuration: 0.75, animations: {
-            self.welcomeTextXConstraint.constant -= self._screenWidth
-            self.view.layoutIfNeeded()
-        }) { finished in
-            self.welcomeTextView.removeFromSuperview()
-            self.welcomeTextView = nil
-        }
-    }
-    
-    /**
-     Repositions while animating get started button left and out of view
-     */
-    fileprivate func fadeLeftOutGetStartedButton() {
-        UIView.animate(withDuration: 0.75, animations: {
-            self.buttonXConstraint.constant
-                -= self._screenWidth
-            self.view.layoutIfNeeded()
-        }) { finished in
-            self.getstartedButton.removeFromSuperview()
-            self.getstartedButton = nil
-        }
-    }
-    
     /**
      Repositions while animating the title to the top of the page
      */
-    fileprivate func repositionTitleUp() {
-        let newConstant = ((_screenHeight / 2) - 56)
+    fileprivate func repositionTitle() {
+        
+        let newYConstant = ((_screenHeight / 2) - 56)
+        let newXConstant = (_screenWidth/2) - (titleLabel.intrinsicContentSize.width/2) - 16
+        
         UIView.animate(withDuration: 0.75, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.titleYConstraint.constant -= newConstant
-            self.view.layoutIfNeeded()
-            self.perform(#selector(self.showWelcomeText), with: nil, afterDelay: 1.35)
-        }, completion: nil)
-    }
-    
-    /**
-     Repositions while animating the title to the left of the page
-     */
-    fileprivate func repositionTitleLeft() {
-        let newConstant = (_screenWidth/2) - (titleLabel.intrinsicContentSize.width/2) - 16
-        UIView.animate(withDuration: 0.5, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.titleXConstraint.constant -= newConstant
+            self.titleYConstraint.constant -= newYConstant
+            self.titleXConstraint.constant -= newXConstant
             self.view.layoutIfNeeded()
         }, completion: { finished in
+            self._calculatorTypeElectionNeeded = true
+            self.menuButton.fadeIn(duration: 0.5)
+            self.configureLayoverView()
+            self.layoverContainerView.fadeIn(duration: 1.0, completion: { finished in
+                self.pageContainerView.layer.opacity = 1.0
+            })
         })
     }
     
     /**
-     Slowly brings the welcome text to view in the middle of the view
+     Loads and add a view controller to the the view controller to the stack within the WelcomeViewController's container
+     */
+    fileprivate func presentViewControllerInLayoverContainer(withIdentifier identifier: String) {
+        _layoverViewController = mainStoryboard.instantiateViewController(withIdentifier: identifier)
+        
+        guard let layoverViewController = _layoverViewController, let lcView = layoverViewController.view else { return }
+        
+        addChildViewController(layoverViewController)
+        
+        lcView.frame = layoverContainerView.bounds
+        layoverContainerView.addSubview(lcView)
+    }
+    
+    fileprivate func removeLayoverContainerViewSubviews() {
+        self.layoverContainerView.subviews.forEach { subview in
+            subview.removeFromSuperview()
+        }
+    }
+    
+    /**
+     Loads and displays the total view controller
      */
     @objc
-    fileprivate func showWelcomeText() {
-        welcomeTextView.isHidden = false
-        UIView.animate(withDuration: 0.75, delay: 0.0, options: .curveEaseInOut, animations: {
-            self.welcomeTextView.layer.opacity = 1.0
-        }, completion: { finished in
-            self.showGetStartedButton()
+    fileprivate func processNewTotalRequest() {
+        presentViewControllerInLayoverContainer(withIdentifier: YOUR_TOTAL_VIEW_CONTROLLER)
+        (_layoverViewController as? YourTotalViewController)?.totalLabel.text = "$"+Brain.instance.getTotal()
+        
+        layoverContainerView.fadeIn(duration: 0.5)
+    }
+    
+    @objc
+    fileprivate func processCloseTotal() {
+        pageContainerView.layer.opacity = 0.0
+        layoverContainerView.fadeOut(duration: 0.5, completion: { finished in
+            self.removeLayoverContainerViewSubviews()
+            self._layoverViewController?.removeFromParentViewController()
+            self._calculatorTypeElectionNeeded = true
+            self.configureLayoverView()
+            self.layoverContainerView.fadeIn(duration: 0.5, completion: { finished in
+                self.pageContainerView.fadeIn(duration: 0.0)
+            })
         })
     }
     
     /**
-     Slowly brings the get started button to view at the bottom of the view
+     Removes the layover container view from the forefront of the view hierarchy
      */
-    fileprivate func showGetStartedButton() {
-        getstartedButton.show()
-        UIView.animate(withDuration: 0.75, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.getstartedButton.layer.opacity = 1.0
-        }, completion: nil)
+    @objc
+    fileprivate func hideLayoverContainerView() {
+        layoverContainerView.fadeOut(duration: 0.5, completion: { finished in
+            self.removeLayoverContainerViewSubviews()
+            self._layoverViewController?.removeFromParentViewController()
+        })
     }
     
     /**
-     Slowly brings the menu button to view at the top right-hand corner of the view
+     Removes the layover container view from the forefront of the view hierarchy
      */
-    fileprivate func showMenuButton() {
-        menuButton.show()
-        UIView.animate(withDuration: 0.5, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.menuButton.layer.opacity = 1.0
-        }, completion: nil)
+    @objc
+    fileprivate func hidePageContainerView() {
+        pageContainerView.fadeOut(duration: 0.5)
     }
     
 }

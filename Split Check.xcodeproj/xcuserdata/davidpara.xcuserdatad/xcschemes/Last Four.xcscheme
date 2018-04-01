@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F5B72EAF2061FF2000EA58DA"
-               BuildableName = "Last Four.app"
-               BlueprintName = "Last Four"
-               ReferencedContainer = "container:Last Four.xcodeproj">
+               BuildableName = "Split Check.app"
+               BlueprintName = "Split Check"
+               ReferencedContainer = "container:Split Check.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F5B72EC62061FF2000EA58DA"
-               BuildableName = "Last FourTests.xctest"
-               BlueprintName = "Last FourTests"
-               ReferencedContainer = "container:Last Four.xcodeproj">
+               BuildableName = "Split CheckTests.xctest"
+               BlueprintName = "Split CheckTests"
+               ReferencedContainer = "container:Split Check.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F5B72ED12061FF2000EA58DA"
-               BuildableName = "Last FourUITests.xctest"
-               BlueprintName = "Last FourUITests"
-               ReferencedContainer = "container:Last Four.xcodeproj">
+               BuildableName = "Split CheckUITests.xctest"
+               BlueprintName = "Split CheckUITests"
+               ReferencedContainer = "container:Split Check.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F5B72EAF2061FF2000EA58DA"
-            BuildableName = "Last Four.app"
-            BlueprintName = "Last Four"
-            ReferencedContainer = "container:Last Four.xcodeproj">
+            BuildableName = "Split Check.app"
+            BlueprintName = "Split Check"
+            ReferencedContainer = "container:Split Check.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F5B72EAF2061FF2000EA58DA"
-            BuildableName = "Last Four.app"
-            BlueprintName = "Last Four"
-            ReferencedContainer = "container:Last Four.xcodeproj">
+            BuildableName = "Split Check.app"
+            BlueprintName = "Split Check"
+            ReferencedContainer = "container:Split Check.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F5B72EAF2061FF2000EA58DA"
-            BuildableName = "Last Four.app"
-            BlueprintName = "Last Four"
-            ReferencedContainer = "container:Last Four.xcodeproj">
+            BuildableName = "Split Check.app"
+            BlueprintName = "Split Check"
+            ReferencedContainer = "container:Split Check.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

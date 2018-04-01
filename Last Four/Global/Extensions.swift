@@ -7,8 +7,8 @@
 //
 
 import Foundation
+import UIKit
 
-// MARK: Double Extension
 // MARK: Double Extension
 extension Double {
     func toDollarFormat() -> String {
@@ -24,5 +24,20 @@ extension Double {
         
         return "\(self)0"
         
+    }
+}
+
+// MARK: UIView Extension
+extension UIView {
+    func fadeOut(duration: Double, completion: ((Bool) -> Void)? = nil) {
+        UIView.animate(withDuration: duration, animations: {
+            self.layer.opacity = 0.0
+        }, completion: completion)
+    }
+    
+    func fadeIn(duration: Double, completion: ((Bool) -> Void)? = nil) {
+        UIView.animate(withDuration: duration, animations: {
+            self.layer.opacity = 1.0
+        }, completion: completion)
     }
 }

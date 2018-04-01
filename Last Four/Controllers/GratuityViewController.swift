@@ -32,7 +32,7 @@ class GratuityViewController: UIViewController {
     @IBOutlet weak var yesNoButtonsStack: UIStackView!
     @IBOutlet weak var tipButtonsStack: UIStackView!
     @IBOutlet weak var nextStack: UIStackView!
-    @IBOutlet weak var leaveTipButton: UICustomButton!
+    @IBOutlet weak var leaveTipButton: UIStackView!
     
     @IBOutlet weak var inputField: UICustomView!
     @IBOutlet weak var tipButtonsStackYConstraint: NSLayoutConstraint!
@@ -54,6 +54,13 @@ class GratuityViewController: UIViewController {
         if wasGratuityIncluded == nil {
             wasGratuityIncluded = true
             animateMessage(LEAVE_ADDTL_TIP)
+            UIView.animate(withDuration: 0.25, animations: {
+                self.yesNoButtonsStack.layer.opacity = 0.0
+            }, completion: { finished in
+                UIView.animate(withDuration: 0.25, animations: {
+                    self.yesNoButtonsStack.layer.opacity = 1.0
+                })
+            })
         } else {
             willLeaveTip = true
             animateMessage(TIP_AMOUNT)
@@ -65,6 +72,13 @@ class GratuityViewController: UIViewController {
         if wasGratuityIncluded == nil {
             wasGratuityIncluded = false
             animateMessage(LEAVE_TIP)
+            UIView.animate(withDuration: 0.25, animations: {
+                self.yesNoButtonsStack.layer.opacity = 0.0
+            }, completion: { finished in
+                UIView.animate(withDuration: 0.25, animations: {
+                    self.yesNoButtonsStack.layer.opacity = 1.0
+                })
+            })
         } else {
             willLeaveTip = false
             animateMessage(NO_TIP)
@@ -80,8 +94,10 @@ class GratuityViewController: UIViewController {
     
     @IBAction func backspaceSwipe(_ sender: Any) {
         if _willLeaveCustomPercentage {
+            guard inputTextPercent.text != "" else { return }
             inputTextPercent.text?.removeLast()
         } else {
+            guard inputTextDollar.text != "" else { return }
             inputTextDollar.text?.removeLast()
         }
     }
@@ -236,16 +252,10 @@ class GratuityViewController: UIViewController {
         })
     }
     
-    // TODO:
-    fileprivate func test() {
-        let bill = Brain.instance.billSum
-        let tip = Double(Brain.instance.getTipAmount()) ?? 0
-        print("Total so far = \((bill+tip).toDollarFormat())")
-    }
-    
     // MARK: INTERNAL FUNCTIONS
 }
 
+// Number Pad Delegate extension
 extension GratuityViewController: NumberPadDelegate {
     
     func showNumberPad() {
@@ -324,12 +334,16 @@ extension GratuityViewController: NumberPadDelegate {
         
         hideNumberPad()
         animateInputFieldDown()
+        // TODO:
+        test()
     }
     
     func clear() {
         if _willLeaveCustomPercentage {
+            Brain.instance.tipPercentage = 0.0
             inputTextPercent.text = ""
         } else {
+            Brain.instance.tipAmount = 0.0
             inputTextDollar.text = ""
         }
     }
@@ -371,4 +385,9 @@ extension GratuityViewController: NumberPadDelegate {
         label.text?.append(num)
     }
     
+}
+
+// TODO:
+public func test() {
+    print("Total so far = \(Brain.instance.getTotal())")
 }

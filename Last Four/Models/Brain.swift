@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Brain {
     
@@ -19,6 +20,9 @@ class Brain {
     fileprivate var _tipAmount: Double = 0.0
     fileprivate var _tipPercentage: Double = 0.0
     fileprivate var _totalPlayers: Int = 1
+    
+    // TODO: Might not even need the subsribeers property
+    fileprivate var _subscribers: [UIViewController] = []
     
     // MARK: Instance getter
     static internal var instance: Brain {
@@ -66,7 +70,20 @@ class Brain {
     }
     
     // MARK: INTERNAL FUNCTIONS
+    // TODO: Might not even need the subsribe function
+    internal func subscribe(_ controller: UIViewController) {
+        _subscribers.append(controller)
+    }
+    
     internal func getTipAmount() -> String {
         return _tipAmount > _tipPercentage ? getTipUsingAmount().toDollarFormat() : getTipUsingPercentage().toDollarFormat()
+    }
+    
+    internal func getTotal() -> String {
+        if _tipAmount > _tipPercentage {
+            return ((_tipAmount+_billSum)/Double(_totalPlayers)).toDollarFormat()
+        } else {
+            return (((_tipPercentage*_billSum)+billSum)/Double(_totalPlayers)).toDollarFormat()
+        }
     }
 }
