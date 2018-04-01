@@ -54,12 +54,8 @@ class GratuityViewController: UIViewController {
         if wasGratuityIncluded == nil {
             wasGratuityIncluded = true
             animateMessage(LEAVE_ADDTL_TIP)
-            UIView.animate(withDuration: 0.25, animations: {
-                self.yesNoButtonsStack.layer.opacity = 0.0
-            }, completion: { finished in
-                UIView.animate(withDuration: 0.25, animations: {
-                    self.yesNoButtonsStack.layer.opacity = 1.0
-                })
+            yesNoButtonsStack.fadeOut(duration: 0.25, completion: { finished in
+                self.yesNoButtonsStack.fadeIn(duration: 0.25)
             })
         } else {
             willLeaveTip = true
@@ -72,12 +68,8 @@ class GratuityViewController: UIViewController {
         if wasGratuityIncluded == nil {
             wasGratuityIncluded = false
             animateMessage(LEAVE_TIP)
-            UIView.animate(withDuration: 0.25, animations: {
-                self.yesNoButtonsStack.layer.opacity = 0.0
-            }, completion: { finished in
-                UIView.animate(withDuration: 0.25, animations: {
-                    self.yesNoButtonsStack.layer.opacity = 1.0
-                })
+            yesNoButtonsStack.fadeOut(duration: 0.25, completion: { finished in
+                self.yesNoButtonsStack.fadeIn(duration: 0.25)
             })
         } else {
             willLeaveTip = false
@@ -174,13 +166,9 @@ class GratuityViewController: UIViewController {
     }
     
     fileprivate func animateMessage(_ message: String) {
-        UIView.animate(withDuration: 0.25, animations: {
-            self.questionLabel.layer.opacity = 0.0
-        }, completion: { finished in
+        questionLabel.fadeOut(duration: 0.25, completion: { finished in
             self.questionLabel.text = message
-            UIView.animate(withDuration: 0.25, animations: {
-                self.questionLabel.layer.opacity = 1.0
-            })
+            self.questionLabel.fadeIn(duration: 0.25)
         })
     }
     
