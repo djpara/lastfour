@@ -27,7 +27,8 @@ class PageViewController: UIPageViewController {
     }()
     
     fileprivate var _orderedSequence: [UIViewController]?
-    fileprivate var _layoverController: UIViewController?
+    
+    fileprivate var _firstPass = true
     
     // MARK: INTERNAL PROPERTIES
     // MARK: Internal getter and setter properties
@@ -40,8 +41,11 @@ class PageViewController: UIPageViewController {
     // MARK: OVERRIDE FUNCTIONS
     override func viewDidLoad() {
         super.viewDidLoad()
-        setControllers()
-        addObservers()
+        if _firstPass {
+            setControllers()
+            addObservers()
+            _firstPass = false
+        }
     }
     
     // MARK: FILEPRIVATE FUNCTIONS

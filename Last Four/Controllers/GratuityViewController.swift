@@ -47,11 +47,7 @@ class GratuityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        inputTextDollar.text = Brain.instance.tipAmount.toDollarFormat()
+        // TODO: Add observer to clear and release memory?
     }
     
     // MARK: IBACTION FUNCTIONS
