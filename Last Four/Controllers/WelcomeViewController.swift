@@ -24,9 +24,6 @@ class WelcomeViewController: UIViewController {
     
     fileprivate weak var _layoverViewController             : UIViewController?
     
-    fileprivate var _screenWidth    = UIScreen.main.bounds.width
-    fileprivate var _screenHeight   = UIScreen.main.bounds.height
-    
     fileprivate var _calculatorTypeElectionNeeded = false
     
     // MARK: OVERRIDE FUNCTIONS
@@ -65,8 +62,8 @@ class WelcomeViewController: UIViewController {
      */
     fileprivate func repositionTitle() {
         
-        let newYConstant = ((_screenHeight / 2) - 56)
-        let newXConstant = (_screenWidth/2) - (titleLabel.intrinsicContentSize.width/2) - 16
+        let newYConstant = ((screenHeight / 2) - 56)
+        let newXConstant = (screenWidth/2) - (titleLabel.intrinsicContentSize.width/2) - 16
         
         UIView.animate(withDuration: 0.75, delay: 1.0, options: .curveEaseInOut, animations: {
             self.titleYConstraint.constant -= newYConstant

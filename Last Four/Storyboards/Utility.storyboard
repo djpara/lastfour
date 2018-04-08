@@ -1,31 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Thonburi.ttc">
-            <string>Thonburi</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Number Pad View Controller-->
         <scene sceneID="wib-GK-cLf">
             <objects>
-                <viewController storyboardIdentifier="numberPadViewController" modalPresentationStyle="overCurrentContext" id="d4W-dg-E44" customClass="NumberPadViewController" customModule="Last_Four" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="numberPadViewController" modalPresentationStyle="overCurrentContext" id="d4W-dg-E44" customClass="NumberPadViewController" customModule="Split_Check" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cL8-Iu-oov">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hN8-cj-GRt">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hN8-cj-GRt">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Xwt-z1-Ijx">
@@ -34,8 +28,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="z8E-8x-BVM" userLabel="789 Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="367" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQB-oD-3xD" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="50"/>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQB-oD-3xD" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.66666666666667" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="BN8-Ot-QP3"/>
                                                 </constraints>
@@ -58,8 +52,8 @@
                                                     <action selector="numericPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="fwS-xg-G5z"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7N-aP-Iad" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                                <rect key="frame" x="123.5" y="0.0" width="120" height="50"/>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7N-aP-Iad" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                                <rect key="frame" x="123.66666666666669" y="0.0" width="120" height="50"/>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="28"/>
                                                 <state key="normal" title="8">
                                                     <color key="titleColor" red="0.75500637292861938" green="0.81528818607330322" blue="0.85291397571563721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -79,8 +73,8 @@
                                                     <action selector="numericPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="vju-q6-DTs"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rB4-Qb-NCf" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                                <rect key="frame" x="247.5" y="0.0" width="119.5" height="50"/>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rB4-Qb-NCf" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                                <rect key="frame" x="247.66666666666666" y="0.0" width="119.33333333333334" height="50"/>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="28"/>
                                                 <state key="normal" title="9">
                                                     <color key="titleColor" red="0.75500637292861938" green="0.81528818607330322" blue="0.85291397571563721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -111,8 +105,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="W0w-ow-F51" userLabel="456 Stack View">
                                         <rect key="frame" x="0.0" y="54" width="367" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2h-Bm-Yeq" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="50"/>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2h-Bm-Yeq" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.66666666666667" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="dBx-ia-Y3T"/>
                                                 </constraints>
@@ -135,8 +129,8 @@
                                                     <action selector="numericPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="cGZ-LB-6Kr"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcI-on-p08" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                                <rect key="frame" x="123.5" y="0.0" width="120" height="50"/>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcI-on-p08" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                                <rect key="frame" x="123.66666666666669" y="0.0" width="120" height="50"/>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="28"/>
                                                 <state key="normal" title="5">
                                                     <color key="titleColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -156,8 +150,8 @@
                                                     <action selector="numericPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="fLA-Je-jUf"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGM-wk-ZcQ" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                                <rect key="frame" x="247.5" y="0.0" width="119.5" height="50"/>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGM-wk-ZcQ" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                                <rect key="frame" x="247.66666666666666" y="0.0" width="119.33333333333334" height="50"/>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="28"/>
                                                 <state key="normal" title="6">
                                                     <color key="titleColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -188,8 +182,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hyA-gr-Cxs" userLabel="123 Stack View">
                                         <rect key="frame" x="0.0" y="108" width="367" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZa-5D-5Sp" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="50"/>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZa-5D-5Sp" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.66666666666667" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="87x-Uu-Uh5"/>
                                                 </constraints>
@@ -212,8 +206,8 @@
                                                     <action selector="numericPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="1Jd-u3-Alb"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSR-Oo-TiQ" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                                <rect key="frame" x="123.5" y="0.0" width="120" height="50"/>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSR-Oo-TiQ" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                                <rect key="frame" x="123.66666666666669" y="0.0" width="120" height="50"/>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="28"/>
                                                 <state key="normal" title="2">
                                                     <color key="titleColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -233,8 +227,8 @@
                                                     <action selector="numericPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="tl5-AJ-RHG"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTn-am-M1c" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                                <rect key="frame" x="247.5" y="0.0" width="119.5" height="50"/>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTn-am-M1c" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                                <rect key="frame" x="247.66666666666666" y="0.0" width="119.33333333333334" height="50"/>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="28"/>
                                                 <state key="normal" title="3">
                                                     <color key="titleColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -265,8 +259,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="gdc-Gu-o8K" userLabel="0 Stack View">
                                         <rect key="frame" x="0.0" y="162" width="367" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pa-Av-9CM" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="50"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pa-Av-9CM" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.66666666666667" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="dHE-c6-M5h"/>
                                                 </constraints>
@@ -289,8 +283,8 @@
                                                     <action selector="numericPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="p5c-Wo-yLt"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASz-yY-UUR" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                                <rect key="frame" x="123.5" y="0.0" width="120" height="50"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASz-yY-UUR" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                                <rect key="frame" x="123.66666666666669" y="0.0" width="120" height="50"/>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="28"/>
                                                 <state key="normal" title="00">
                                                     <color key="titleColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -310,8 +304,8 @@
                                                     <action selector="doubleZeroPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="N4M-eN-sUL"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwJ-DG-Qon" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                                <rect key="frame" x="247.5" y="0.0" width="119.5" height="50"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwJ-DG-Qon" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                                <rect key="frame" x="247.66666666666666" y="0.0" width="119.33333333333334" height="50"/>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="28"/>
                                                 <state key="normal" title=".">
                                                     <color key="titleColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -344,8 +338,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="9ok-VL-hDV" userLabel="Utility Buttons Stack View">
                                 <rect key="frame" x="4" y="4" width="367" height="36"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Q-AE-Nkp" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="70.5" height="36"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Q-AE-Nkp" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="70.666666666666671" height="36"/>
                                         <color key="backgroundColor" white="1" alpha="0.24526434075342465" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="qgl-Rn-Z9H"/>
@@ -369,8 +363,8 @@
                                             <action selector="cancelPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="ZgU-TB-L3G"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-Af-NGm" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                        <rect key="frame" x="74.5" y="0.0" width="70" height="36"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-Af-NGm" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                        <rect key="frame" x="74.666666666666671" y="0.0" width="70.000000000000014" height="36"/>
                                         <color key="backgroundColor" white="1" alpha="0.24526434075342465" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="NRj-Sh-krA"/>
@@ -394,8 +388,8 @@
                                             <action selector="clearPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="Ap8-pb-BXF"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esz-GV-s9U" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                        <rect key="frame" x="148.5" y="0.0" width="70" height="36"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esz-GV-s9U" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                        <rect key="frame" x="148.66666666666666" y="0.0" width="70" height="36"/>
                                         <color key="backgroundColor" white="1" alpha="0.24526434075342465" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="Nmy-Me-9g4"/>
@@ -420,8 +414,8 @@
                                             <action selector="removeLastPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="i36-Jj-2eU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtC-KV-gpC" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                        <rect key="frame" x="222.5" y="0.0" width="70" height="36"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtC-KV-gpC" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                        <rect key="frame" x="222.66666666666663" y="0.0" width="70" height="36"/>
                                         <color key="backgroundColor" white="1" alpha="0.24526434075342465" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="JHU-Wi-0v5"/>
@@ -445,8 +439,8 @@
                                             <action selector="addItemPressed:" destination="d4W-dg-E44" eventType="touchUpInside" id="FJ1-f4-1X0"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXe-X3-f10" customClass="UICustomButton" customModule="Last_Four" customModuleProvider="target">
-                                        <rect key="frame" x="296.5" y="0.0" width="70.5" height="36"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXe-X3-f10" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                        <rect key="frame" x="296.66666666666669" y="0.0" width="70.333333333333314" height="36"/>
                                         <color key="backgroundColor" white="1" alpha="0.24526434075342465" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="gKm-w3-8qs"/>
@@ -479,12 +473,16 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.019350416959999998" green="0.25883489850000002" blue="0.40137770769999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="hN8-cj-GRt" firstAttribute="top" secondItem="gJ6-Qd-Vdg" secondAttribute="top" id="60P-iE-rBW"/>
+                            <constraint firstItem="hN8-cj-GRt" firstAttribute="bottom" secondItem="gJ6-Qd-Vdg" secondAttribute="bottom" id="BmR-9o-oZW"/>
+                            <constraint firstItem="gJ6-Qd-Vdg" firstAttribute="trailing" secondItem="hN8-cj-GRt" secondAttribute="trailing" id="JCd-Xs-4xS"/>
                             <constraint firstItem="gJ6-Qd-Vdg" firstAttribute="trailing" secondItem="9ok-VL-hDV" secondAttribute="trailing" constant="4" id="MiV-yS-Bu0"/>
                             <constraint firstItem="gJ6-Qd-Vdg" firstAttribute="bottom" secondItem="Xwt-z1-Ijx" secondAttribute="bottom" priority="250" constant="4" id="TlO-ZR-xHY"/>
                             <constraint firstItem="Xwt-z1-Ijx" firstAttribute="top" secondItem="9ok-VL-hDV" secondAttribute="bottom" constant="4" id="Xr5-cs-6T9"/>
                             <constraint firstItem="9ok-VL-hDV" firstAttribute="top" secondItem="gJ6-Qd-Vdg" secondAttribute="top" constant="4" id="ie8-CD-dfC"/>
+                            <constraint firstItem="hN8-cj-GRt" firstAttribute="leading" secondItem="gJ6-Qd-Vdg" secondAttribute="leading" id="s8Z-vM-yDK"/>
                             <constraint firstItem="9ok-VL-hDV" firstAttribute="leading" secondItem="gJ6-Qd-Vdg" secondAttribute="leading" constant="4" id="x0V-xl-8Zh"/>
                             <constraint firstItem="Xwt-z1-Ijx" firstAttribute="leading" secondItem="gJ6-Qd-Vdg" secondAttribute="leading" constant="4" id="zDT-CZ-2Ex"/>
                             <constraint firstItem="gJ6-Qd-Vdg" firstAttribute="trailing" secondItem="Xwt-z1-Ijx" secondAttribute="trailing" constant="4" id="zKU-gD-1G5"/>
@@ -510,6 +508,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIu-qA-Qcu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="44" y="102.54872563718142"/>
+        </scene>
+        <!--Itemized Table View Controller-->
+        <scene sceneID="TQx-EY-45F">
+            <objects>
+                <tableViewController id="FWl-UW-WbX" customClass="ItemizedTableViewController" customModule="Split_Check" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="my3-82-Sxv">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="260"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" red="0.75831586122512817" green="0.81511950492858887" blue="0.85290032625198364" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="M87-0l-TDZ">
+                            <rect key="frame" x="0.0" y="72" width="100" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="QfG-6Q-rag" customClass="UIItemizedTableViewCell" customModule="Split_Check" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="100" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QfG-6Q-rag" id="lgw-xQ-UQ8">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$99999.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ben-tr-Asi">
+                                            <rect key="frame" x="9" y="8" width="82.666666666666671" height="28"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="28" id="O4L-aI-ptd"/>
+                                                <constraint firstAttribute="width" constant="82.5" id="lRy-uB-e7w"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                            <color key="textColor" red="0.019350416958332062" green="0.25883489847183228" blue="0.40137770771980286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.75831586120000005" green="0.81511950489999996" blue="0.85290032630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="Ben-tr-Asi" firstAttribute="centerY" secondItem="lgw-xQ-UQ8" secondAttribute="centerY" id="I12-O7-zdz"/>
+                                        <constraint firstItem="Ben-tr-Asi" firstAttribute="centerX" secondItem="lgw-xQ-UQ8" secondAttribute="centerX" id="rna-dK-WWJ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.019350416959999998" green="0.25883489850000002" blue="0.40137770769999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="itemLabel" destination="Ben-tr-Asi" id="qZw-5q-xUN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FWl-UW-WbX" id="8SL-Jx-AqJ"/>
+                            <outlet property="delegate" destination="FWl-UW-WbX" id="7dn-G7-4EU"/>
+                        </connections>
+                    </tableView>
+                    <size key="freeformSize" width="100" height="260"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x43-lJ-SKW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="649" y="102"/>
         </scene>
     </scenes>
 </document>

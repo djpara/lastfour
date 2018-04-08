@@ -21,7 +21,7 @@ class QuestionSplittingViewController: UIViewController {
     // MARK: OVERRIDE FUNCTIONS
     override func viewDidLoad() {
         super.viewDidLoad()
-        noButton.disable()
+//        noButton.disable()
     }
     
     // MARK: IBACTION FUNCTIONS

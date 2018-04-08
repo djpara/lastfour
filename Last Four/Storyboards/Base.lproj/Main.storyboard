@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split Check" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA5-RV-Lbb">
-                                <rect key="frame" x="85" y="294" width="206" height="79"/>
+                                <rect key="frame" x="84.5" y="294" width="206" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="206" id="FTy-2a-qph"/>
                                     <constraint firstAttribute="height" constant="79" id="zdX-90-Ae5"/>
@@ -245,28 +245,136 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8s5-zQ-vKi" customClass="UICustomView" customModule="Split_Check" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="343" height="529"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your items." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ME-Al-mYb">
+                                        <rect key="frame" x="43" y="52" width="256" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="9mr-Lj-ge6"/>
+                                            <constraint firstAttribute="width" constant="256" id="T0g-1f-Jqo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
+                                        <color key="textColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ClI-hY-YEP" customClass="UICustomView" customModule="Split_Check" customModuleProvider="target">
+                                        <rect key="frame" x="51" y="234" width="240" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o38-K3-edu">
+                                                <rect key="frame" x="8" y="4" width="18.5" height="51.5"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="32"/>
+                                                <color key="textColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qSc-DY-8Vv">
+                                                <rect key="frame" x="30.5" y="8" width="201.5" height="44"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="32"/>
+                                                <color key="textColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="qSc-DY-8Vv" firstAttribute="centerY" secondItem="ClI-hY-YEP" secondAttribute="centerY" id="4Gf-LL-fH4"/>
+                                            <constraint firstItem="o38-K3-edu" firstAttribute="centerY" secondItem="ClI-hY-YEP" secondAttribute="centerY" id="4jd-Vr-w8q"/>
+                                            <constraint firstItem="o38-K3-edu" firstAttribute="leading" secondItem="ClI-hY-YEP" secondAttribute="leading" constant="8" id="E2c-Nh-MJB"/>
+                                            <constraint firstItem="qSc-DY-8Vv" firstAttribute="leading" secondItem="o38-K3-edu" secondAttribute="trailing" constant="4" id="MJh-O6-V3S"/>
+                                            <constraint firstAttribute="trailing" secondItem="qSc-DY-8Vv" secondAttribute="trailing" constant="8" id="iCs-Ck-BTS"/>
+                                            <constraint firstAttribute="height" constant="60" id="k4O-uq-MBd"/>
+                                            <constraint firstItem="qSc-DY-8Vv" firstAttribute="top" secondItem="ClI-hY-YEP" secondAttribute="top" constant="8" id="mEv-2D-VlU"/>
+                                            <constraint firstAttribute="bottom" secondItem="qSc-DY-8Vv" secondAttribute="bottom" constant="8" id="thu-8P-lrP"/>
+                                            <constraint firstAttribute="width" constant="240" id="uAJ-68-w9c"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.2459332192" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Koc-bs-O7B" appends="YES" id="ahY-Rj-ZLW"/>
+                                            <outletCollection property="gestureRecognizers" destination="5i4-bh-hwe" appends="YES" id="FMy-tZ-0X1"/>
+                                        </connections>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xyB-Of-FN3" userLabel="Next Stack View">
+                                        <rect key="frame" x="51" y="429" width="240" height="48"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwb-Yk-vJG" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="116" height="48"/>
+                                                <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="62s-xs-RgN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
+                                                <state key="normal" title="Show Order">
+                                                    <color key="titleColor" red="0.019350416959999998" green="0.25883489850000002" blue="0.40137770769999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMc-hx-3zY" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                                <rect key="frame" x="124" y="0.0" width="116" height="48"/>
+                                                <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="6l4-Q6-75J"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
+                                                <state key="normal" title="Next">
+                                                    <color key="titleColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="6YF-Vz-DLs"/>
+                                            <constraint firstItem="DMc-hx-3zY" firstAttribute="width" secondItem="cwb-Yk-vJG" secondAttribute="width" id="Kmy-RZ-NfH"/>
+                                            <constraint firstItem="DMc-hx-3zY" firstAttribute="height" secondItem="cwb-Yk-vJG" secondAttribute="height" id="wcR-Zc-zfC"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="7ME-Al-mYb" firstAttribute="top" secondItem="8s5-zQ-vKi" secondAttribute="top" constant="52" id="C40-ZH-pgK"/>
+                                    <constraint firstItem="ClI-hY-YEP" firstAttribute="centerX" secondItem="8s5-zQ-vKi" secondAttribute="centerX" id="Ead-Ll-FVy"/>
+                                    <constraint firstItem="ClI-hY-YEP" firstAttribute="centerY" secondItem="8s5-zQ-vKi" secondAttribute="centerY" id="RWp-1s-ipt"/>
+                                    <constraint firstItem="7ME-Al-mYb" firstAttribute="centerX" secondItem="8s5-zQ-vKi" secondAttribute="centerX" id="jY3-lC-KoP"/>
+                                    <constraint firstAttribute="bottom" secondItem="xyB-Of-FN3" secondAttribute="bottom" constant="52" id="k23-iy-9X4"/>
+                                    <constraint firstItem="xyB-Of-FN3" firstAttribute="centerX" secondItem="8s5-zQ-vKi" secondAttribute="centerX" id="kch-Yr-Cye"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your itemized order." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ME-Al-mYb">
-                                <rect key="frame" x="59.5" y="72" width="256" height="88"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="9mr-Lj-ge6"/>
-                                    <constraint firstAttribute="width" constant="256" id="T0g-1f-Jqo"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
-                                <color key="textColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="7ME-Al-mYb" firstAttribute="top" secondItem="x5g-LN-7Wu" secondAttribute="bottom" constant="52" id="6gK-6j-Ylh"/>
-                            <constraint firstItem="7ME-Al-mYb" firstAttribute="centerX" secondItem="08O-Td-CMa" secondAttribute="centerX" id="7gT-ER-dAg"/>
                             <constraint firstItem="7g3-hM-kM7" firstAttribute="top" secondItem="8s5-zQ-vKi" secondAttribute="bottom" constant="18" id="Pmm-4t-q6b"/>
                             <constraint firstAttribute="trailing" secondItem="8s5-zQ-vKi" secondAttribute="trailing" constant="16" id="RiB-fj-JmH"/>
                             <constraint firstItem="8s5-zQ-vKi" firstAttribute="top" secondItem="x5g-LN-7Wu" secondAttribute="bottom" id="UkJ-ng-Fnj"/>
@@ -274,8 +382,22 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="375" height="567"/>
+                    <connections>
+                        <outlet property="inputField" destination="ClI-hY-YEP" id="mhb-wd-yDe"/>
+                        <outlet property="inputFieldCenterXConstraint" destination="Ead-Ll-FVy" id="GMD-Jh-ctQ"/>
+                        <outlet property="inputFieldCenterYConstraint" destination="RWp-1s-ipt" id="WVy-Du-9K9"/>
+                        <outlet property="inputFieldWidthConstraint" destination="uAJ-68-w9c" id="pLY-4b-wc9"/>
+                        <outlet property="inputText" destination="qSc-DY-8Vv" id="k8Y-c1-Xz3"/>
+                        <outlet property="showHideOrderButton" destination="cwb-Yk-vJG" id="L4O-wS-nal"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSv-qq-CXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Koc-bs-O7B">
+                    <connections>
+                        <action selector="inputFieldPressed:" destination="OU2-jX-YwX" id="UmJ-u9-vbF"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="5i4-bh-hwe"/>
             </objects>
             <point key="canvasLocation" x="-631" y="1355"/>
         </scene>

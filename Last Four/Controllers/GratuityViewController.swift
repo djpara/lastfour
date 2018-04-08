@@ -50,6 +50,10 @@ class GratuityViewController: UIViewController {
         // TODO: Add observer to clear and release memory?
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     // MARK: IBACTION FUNCTIONS
     @IBAction func yesPressed(_ sender: Any) {
         if wasGratuityIncluded == nil {

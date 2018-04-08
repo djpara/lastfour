@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F503CE9C20791F6700439AFB /* ItemizedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F503CE9B20791F6700439AFB /* ItemizedTableViewController.swift */; };
+		F503CE9E20791FA500439AFB /* UIItemizedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F503CE9D20791FA500439AFB /* UIItemizedTableViewCell.swift */; };
 		F52EDF5F206C6511004EB025 /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52EDF5E206C6511004EB025 /* Brain.swift */; };
 		F54579EF2066B0E200418626 /* Utility.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F54579EE2066B0E200418626 /* Utility.storyboard */; };
 		F54579F12066B7C800418626 /* NumberPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54579F02066B7C800418626 /* NumberPadViewController.swift */; };
@@ -57,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F503CE9B20791F6700439AFB /* ItemizedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemizedTableViewController.swift; sourceTree = "<group>"; };
+		F503CE9D20791FA500439AFB /* UIItemizedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIItemizedTableViewCell.swift; sourceTree = "<group>"; };
 		F52EDF5E206C6511004EB025 /* Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
 		F54579EE2066B0E200418626 /* Utility.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Utility.storyboard; sourceTree = "<group>"; };
 		F54579F02066B7C800418626 /* NumberPadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 				F5876FBC2063532C00806F48 /* UICustomButton.swift */,
 				F5457A002066BD3500418626 /* UICustomTextField.swift */,
 				F5457A112068C52400418626 /* UICustomView.swift */,
+				F503CE9D20791FA500439AFB /* UIItemizedTableViewCell.swift */,
 			);
 			path = "Custom UI";
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 				F5CC11CD2064C00B0082109B /* QuestionSplittingViewController.swift */,
 				F5B72EB52061FF2000EA58DA /* WelcomeViewController.swift */,
 				F54579F62066B8D200418626 /* YourTotalViewController.swift */,
+				F503CE9B20791F6700439AFB /* ItemizedTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -428,6 +434,7 @@
 				F5876FBB2063509000806F48 /* Colors.swift in Sources */,
 				F5457A012066BD3500418626 /* UICustomTextField.swift in Sources */,
 				F52EDF5F206C6511004EB025 /* Brain.swift in Sources */,
+				F503CE9C20791F6700439AFB /* ItemizedTableViewController.swift in Sources */,
 				F5CC11CE2064C00B0082109B /* QuestionSplittingViewController.swift in Sources */,
 				F54579F32066B86100418626 /* BillSumViewController.swift in Sources */,
 				F5457A042066C16B00418626 /* CalculatorType.swift in Sources */,
@@ -436,6 +443,7 @@
 				F5B72EB62061FF2000EA58DA /* WelcomeViewController.swift in Sources */,
 				F54579F92066B90100418626 /* PeopleTotalViewController.swift in Sources */,
 				F5B72EB42061FF2000EA58DA /* AppDelegate.swift in Sources */,
+				F503CE9E20791FA500439AFB /* UIItemizedTableViewCell.swift in Sources */,
 				F57715C62069FF8F0019E261 /* NumberPadDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
