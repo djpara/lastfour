@@ -48,6 +48,10 @@ class PageViewController: UIPageViewController {
         }
     }
     
+    deinit {
+        print("Page Controller deinitialized")
+    }
+    
     // MARK: FILEPRIVATE FUNCTIONS
     fileprivate func resetExtension() {
         // Clear the extensions

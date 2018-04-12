@@ -32,6 +32,10 @@ class PeopleTotalViewController: UIViewController {
         inputText.text = String(Brain.instance.totalPlayers)
     }
     
+    deinit {
+        print("People Total Controller deinitialized")
+    }
+    
     // MARK: IBACTION FUNCTIONS
     @IBAction func inputFieldPressed(_ sender: Any) {
         guard _numberPad == nil else { return }

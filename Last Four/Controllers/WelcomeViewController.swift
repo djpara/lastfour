@@ -41,6 +41,10 @@ class WelcomeViewController: UIViewController {
         print("Menu pressed")
     }
     
+    deinit {
+        print("Welcome Controller deinitialized")
+    }
+    
     // MARK: FILEPRIVATE FUNCTIONS
     fileprivate func addObservers() {
         notificationCenterDefault.addObserver(self, selector: #selector(hideLayoverContainerView), name: .newCalculatorTypeElected, object: nil)

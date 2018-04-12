@@ -37,6 +37,10 @@ class NumberPadViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
+    deinit {
+        print("Number Pad Controller deinitialized")
+    }
+    
     // MARK: IBACTION FUNCTIONS
     @IBAction func removeLastPressed(_ sender: Any) {
     }

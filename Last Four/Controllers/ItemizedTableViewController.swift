@@ -36,6 +36,10 @@ class ItemizedTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
+    
+    deinit {
+        print("Itemized Table Controller deinitialized")
+    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

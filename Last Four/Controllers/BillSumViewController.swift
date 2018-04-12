@@ -31,6 +31,10 @@ class BillSumViewController: UIViewController {
         super.viewWillAppear(animated)
         inputText.text = Brain.instance.billSum.toDollarFormat()
     }
+    
+    deinit {
+        print("Bull Sum Controller deinitialized")
+    }
 
     // MARK: IBACTION FUNCTIONS
     @IBAction func inputFieldPressed(_ sender: Any) {

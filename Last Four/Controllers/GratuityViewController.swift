@@ -54,6 +54,10 @@ class GratuityViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
+    deinit {
+        print("Gratuity Controller deinitialized")
+    }
+    
     // MARK: IBACTION FUNCTIONS
     @IBAction func yesPressed(_ sender: Any) {
         if wasGratuityIncluded == nil {

@@ -24,6 +24,10 @@ class QuestionSplittingViewController: UIViewController {
 //        noButton.disable()
     }
     
+    deinit {
+        print("Questions Splitting Controller deinitialized")
+    }
+    
     // MARK: IBACTION FUNCTIONS
     @IBAction func buttonPressed(_ sender: UICustomButton) {
         if sender.tag == 0 {

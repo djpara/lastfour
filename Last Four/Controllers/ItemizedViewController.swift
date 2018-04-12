@@ -33,6 +33,10 @@ class ItemizedViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
+    deinit {
+        print("Itemized Controller deinitialized")
+    }
+    
     // MARK: FILEPRIVATE FUNCTIONS
     fileprivate func configureViews() {
         _ogBorderColor = inputField.borderColor

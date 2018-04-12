@@ -16,6 +16,10 @@ class YourTotalViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    deinit {
+        print("Your Total Controller deinitialized")
+    }
+    
     @IBAction func backPressed(_ sender: Any) {
         notificationCenterDefault.post(NOTIFICATION_YOUR_TOTAL_BACK_PRESSED)
     }
