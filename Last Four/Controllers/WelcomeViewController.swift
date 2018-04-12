@@ -29,8 +29,12 @@ class WelcomeViewController: UIViewController {
     // MARK: OVERRIDE FUNCTIONS
     override func viewDidLoad() {
         super.viewDidLoad()
-        repositionTitle()
         addObservers()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        repositionTitle()
     }
     
     @IBAction func menuButtonPressed(_ sender: Any) {
@@ -62,12 +66,12 @@ class WelcomeViewController: UIViewController {
      */
     fileprivate func repositionTitle() {
         
-        let newYConstant = ((screenHeight / 2) - 56)
-        let newXConstant = (screenWidth/2) - (titleLabel.intrinsicContentSize.width/2) - 16
+        let newYConstantDiff = ((screenHeight / 2) - 56)
+        let newXConstantDiff = (screenWidth/2) - (titleLabel.intrinsicContentSize.width/2) - 16
         
         UIView.animate(withDuration: 0.75, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.titleYConstraint.constant -= newYConstant
-            self.titleXConstraint.constant -= newXConstant
+            self.titleYConstraint.constant -= newYConstantDiff
+            self.titleXConstraint.constant -= newXConstantDiff
             self.view.layoutIfNeeded()
         }, completion: { finished in
             self._calculatorTypeElectionNeeded = true
