@@ -11,6 +11,7 @@ import Foundation
 let BILL_TOTAL_VIEW_CONTROLLER          = "billTotalViewController"
 let GRATUITY_VIEW_CONTROLLER            = "gruatuityViewController"
 let ITEMIZED_VIEW_CONTROLLER            = "itemizedViewController"
+let ITEMIZED_TABLE_VIEW_CONTROLLER      = "itemizedTableViewController"
 let NUMBER_PAD_VIEW_CONTROLLER          = "numberPadViewController"
 let PAGE_VIEW_CONTROLLER                = "pageViewController"
 let PEOPLE_TOTAL_VIEW_CONTROLLER        = "peopleTotalViewController"

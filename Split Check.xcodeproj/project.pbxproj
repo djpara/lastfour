@@ -27,6 +27,8 @@
 		F5457A122068C52400418626 /* UICustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5457A112068C52400418626 /* UICustomView.swift */; };
 		F56D5F56206DAA54002F69E9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56D5F55206DAA54002F69E9 /* Extensions.swift */; };
 		F57715C62069FF8F0019E261 /* NumberPadDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57715C52069FF8F0019E261 /* NumberPadDelegate.swift */; };
+		F57E702A207F1B080012ABB4 /* ItemsTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57E7029207F1B080012ABB4 /* ItemsTableDelegate.swift */; };
+		F57E702C207F23AB0012ABB4 /* TableViewCellIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57E702B207F23AB0012ABB4 /* TableViewCellIdentifiers.swift */; };
 		F5876FBB2063509000806F48 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5876FBA2063509000806F48 /* Colors.swift */; };
 		F5876FBD2063532C00806F48 /* UICustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5876FBC2063532C00806F48 /* UICustomButton.swift */; };
 		F5B72EB42061FF2000EA58DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B72EB32061FF2000EA58DA /* AppDelegate.swift */; };
@@ -79,6 +81,8 @@
 		F5457A112068C52400418626 /* UICustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomView.swift; sourceTree = "<group>"; };
 		F56D5F55206DAA54002F69E9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F57715C52069FF8F0019E261 /* NumberPadDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadDelegate.swift; sourceTree = "<group>"; };
+		F57E7029207F1B080012ABB4 /* ItemsTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableDelegate.swift; sourceTree = "<group>"; };
+		F57E702B207F23AB0012ABB4 /* TableViewCellIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellIdentifiers.swift; sourceTree = "<group>"; };
 		F5876FBA2063509000806F48 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F5876FBC2063532C00806F48 /* UICustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomButton.swift; sourceTree = "<group>"; };
 		F5B72EB02061FF2000EA58DA /* Split Check.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Split Check.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				F57715C52069FF8F0019E261 /* NumberPadDelegate.swift */,
+				F57E7029207F1B080012ABB4 /* ItemsTableDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 				F5457A0C2066D18200418626 /* Shortcuts.swift */,
 				F56D5F55206DAA54002F69E9 /* Extensions.swift */,
 				F5457A082066C7E600418626 /* ViewControllerIdentifiers.swift */,
+				F57E702B207F23AB0012ABB4 /* TableViewCellIdentifiers.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -424,10 +430,12 @@
 				F54579FD2066B94E00418626 /* PageViewController.swift in Sources */,
 				F5876FBD2063532C00806F48 /* UICustomButton.swift in Sources */,
 				F54579F52066B89F00418626 /* GratuityViewController.swift in Sources */,
+				F57E702A207F1B080012ABB4 /* ItemsTableDelegate.swift in Sources */,
 				F5457A0B2066D16500418626 /* HelperFunctions.swift in Sources */,
 				F54579F72066B8D200418626 /* YourTotalViewController.swift in Sources */,
 				F5CC11D02064C2DD0082109B /* Notifications.swift in Sources */,
 				F5457A0F20684D4600418626 /* Preferences.swift in Sources */,
+				F57E702C207F23AB0012ABB4 /* TableViewCellIdentifiers.swift in Sources */,
 				F5457A122068C52400418626 /* UICustomView.swift in Sources */,
 				F5B72EBC2061FF2000EA58DA /* Last_Four.xcdatamodeld in Sources */,
 				F5457A0D2066D18200418626 /* Shortcuts.swift in Sources */,

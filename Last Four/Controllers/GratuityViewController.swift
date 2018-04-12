@@ -11,6 +11,7 @@ import UIKit
 class GratuityViewController: UIViewController {
 
     // MARK: FINAL PROPERTIES
+    
     final let GRATUITY_INCLUDED     = "Was gratuity included?"
     final let LEAVE_ADDTL_TIP       = "Would you like to leave an additional tip?"
     final let LEAVE_TIP             = "Would you like to leave a tip?"
@@ -18,6 +19,7 @@ class GratuityViewController: UIViewController {
     final let NO_TIP                = "Not leaving tip."
     
     // MARK: FILEPRIVATE PROPERTIES
+    
     fileprivate var wasGratuityIncluded: Bool?
     fileprivate var willLeaveTip: Bool?
     
@@ -28,6 +30,7 @@ class GratuityViewController: UIViewController {
     fileprivate var _willLeaveCustomPercentage = false
     
     // MARK: IBOUTLET PROPERTIES
+    
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var yesNoButtonsStack: UIStackView!
     @IBOutlet weak var tipButtonsStack: UIStackView!
@@ -44,6 +47,7 @@ class GratuityViewController: UIViewController {
     @IBOutlet weak var percentSign: UILabel!
     
     // MARK: OVERRIDE FUNCTIONS
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
@@ -59,6 +63,7 @@ class GratuityViewController: UIViewController {
     }
     
     // MARK: IBACTION FUNCTIONS
+    
     @IBAction func yesPressed(_ sender: Any) {
         if wasGratuityIncluded == nil {
             wasGratuityIncluded = true
@@ -163,6 +168,7 @@ class GratuityViewController: UIViewController {
     }
     
     // MARK: FILEPRIVATE FUNCTIONS
+    
     fileprivate func configureViews() {
         _ogBorderColor = inputField.borderColor
         questionLabel.text = GRATUITY_INCLUDED
@@ -246,7 +252,8 @@ class GratuityViewController: UIViewController {
     // MARK: INTERNAL FUNCTIONS
 }
 
-// Number Pad Delegate extension
+// MARK: Number Pad Delegate extension
+
 extension GratuityViewController: NumberPadDelegate {
     
     func showNumberPad() {
@@ -345,6 +352,7 @@ extension GratuityViewController: NumberPadDelegate {
     }
     
     // MARK: EXTENSION HELPER FUNCTIONS
+    
     fileprivate func insertKey(_ num: String, into label: UILabel) {
         // Local helper variables
         let e = ""

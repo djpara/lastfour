@@ -11,11 +11,15 @@ import UIKit
 class ItemizedViewController: UIViewController {
 
     // MARK: FILEPRIVATE PROPERTIES
-    fileprivate weak var _numberPad: NumberPadViewController?
     
+    fileprivate weak var _numberPad: NumberPadViewController?
+    fileprivate weak var _itemsTable: ItemizedTableViewController?
     fileprivate var _ogBorderColor: UIColor?
     
+    fileprivate var _items: [Int] = []
+    
     // MARK: IBOUTLET PROPERTIES
+    
     @IBOutlet weak var inputField: UICustomView!
     @IBOutlet weak var inputText: UILabel!
     @IBOutlet weak var inputFieldCenterXConstraint: NSLayoutConstraint!
@@ -24,6 +28,7 @@ class ItemizedViewController: UIViewController {
     @IBOutlet weak var showHideOrderButton: UICustomButton!
     
     // MARK: OVERRIDE FUNCTIONS
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
@@ -38,6 +43,7 @@ class ItemizedViewController: UIViewController {
     }
     
     // MARK: FILEPRIVATE FUNCTIONS
+    
     fileprivate func configureViews() {
         _ogBorderColor = inputField.borderColor
     }
@@ -73,15 +79,18 @@ class ItemizedViewController: UIViewController {
     }
     
     // MARK: IBACTION FUNCTIONS
+    
     @IBAction func inputFieldPressed(_ sender: Any) {
         guard _numberPad == nil else { return }
         showNumberPad()
+        showItemsTable()
         animateInputFieldUp()
     }
 
 }
 
 // MARK: Number Pad Delegate extension
+
 extension ItemizedViewController: NumberPadDelegate {
     
     func showNumberPad() {
@@ -89,7 +98,7 @@ extension ItemizedViewController: NumberPadDelegate {
         _numberPad?.numberPadDelegate = self
         _numberPad?.setType(.evenSplit)
         
-        _numberPad?.view.frame.origin.y = view.frame.height + (_numberPad?.preferredContentSize.height)!
+        _numberPad?.view.frame.origin.y = view.frame.height + ((_numberPad?.preferredContentSize.height) ?? 260)
         
         view.insertSubview((_numberPad?.view)!, at: 10)
         
@@ -177,6 +186,7 @@ extension ItemizedViewController: NumberPadDelegate {
         }
         
         hideNumberPad()
+        hideItemsTable()
         animateInputFieldDown()
     }
     
@@ -191,6 +201,7 @@ extension ItemizedViewController: NumberPadDelegate {
         inputText.text = Brain.instance.billSum.toDollarFormat()
         
         hideNumberPad()
+        hideItemsTable()
         animateInputFieldDown()
     }
     
@@ -209,5 +220,45 @@ extension ItemizedViewController: NumberPadDelegate {
     func removeLast() {
         // Not implemented
     }
+    
+}
+
+extension ItemizedViewController: ItemsTableDelegate {
+    func showItemsTable() {
+        _itemsTable = utilityStoryboard.instantiateViewController(withIdentifier: ITEMIZED_TABLE_VIEW_CONTROLLER) as? ItemizedTableViewController
+        _itemsTable?.itemsTableDelegate = self
+        
+        _itemsTable?.view.frame.origin.x = view.frame.width + ((_itemsTable?.preferredContentSize.width) ?? 100)
+        _itemsTable?.view.frame.origin.y = 0
+        _itemsTable?.view.frame.size.height = _itemsTable?.preferredContentSize.height ?? 200
+        
+        view.insertSubview((_itemsTable?.view)!, at: 10)
+        
+        addChildViewController(_itemsTable!)
+        view.addSubview((_itemsTable?.view)!)
+        _itemsTable?.didMove(toParentViewController: self)
+        
+        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            let target = self.view.frame.width - (self._itemsTable?.preferredContentSize.width ?? 0)
+            self._itemsTable?.view.frame.origin.x = target
+        }, completion: nil)
+    }
+    
+    func hideItemsTable() {
+        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            let target = self.view.frame.width + (self._itemsTable?.preferredContentSize.width ?? 0)
+            self._itemsTable?.view.frame.origin.x = target
+        }) { finished in
+            self._itemsTable?.willMove(toParentViewController: nil)
+            self._itemsTable?.view.removeFromSuperview()
+            self._itemsTable?.removeFromParentViewController()
+            self._itemsTable = nil
+        }
+    }
+    
+    func removeItem(atIndex index: Int) {
+        _items.remove(at: index)
+    }
+    
     
 }

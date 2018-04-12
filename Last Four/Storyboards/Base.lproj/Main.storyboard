@@ -231,10 +231,10 @@
             </objects>
             <point key="canvasLocation" x="-631" y="1931"/>
         </scene>
-        <!--Itemized View Controller-->
+        <!--itemizedTableViewController-->
         <scene sceneID="b73-vh-PXH">
             <objects>
-                <viewController storyboardIdentifier="itemizedViewController" id="OU2-jX-YwX" customClass="ItemizedViewController" customModule="Split_Check" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="itemizedViewController" title="itemizedTableViewController" id="OU2-jX-YwX" customClass="ItemizedViewController" customModule="Split_Check" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x5g-LN-7Wu"/>
                         <viewControllerLayoutGuide type="bottom" id="7g3-hM-kM7"/>

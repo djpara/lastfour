@@ -11,23 +11,27 @@ import UIKit
 class NumberPadViewController: UIViewController {
     
     // MARK: FILEPRIVATE PROPERTIES
+    
     fileprivate var _numberPadDelegate: NumberPadDelegate?
     
     fileprivate var _calculatorType: CalculatorType = .evenSplit
     
     // MARK: INTERNAL PROPERTIES
+    
     internal var numberPadDelegate: NumberPadDelegate? {
         get { return _numberPadDelegate }
         set { _numberPadDelegate = newValue }
     }
     
     // MARK: IBOUTLET PROPERTIES
+    
     @IBOutlet var evenSplitButtons: [UICustomButton]!
     @IBOutlet var itemizedSplitButtons: [UICustomButton]!
     @IBOutlet var utilityButtons: [UICustomButton]!
     
     
     // MARK: OVERRIDE FUNCTIONS
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCalc()
@@ -42,6 +46,7 @@ class NumberPadViewController: UIViewController {
     }
     
     // MARK: IBACTION FUNCTIONS
+    
     @IBAction func removeLastPressed(_ sender: Any) {
     }
     
@@ -73,6 +78,7 @@ class NumberPadViewController: UIViewController {
     }
     
     // MARK: FILEPRIVATE FUNCTIONS
+    
     fileprivate func configureCalc() {
         switch _calculatorType {
         case .evenSplit:
@@ -95,6 +101,7 @@ class NumberPadViewController: UIViewController {
     }
     
     // MARK: INTERNAL FUNCTIONS
+    
     internal func setType(_ type: CalculatorType) {
         _calculatorType = type
     }
