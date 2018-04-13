@@ -29,14 +29,14 @@ extension Double {
 
 // MARK: UIView Extension
 extension UIView {
-    func fadeOut(duration: Double, completion: ((Bool) -> Void)? = nil) {
-        UIView.animate(withDuration: duration, animations: {
+    func fadeOut(duration: Double, delay: Double = 0.0, completion: ((Bool) -> Void)? = nil) {
+        UIView.animate(withDuration: duration, delay: delay, animations: {
             self.layer.opacity = 0.0
         }, completion: completion)
     }
     
-    func fadeIn(duration: Double, completion: ((Bool) -> Void)? = nil) {
-        UIView.animate(withDuration: duration, animations: {
+    func fadeIn(duration: Double, delay: Double = 0.0, completion: ((Bool) -> Void)? = nil) {
+        UIView.animate(withDuration: duration, delay: delay, animations: {
             self.layer.opacity = 1.0
         }, completion: completion)
     }

@@ -326,6 +326,9 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="showOrderPressed:" destination="OU2-jX-YwX" eventType="touchUpInside" id="xM1-0N-kXu"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMc-hx-3zY" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                 <rect key="frame" x="124" y="0.0" width="116" height="48"/>
@@ -384,11 +387,11 @@
                     <size key="freeformSize" width="375" height="567"/>
                     <connections>
                         <outlet property="inputField" destination="ClI-hY-YEP" id="mhb-wd-yDe"/>
-                        <outlet property="inputFieldCenterXConstraint" destination="Ead-Ll-FVy" id="GMD-Jh-ctQ"/>
-                        <outlet property="inputFieldCenterYConstraint" destination="RWp-1s-ipt" id="WVy-Du-9K9"/>
-                        <outlet property="inputFieldWidthConstraint" destination="uAJ-68-w9c" id="pLY-4b-wc9"/>
+                        <outlet property="inputFieldCenterYConstraint" destination="RWp-1s-ipt" id="dBd-nc-xN7"/>
                         <outlet property="inputText" destination="qSc-DY-8Vv" id="k8Y-c1-Xz3"/>
+                        <outlet property="messageLabel" destination="7ME-Al-mYb" id="upj-x0-RfL"/>
                         <outlet property="showHideOrderButton" destination="cwb-Yk-vJG" id="L4O-wS-nal"/>
+                        <outlet property="showOrderButton" destination="cwb-Yk-vJG" id="4GX-2M-Rgv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSv-qq-CXw" userLabel="First Responder" sceneMemberID="firstResponder"/>

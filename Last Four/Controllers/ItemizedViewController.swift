@@ -15,17 +15,20 @@ class ItemizedViewController: UIViewController {
     fileprivate weak var _numberPad: NumberPadViewController?
     fileprivate weak var _itemsTable: ItemizedTableViewController?
     fileprivate var _ogBorderColor: UIColor?
+    fileprivate var _ogInputFieldFrameCenter: CGPoint?
     
     fileprivate var _items: [Int] = []
+    fileprivate var _itemsVisible = false
+    fileprivate var _isShowingFromButtonPress = false
     
     // MARK: IBOUTLET PROPERTIES
     
+    @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var inputField: UICustomView!
     @IBOutlet weak var inputText: UILabel!
-    @IBOutlet weak var inputFieldCenterXConstraint: NSLayoutConstraint!
     @IBOutlet weak var inputFieldCenterYConstraint: NSLayoutConstraint!
-    @IBOutlet weak var inputFieldWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var showHideOrderButton: UICustomButton!
+    @IBOutlet weak var showOrderButton: UICustomButton!
     
     // MARK: OVERRIDE FUNCTIONS
     
@@ -50,31 +53,38 @@ class ItemizedViewController: UIViewController {
     
     fileprivate func animateInputFieldUp() {
         // Bring inputfield up a bit
-        inputField.borderColor = ASTRONAUT_BLUE
-        self.inputText.layer.opacity = 0.0
+        _ogInputFieldFrameCenter = inputField.center
+        
+        let newFrameCenter = CGPoint(x: inputField.center.x, y: (inputField.frame.height/2) + 16)
+        
         UIView.animate(withDuration: 0.5, animations: {
-            self.inputFieldCenterYConstraint.constant -= self.inputField.frame.height
-            self.inputFieldCenterXConstraint.constant -= self.inputField.frame.width / 2
-            self.inputFieldWidthConstraint.constant /= 2
-            self.view.layoutIfNeeded()
+            self.inputField.center = newFrameCenter
         }, completion: { finished in
-            self.inputText.layer.opacity = 1.0
+            self.showItemsTable()
+            self.inputField.borderColor = ASTRONAUT_BLUE
+
         })
     }
     
     fileprivate func animateInputFieldDown() {
         // Bring inputfield down a bit
-        self.inputText.layer.opacity = 0.0
         if let ogBorderColor = self._ogBorderColor {
             self.inputField.borderColor = ogBorderColor
         }
         UIView.animate(withDuration: 0.5, animations: {
-            self.inputFieldCenterYConstraint.constant += self.inputField.frame.height
-            self.inputFieldCenterXConstraint.constant = 0
-            self.inputFieldWidthConstraint.constant *= 2
-            self.view.layoutIfNeeded()
-        }, completion: { finshed in
-            self.inputText.layer.opacity = 1.0
+            self.inputField.center = self._ogInputFieldFrameCenter ?? CGPoint(x: screenHeight/2, y: screenWidth/2)
+        })
+    }
+    
+    fileprivate func animateItemsTableExpand() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self._itemsTable?.view.frame.size.height =  self.view.frame.height - 116 - (self._itemsTable?.view.frame.origin.y ?? 87) - 16
+        })
+    }
+    
+    fileprivate func animateItemsTableShrink() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self._itemsTable?.view.frame.size.height =  self.view.frame.height - (self._numberPad?.preferredContentSize.height ?? 116) - (self._itemsTable?.view.frame.origin.y ?? 87) - 16
         })
     }
     
@@ -83,10 +93,29 @@ class ItemizedViewController: UIViewController {
     @IBAction func inputFieldPressed(_ sender: Any) {
         guard _numberPad == nil else { return }
         showNumberPad()
-        showItemsTable()
-        animateInputFieldUp()
+        messageLabel.fadeOut(duration: 0.25)
+        
+        if _itemsVisible {
+            animateItemsTableShrink()
+        } else {
+            animateInputFieldUp()
+        }
     }
 
+    @IBAction func showOrderPressed(_ sender: Any) {
+        showOrderButton.disable()
+        
+        if _itemsVisible {
+            showOrderButton.setTitle("Show Order", for: .normal)
+            hideItemsTable()
+            _isShowingFromButtonPress = false
+        } else {
+            showOrderButton.setTitle("Hide Order", for: .normal)
+            animateInputFieldUp()
+            messageLabel.fadeOut(duration: 0.25)
+            _isShowingFromButtonPress = true
+        }
+    }
 }
 
 // MARK: Number Pad Delegate extension
@@ -186,8 +215,12 @@ extension ItemizedViewController: NumberPadDelegate {
         }
         
         hideNumberPad()
-        hideItemsTable()
-        animateInputFieldDown()
+        
+        if _isShowingFromButtonPress {
+            animateItemsTableExpand()
+        } else {
+            hideItemsTable()
+        }
     }
     
     func close() {
@@ -201,8 +234,12 @@ extension ItemizedViewController: NumberPadDelegate {
         inputText.text = Brain.instance.billSum.toDollarFormat()
         
         hideNumberPad()
-        hideItemsTable()
-        animateInputFieldDown()
+        
+        if _isShowingFromButtonPress {
+            animateItemsTableExpand()
+        } else {
+            hideItemsTable()
+        }
     }
     
     func clear() {
@@ -228,9 +265,15 @@ extension ItemizedViewController: ItemsTableDelegate {
         _itemsTable = utilityStoryboard.instantiateViewController(withIdentifier: ITEMIZED_TABLE_VIEW_CONTROLLER) as? ItemizedTableViewController
         _itemsTable?.itemsTableDelegate = self
         
-        _itemsTable?.view.frame.origin.x = view.frame.width + ((_itemsTable?.preferredContentSize.width) ?? 100)
-        _itemsTable?.view.frame.origin.y = 0
-        _itemsTable?.view.frame.size.height = _itemsTable?.preferredContentSize.height ?? 200
+        _itemsTable?.view.frame.origin.x = inputField.frame.origin.x + 16.0
+        _itemsTable?.view.frame.origin.y = inputField.frame.origin.y + inputField.frame.height - 1
+        
+        _itemsTable?.view.frame.size.width = inputField.frame.width
+        _itemsTable?.view.frame.size.height = 0
+        
+        _itemsTable?.view.layer.borderWidth = 1.0
+        _itemsTable?.view.layer.cornerRadius = 4.0
+        _itemsTable?.view.layer.borderColor = ASTRONAUT_BLUE.cgColor
         
         view.insertSubview((_itemsTable?.view)!, at: 10)
         
@@ -238,22 +281,29 @@ extension ItemizedViewController: ItemsTableDelegate {
         view.addSubview((_itemsTable?.view)!)
         _itemsTable?.didMove(toParentViewController: self)
         
-        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-            let target = self.view.frame.width - (self._itemsTable?.preferredContentSize.width ?? 0)
-            self._itemsTable?.view.frame.origin.x = target
-        }, completion: nil)
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            self._itemsTable?.view.frame.size.height =  self.view.frame.height - (self._numberPad?.preferredContentSize.height ?? 116) - (self._itemsTable?.view.frame.origin.y ?? 87) - 16
+        }, completion: { finished in
+            self.showOrderButton.enable()
+        })
+        
+        _itemsVisible = true
     }
     
     func hideItemsTable() {
-        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-            let target = self.view.frame.width + (self._itemsTable?.preferredContentSize.width ?? 0)
-            self._itemsTable?.view.frame.origin.x = target
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            self._itemsTable?.view.frame.size.height = 0
         }) { finished in
             self._itemsTable?.willMove(toParentViewController: nil)
             self._itemsTable?.view.removeFromSuperview()
             self._itemsTable?.removeFromParentViewController()
             self._itemsTable = nil
+            self.animateInputFieldDown()
+            self.messageLabel.fadeIn(duration: 0.25, delay: 0.25)
+            self.showOrderButton.enable()
         }
+        
+        _itemsVisible = false
     }
     
     func removeItem(atIndex index: Int) {

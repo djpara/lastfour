@@ -524,14 +524,14 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3Z-et-HVs">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="44.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhm-c9-KtZ" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
-                                            <rect key="frame" x="18" y="6.3333333333333321" width="64" height="31.999999999999996"/>
+                                            <rect key="frame" x="18" y="6" width="64" height="32"/>
                                             <color key="backgroundColor" red="0.039215686270000001" green="0.26274509800000001" blue="0.39607843139999999" alpha="0.25494970034246578" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="32" id="2WD-5k-WRh"/>
-                                                <constraint firstAttribute="width" constant="64" id="T6S-Nv-uqx"/>
+                                                <constraint firstAttribute="width" priority="999" constant="64" id="T6S-Nv-uqx"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                             <state key="normal" title="Delete">
@@ -580,7 +580,7 @@
                                                     <rect key="frame" x="8" y="7" width="82.666666666666671" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="28" id="O4L-aI-ptd"/>
-                                                        <constraint firstAttribute="width" constant="82.5" id="lRy-uB-e7w"/>
+                                                        <constraint firstAttribute="width" priority="999" constant="82.5" id="lRy-uB-e7w"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <color key="textColor" red="0.019350416958332062" green="0.25883489847183228" blue="0.40137770771980286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -627,7 +627,7 @@
                                                     <rect key="frame" x="8" y="7" width="82.666666666666671" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="28" id="7N0-OD-5UU"/>
-                                                        <constraint firstAttribute="width" constant="82.5" id="i2O-rv-Aed"/>
+                                                        <constraint firstAttribute="width" priority="999" constant="82.5" id="i2O-rv-Aed"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <color key="textColor" red="0.019350416959999998" green="0.25883489850000002" blue="0.40137770769999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -651,14 +651,6 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
                         </prototypes>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                <integer key="value" value="1"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                <color key="value" red="0.039215686274509803" green="0.2627450980392157" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="FWl-UW-WbX" id="8SL-Jx-AqJ"/>
                             <outlet property="delegate" destination="FWl-UW-WbX" id="7dn-G7-4EU"/>
