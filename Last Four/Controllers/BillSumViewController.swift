@@ -215,10 +215,6 @@ extension BillSumViewController: NumberPadDelegate {
         // Not implemented
     }
     
-    func keyboardDown() {
-        // Not implemented
-    }
-    
     func removeLast() {
         // Not implemented
     }

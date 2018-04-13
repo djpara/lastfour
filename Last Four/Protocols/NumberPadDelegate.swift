@@ -17,5 +17,4 @@ protocol NumberPadDelegate {
     func clear()
     func addItem()
     func enter()
-    func keyboardDown()
 }

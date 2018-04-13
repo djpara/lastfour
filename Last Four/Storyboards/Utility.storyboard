@@ -344,7 +344,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="qgl-Rn-Z9H"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="12"/>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -369,7 +369,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="NRj-Sh-krA"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="12"/>
                                         <state key="normal" title="Clear">
                                             <color key="titleColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -395,7 +395,7 @@
                                             <constraint firstAttribute="height" constant="36" id="Nmy-Me-9g4"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="c7l-3U-0Ue"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="12"/>
                                         <state key="normal" title="Remove Last">
                                             <color key="titleColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -420,7 +420,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="JHU-Wi-0v5"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="12"/>
                                         <state key="normal" title="Add Item">
                                             <color key="titleColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -445,7 +445,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="gKm-w3-8qs"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="12"/>
                                         <state key="normal" title="Enter">
                                             <color key="titleColor" red="0.75500637289999994" green="0.81528818609999998" blue="0.85291397570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -503,6 +503,7 @@
                         <outletCollection property="utilityButtons" destination="nXe-X3-f10" collectionClass="NSMutableArray" id="EjX-1y-0Mj"/>
                         <outletCollection property="utilityButtons" destination="pcd-Af-NGm" collectionClass="NSMutableArray" id="rqw-D8-bUa"/>
                         <outletCollection property="evenSplitButtons" destination="pcd-Af-NGm" collectionClass="NSMutableArray" id="w4X-Rl-I3r"/>
+                        <outletCollection property="itemizedSplitButtons" destination="Q8Q-AE-Nkp" collectionClass="NSMutableArray" id="O2S-OR-rV9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIu-qA-Qcu" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -125,7 +125,7 @@ extension ItemizedViewController: NumberPadDelegate {
     func showNumberPad() {
         _numberPad = utilityStoryboard.instantiateViewController(withIdentifier: NUMBER_PAD_VIEW_CONTROLLER) as? NumberPadViewController
         _numberPad?.numberPadDelegate = self
-        _numberPad?.setType(.evenSplit)
+        _numberPad?.setType(.itemizedSplit)
         
         _numberPad?.view.frame.origin.y = view.frame.height + ((_numberPad?.preferredContentSize.height) ?? 260)
         
@@ -204,25 +204,6 @@ extension ItemizedViewController: NumberPadDelegate {
         inputText.text?.append(num)
     }
     
-    func enter() {
-        _numberPad?.numberPadDelegate = nil
-        
-        if let text = inputText.text, let sum = Double(text) {
-            Brain.instance.billSum = sum
-            inputText.text = sum.toDollarFormat()
-        } else {
-            inputText.text = Brain.instance.billSum.toDollarFormat()
-        }
-        
-        hideNumberPad()
-        
-        if _isShowingFromButtonPress {
-            animateItemsTableExpand()
-        } else {
-            hideItemsTable()
-        }
-    }
-    
     func close() {
         _numberPad?.numberPadDelegate = nil
         
@@ -247,14 +228,29 @@ extension ItemizedViewController: NumberPadDelegate {
     }
     
     func addItem() {
-        // Not implemented
-    }
-    
-    func keyboardDown() {
-        // Not implemented
+        _numberPad?.numberPadDelegate = nil
+        
+        if let text = inputText.text, let sum = Double(text) {
+            Brain.instance.billSum = sum
+            inputText.text = sum.toDollarFormat()
+        } else {
+            inputText.text = Brain.instance.billSum.toDollarFormat()
+        }
+        
+        hideNumberPad()
+        
+        if _isShowingFromButtonPress {
+            animateItemsTableExpand()
+        } else {
+            hideItemsTable()
+        }
     }
     
     func removeLast() {
+        // Not implemented
+    }
+    
+    func enter() {
         // Not implemented
     }
     

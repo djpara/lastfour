@@ -347,10 +347,6 @@ extension GratuityViewController: NumberPadDelegate {
         // Not implemented
     }
     
-    func keyboardDown() {
-        // Not implemented
-    }
-    
     // MARK: EXTENSION HELPER FUNCTIONS
     
     fileprivate func insertKey(_ num: String, into label: UILabel) {

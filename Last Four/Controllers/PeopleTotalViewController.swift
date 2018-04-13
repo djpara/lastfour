@@ -170,9 +170,4 @@ extension PeopleTotalViewController: NumberPadDelegate {
     func removeLast() {
         // Not Implemented
     }
-    
-    func keyboardDown() {
-        // Not Implemented  
-    }
-     
 }

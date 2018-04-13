@@ -86,6 +86,10 @@ class NumberPadViewController: UIViewController {
         case .itemizedSplit:
             showItemizedSplitButtons()
         }
+        
+        utilityButtons.forEach { button in
+            button.titleLabel?.adjustsFontSizeToFitWidth = true
+        }
     }
     
     fileprivate func showEvenSplitButtons() {
