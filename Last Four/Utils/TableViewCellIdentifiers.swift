@@ -10,3 +10,4 @@ import Foundation
 
 let ITEMS_TABLE_CELL = "itemTableCell"
 let NO_ITEMS_CELL    = "noItemsTableCell"
+let MENU_ITEM_CELL   = "menuItemTableCell"

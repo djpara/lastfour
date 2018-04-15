@@ -167,7 +167,6 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzp-qT-gmz" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                 <rect key="frame" x="59.666666666666657" y="449" width="255.99999999999997" height="48"/>
-                                <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="NYL-TM-sXt"/>
                                 </constraints>
@@ -227,7 +226,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-631" y="1931"/>
+            <point key="canvasLocation" x="-207" y="1931"/>
         </scene>
         <!--itemizedTableViewController-->
         <scene sceneID="b73-vh-PXH">
@@ -305,7 +304,6 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwb-Yk-vJG" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="116" height="48"/>
-                                                <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="62s-xs-RgN"/>
                                                 </constraints>
@@ -330,7 +328,6 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMc-hx-3zY" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                 <rect key="frame" x="124" y="0.0" width="116" height="48"/>
-                                                <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="6l4-Q6-75J"/>
                                                 </constraints>
@@ -435,7 +432,6 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSn-1f-4mR" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="48"/>
-                                                <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="kDJ-vJ-nHr"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="l0p-jE-agu"/>
@@ -461,7 +457,6 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTQ-Ug-cYs" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="64.000000000000028" width="100" height="48"/>
-                                                <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="67O-ug-FfT"/>
                                                 </constraints>
@@ -574,7 +569,6 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfU-Qa-FDr" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="48"/>
-                                                        <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="80" id="sFc-SQ-epV"/>
                                                             <constraint firstAttribute="height" constant="48" id="w4g-3T-IaI"/>
@@ -600,7 +594,6 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdW-ZP-tq4" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                         <rect key="frame" x="88" y="0.0" width="80" height="48"/>
-                                                        <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="eWu-yb-9Ao"/>
                                                         </constraints>
@@ -625,7 +618,6 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsN-iP-AdO" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                         <rect key="frame" x="176" y="0.0" width="80" height="48"/>
-                                                        <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="yNf-Ts-bFj"/>
                                                         </constraints>
@@ -656,7 +648,6 @@
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75h-IE-cwy" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="124" width="256" height="48"/>
-                                                <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="UMB-Wq-2Uv"/>
                                                 </constraints>
@@ -696,7 +687,6 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRf-hi-Kmr" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="48"/>
-                                                <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="Q5d-Bl-0Ue"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="vo8-dn-NlC"/>
@@ -722,7 +712,6 @@
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-cd-IAD" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="64" width="100" height="48"/>
-                                                <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                                 <state key="normal" title="No">
                                                     <color key="titleColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -753,7 +742,6 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uB1-72-1he" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="124" height="48"/>
-                                                <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="wLc-pN-KDH"/>
                                                 </constraints>
@@ -778,7 +766,6 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLA-e5-tcd" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                 <rect key="frame" x="132" y="0.0" width="124" height="48"/>
-                                                <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="PNJ-84-Z2Y"/>
                                                 </constraints>
@@ -892,7 +879,6 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hf4-Wz-Iz5" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="48"/>
-                                                <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="F4Z-Vs-a98"/>
                                                 </constraints>
@@ -917,7 +903,6 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57Z-0z-D5w" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                                 <rect key="frame" x="136" y="0.0" width="120" height="48"/>
-                                                <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="hZL-hl-mJ8"/>
                                                 </constraints>
@@ -1062,7 +1047,6 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mv1-wa-Hyz" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                         <rect key="frame" x="51" y="429" width="240" height="48"/>
-                                        <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.25018728600000001" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="r5Y-tx-6kc"/>
                                         </constraints>
@@ -1189,7 +1173,6 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nM-5C-BDE" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="48"/>
-                                        <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.2501872859589041" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="7GN-WM-neX"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="FZn-31-xcM"/>
@@ -1215,7 +1198,6 @@
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s85-Gg-R7I" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="64.000000000000028" width="100" height="48"/>
-                                        <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="0.2501872859589041" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                         <state key="normal" title="No">
                                             <color key="titleColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

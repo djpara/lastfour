@@ -17,13 +17,18 @@ class UIMenuButton: UICustomButton {
     fileprivate var _ogTopBarPath: CGPath!
     
     fileprivate var _menuOpen = false
+    fileprivate var _rendered = false
     
     override func draw(_ rect: CGRect) {
+        if _rendered { return }
+        
         _bottomBar = drawMenuLine(y: bounds.height/2 + 8)
         _topBar = drawMenuLine(y: bounds.height/2 - 8)
         
         _ogBottomBarPath = _bottomBar.path
         _ogTopBarPath = _topBar.path
+        
+        _rendered = true
     }
     
     fileprivate func drawMenuLine(y: CGFloat, toY: CGFloat = 0) -> CAShapeLayer {
@@ -44,8 +49,8 @@ class UIMenuButton: UICustomButton {
     fileprivate func createMenuX(fromY: CGFloat, toY: CGFloat) -> UIBezierPath {
         let path = UIBezierPath()
         
-        path.move(to: CGPoint(x: 6, y: fromY))
-        path.addLine(to: CGPoint(x: bounds.width-6, y: toY))
+        path.move(to: CGPoint(x: 4, y: fromY))
+        path.addLine(to: CGPoint(x: bounds.width-4, y: toY))
         path.lineJoinStyle = .round
         
         return path
@@ -83,8 +88,8 @@ class UIMenuButton: UICustomButton {
             
             _menuOpen = false
         } else {
-            animatePathChange(for: _bottomBar, toPath: createMenuX(fromY: bounds.height/2 + 10, toY: bounds.height/2 - 10).cgPath)
-            animatePathChange(for: _topBar, toPath: createMenuX(fromY: bounds.height/2 - 10, toY: bounds.height/2 + 10).cgPath)
+            animatePathChange(for: _bottomBar, toPath: createMenuX(fromY: bounds.height/2 + 12, toY: bounds.height/2 - 12).cgPath)
+            animatePathChange(for: _topBar, toPath: createMenuX(fromY: bounds.height/2 - 12, toY: bounds.height/2 + 12).cgPath)
             
             _menuOpen = true
         }

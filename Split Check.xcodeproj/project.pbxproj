@@ -26,6 +26,10 @@
 		F5457A0F20684D4600418626 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5457A0E20684D4600418626 /* Preferences.swift */; };
 		F5457A122068C52400418626 /* UICustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5457A112068C52400418626 /* UICustomView.swift */; };
 		F547183A20828DC90049972E /* UIMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F547183920828DC90049972E /* UIMenuButton.swift */; };
+		F547183C208308FD0049972E /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F547183B208308FD0049972E /* MenuTableViewController.swift */; };
+		F547183F20830E690049972E /* UIMenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F547183E20830E690049972E /* UIMenuItemTableViewCell.swift */; };
+		F54718412083113C0049972E /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54718402083113C0049972E /* MenuItem.swift */; };
+		F54718432083117E0049972E /* MenuItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54718422083117E0049972E /* MenuItemType.swift */; };
 		F56D5F56206DAA54002F69E9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56D5F55206DAA54002F69E9 /* Extensions.swift */; };
 		F57715C62069FF8F0019E261 /* NumberPadDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57715C52069FF8F0019E261 /* NumberPadDelegate.swift */; };
 		F57E702A207F1B080012ABB4 /* ItemsTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57E7029207F1B080012ABB4 /* ItemsTableDelegate.swift */; };
@@ -81,6 +85,10 @@
 		F5457A0E20684D4600418626 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		F5457A112068C52400418626 /* UICustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomView.swift; sourceTree = "<group>"; };
 		F547183920828DC90049972E /* UIMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMenuButton.swift; sourceTree = "<group>"; };
+		F547183B208308FD0049972E /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		F547183E20830E690049972E /* UIMenuItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMenuItemTableViewCell.swift; sourceTree = "<group>"; };
+		F54718402083113C0049972E /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		F54718422083117E0049972E /* MenuItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemType.swift; sourceTree = "<group>"; };
 		F56D5F55206DAA54002F69E9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F57715C52069FF8F0019E261 /* NumberPadDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadDelegate.swift; sourceTree = "<group>"; };
 		F57E7029207F1B080012ABB4 /* ItemsTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				F5457A032066C16B00418626 /* CalculatorType.swift */,
+				F54718422083117E0049972E /* MenuItemType.swift */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";
@@ -152,6 +161,7 @@
 			children = (
 				F5457A0E20684D4600418626 /* Preferences.swift */,
 				F52EDF5E206C6511004EB025 /* Brain.swift */,
+				F54718402083113C0049972E /* MenuItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -164,6 +174,7 @@
 				F5457A112068C52400418626 /* UICustomView.swift */,
 				F503CE9D20791FA500439AFB /* UIItemizedTableViewCell.swift */,
 				F547183920828DC90049972E /* UIMenuButton.swift */,
+				F547183E20830E690049972E /* UIMenuItemTableViewCell.swift */,
 			);
 			path = "UI Custom";
 			sourceTree = "<group>";
@@ -181,6 +192,7 @@
 				F5B72EB52061FF2000EA58DA /* WelcomeViewController.swift */,
 				F54579F62066B8D200418626 /* YourTotalViewController.swift */,
 				F503CE9B20791F6700439AFB /* ItemizedTableViewController.swift */,
+				F547183B208308FD0049972E /* MenuTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -429,7 +441,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F54579FB2066B92A00418626 /* ItemizedViewController.swift in Sources */,
+				F547183F20830E690049972E /* UIMenuItemTableViewCell.swift in Sources */,
 				F5457A092066C7E600418626 /* ViewControllerIdentifiers.swift in Sources */,
+				F547183C208308FD0049972E /* MenuTableViewController.swift in Sources */,
 				F54579FD2066B94E00418626 /* PageViewController.swift in Sources */,
 				F5876FBD2063532C00806F48 /* UICustomButton.swift in Sources */,
 				F54579F52066B89F00418626 /* GratuityViewController.swift in Sources */,
@@ -439,6 +453,7 @@
 				F5CC11D02064C2DD0082109B /* Notifications.swift in Sources */,
 				F5457A0F20684D4600418626 /* Preferences.swift in Sources */,
 				F57E702C207F23AB0012ABB4 /* TableViewCellIdentifiers.swift in Sources */,
+				F54718412083113C0049972E /* MenuItem.swift in Sources */,
 				F5457A122068C52400418626 /* UICustomView.swift in Sources */,
 				F5B72EBC2061FF2000EA58DA /* Last_Four.xcdatamodeld in Sources */,
 				F5457A0D2066D18200418626 /* Shortcuts.swift in Sources */,
@@ -446,6 +461,7 @@
 				F5457A012066BD3500418626 /* UICustomTextField.swift in Sources */,
 				F52EDF5F206C6511004EB025 /* Brain.swift in Sources */,
 				F503CE9C20791F6700439AFB /* ItemizedTableViewController.swift in Sources */,
+				F54718432083117E0049972E /* MenuItemType.swift in Sources */,
 				F5CC11CE2064C00B0082109B /* QuestionSplittingViewController.swift in Sources */,
 				F54579F32066B86100418626 /* BillSumViewController.swift in Sources */,
 				F5457A042066C16B00418626 /* CalculatorType.swift in Sources */,
