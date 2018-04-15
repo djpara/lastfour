@@ -11,7 +11,8 @@ import UIKit
 class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var titleLabel                           : UILabel!
-    @IBOutlet weak var menuButton                           : UICustomButton!
+//    @IBOutlet weak var menuButton                           : UICustomButton!
+    @IBOutlet weak var menuButton                           : UIView!
     
     @IBOutlet weak var titleYConstraint                     : NSLayoutConstraint!
     @IBOutlet weak var titleXConstraint                     : NSLayoutConstraint!
@@ -40,6 +41,8 @@ class WelcomeViewController: UIViewController {
     @IBAction func menuButtonPressed(_ sender: Any) {
         print("Menu pressed")
     }
+    
+    
     
     deinit {
         print("Welcome Controller deinitialized")

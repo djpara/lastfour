@@ -25,6 +25,7 @@
 		F5457A0D2066D18200418626 /* Shortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5457A0C2066D18200418626 /* Shortcuts.swift */; };
 		F5457A0F20684D4600418626 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5457A0E20684D4600418626 /* Preferences.swift */; };
 		F5457A122068C52400418626 /* UICustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5457A112068C52400418626 /* UICustomView.swift */; };
+		F547183A20828DC90049972E /* UIMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F547183920828DC90049972E /* UIMenuButton.swift */; };
 		F56D5F56206DAA54002F69E9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56D5F55206DAA54002F69E9 /* Extensions.swift */; };
 		F57715C62069FF8F0019E261 /* NumberPadDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57715C52069FF8F0019E261 /* NumberPadDelegate.swift */; };
 		F57E702A207F1B080012ABB4 /* ItemsTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57E7029207F1B080012ABB4 /* ItemsTableDelegate.swift */; };
@@ -79,6 +80,7 @@
 		F5457A0C2066D18200418626 /* Shortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcuts.swift; sourceTree = "<group>"; };
 		F5457A0E20684D4600418626 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		F5457A112068C52400418626 /* UICustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomView.swift; sourceTree = "<group>"; };
+		F547183920828DC90049972E /* UIMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMenuButton.swift; sourceTree = "<group>"; };
 		F56D5F55206DAA54002F69E9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F57715C52069FF8F0019E261 /* NumberPadDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadDelegate.swift; sourceTree = "<group>"; };
 		F57E7029207F1B080012ABB4 /* ItemsTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableDelegate.swift; sourceTree = "<group>"; };
@@ -154,15 +156,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		F5876FB520634F8F00806F48 /* Custom UI */ = {
+		F5876FB520634F8F00806F48 /* UI Custom */ = {
 			isa = PBXGroup;
 			children = (
 				F5876FBC2063532C00806F48 /* UICustomButton.swift */,
 				F5457A002066BD3500418626 /* UICustomTextField.swift */,
 				F5457A112068C52400418626 /* UICustomView.swift */,
 				F503CE9D20791FA500439AFB /* UIItemizedTableViewCell.swift */,
+				F547183920828DC90049972E /* UIMenuButton.swift */,
 			);
-			path = "Custom UI";
+			path = "UI Custom";
 			sourceTree = "<group>";
 		};
 		F5876FB620634F9D00806F48 /* Controllers */ = {
@@ -203,7 +206,7 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		F5876FB92063507F00806F48 /* Global */ = {
+		F5876FB92063507F00806F48 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				F5876FBA2063509000806F48 /* Colors.swift */,
@@ -214,7 +217,7 @@
 				F5457A082066C7E600418626 /* ViewControllerIdentifiers.swift */,
 				F57E702B207F23AB0012ABB4 /* TableViewCellIdentifiers.swift */,
 			);
-			path = Global;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		F5B72EA72061FF2000EA58DA = {
@@ -241,9 +244,9 @@
 			isa = PBXGroup;
 			children = (
 				F5876FB620634F9D00806F48 /* Controllers */,
-				F5876FB520634F8F00806F48 /* Custom UI */,
+				F5876FB520634F8F00806F48 /* UI Custom */,
 				F5457A022066C12200418626 /* Enumerations */,
-				F5876FB92063507F00806F48 /* Global */,
+				F5876FB92063507F00806F48 /* Utils */,
 				F5457A1020684DAE00418626 /* Models */,
 				F5457A052066C45C00418626 /* Protocols */,
 				F5876FB820634FBD00806F48 /* Storyboards */,
@@ -447,6 +450,7 @@
 				F54579F32066B86100418626 /* BillSumViewController.swift in Sources */,
 				F5457A042066C16B00418626 /* CalculatorType.swift in Sources */,
 				F54579F12066B7C800418626 /* NumberPadViewController.swift in Sources */,
+				F547183A20828DC90049972E /* UIMenuButton.swift in Sources */,
 				F56D5F56206DAA54002F69E9 /* Extensions.swift in Sources */,
 				F5B72EB62061FF2000EA58DA /* WelcomeViewController.swift in Sources */,
 				F54579F92066B90100418626 /* PeopleTotalViewController.swift in Sources */,
@@ -603,6 +607,7 @@
 		F5B72EDC2061FF2000EA58DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ETY6J7XEJ7;
 				INFOPLIST_FILE = "Last Four/Supporting Files/Info.plist";
@@ -616,6 +621,7 @@
 		F5B72EDD2061FF2000EA58DA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ETY6J7XEJ7;
 				INFOPLIST_FILE = "Last Four/Supporting Files/Info.plist";

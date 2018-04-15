@@ -22,23 +22,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMy-AY-Dpn" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
-                                <rect key="frame" x="362" y="20" width="32" height="76"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="40"/>
-                                <size key="titleShadowOffset" width="1" height="2"/>
-                                <state key="normal" title="≡">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="1" alpha="0.25082940924657532" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.opacity">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="menuButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wcZ-dj-rB0"/>
-                                </connections>
-                            </button>
                             <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ejg-83-HCH" userLabel="Page Container View">
                                 <rect key="frame" x="0.0" y="100" width="414" height="636"/>
                                 <color key="backgroundColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -62,26 +45,41 @@
                                 <color key="shadowColor" white="1" alpha="0.25109696061643838" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="2"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6z-lW-Cds" customClass="UIMenuButton" customModule="Split_Check" customModuleProvider="target">
+                                <rect key="frame" x="362" y="20" width="32" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="rQV-NT-Ubh"/>
+                                    <constraint firstAttribute="width" constant="32" id="zl8-jL-MxM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.opacity">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="menuButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R0T-Tq-fkx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.019607843137254902" green="0.25882352941176467" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ejg-83-HCH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="5co-98-aky"/>
                             <constraint firstItem="Ejg-83-HCH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7Wp-ke-TWA"/>
                             <constraint firstAttribute="trailing" secondItem="Ejg-83-HCH" secondAttribute="trailing" id="7un-yU-2TI"/>
+                            <constraint firstItem="V6z-lW-Cds" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8GR-FP-r8K"/>
                             <constraint firstItem="dA5-RV-Lbb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="F2K-2o-xS7"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ejg-83-HCH" secondAttribute="bottom" id="Gvn-Y2-yXj"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="v94-7B-Saj" secondAttribute="bottom" id="INw-22-zDn"/>
                             <constraint firstAttribute="trailing" secondItem="v94-7B-Saj" secondAttribute="trailing" id="Ums-hO-uPZ"/>
                             <constraint firstItem="dA5-RV-Lbb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cK1-Zg-gyf"/>
                             <constraint firstItem="v94-7B-Saj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gGI-Dq-gqF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="YMy-AY-Dpn" secondAttribute="trailing" id="nNx-eY-m4W"/>
-                            <constraint firstItem="YMy-AY-Dpn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qxe-pQ-1UE"/>
+                            <constraint firstItem="V6z-lW-Cds" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="l0Y-2K-nmg"/>
                             <constraint firstItem="v94-7B-Saj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="rCd-fV-KfF"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="layoverContainerView" destination="v94-7B-Saj" id="vS4-8B-Sbx"/>
-                        <outlet property="menuButton" destination="YMy-AY-Dpn" id="LfC-8U-Dgn"/>
+                        <outlet property="menuButton" destination="V6z-lW-Cds" id="vnf-tC-NDl"/>
                         <outlet property="pageContainerView" destination="Ejg-83-HCH" id="SQp-ED-yzX"/>
                         <outlet property="titleLabel" destination="dA5-RV-Lbb" id="of9-uP-Wbr"/>
                         <outlet property="titleXConstraint" destination="cK1-Zg-gyf" id="hW4-PZ-HYM"/>
@@ -90,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-207.19999999999999" y="43.628185907046479"/>
+            <point key="canvasLocation" x="-207.24637681159422" y="43.206521739130437"/>
         </scene>
         <!--People Total View Controller-->
         <scene sceneID="weY-Wt-AXk">
@@ -351,6 +349,9 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="nextButtonPressed:" destination="OU2-jX-YwX" eventType="touchUpInside" id="WGz-q0-bOZ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>

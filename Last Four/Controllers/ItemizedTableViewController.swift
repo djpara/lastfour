@@ -12,10 +12,9 @@ class ItemizedTableViewController: UITableViewController {
     
     // MARK: FILEPRIVATE PROPERTIES
     
-    fileprivate var _items: [Int] = []
+    fileprivate var _items: [Double] = []
     
     fileprivate var _itemsTableDelegate: ItemsTableDelegate?
-    
     
     // MARK: INTERNAL PROPERTIES
     
@@ -24,9 +23,10 @@ class ItemizedTableViewController: UITableViewController {
         set { _itemsTableDelegate = newValue }
     }
     
-    // MARK: IBOUTLET PROPERTIES
-    
-    @IBOutlet weak var deleteButtonView: UIView!
+    internal var items: [Double] {
+        get { return _items }
+        set { _items = newValue }
+    }
     
     // MARK: OVERRIDE FUNCTIONS
 
@@ -38,14 +38,11 @@ class ItemizedTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         if !_items.isEmpty {
-            deleteButtonView.isHidden = false
             tableView.isScrollEnabled = true
             return _items.count
         }
         
-        deleteButtonView.isHidden = true
         tableView.isScrollEnabled = false
         return 1
     }
@@ -53,13 +50,15 @@ class ItemizedTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if !_items.isEmpty {
-            deleteButtonView.frame.size.height = 44
-            let cell = tableView.dequeueReusableCell(withIdentifier: ITEMS_TABLE_CELL, for: indexPath)
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ITEMS_TABLE_CELL, for: indexPath) as? UIItemizedTableViewCell else {
+                return UITableViewCell()
+            }
+            
+            cell.itemLabel.text = "$\(_items[indexPath.row].toDollarFormat())"
             
             return cell
         }
         
-        deleteButtonView.frame.size.height = 0
         let cell = tableView.dequeueReusableCell(withIdentifier: NO_ITEMS_CELL, for: indexPath)
         
         return cell
@@ -68,6 +67,8 @@ class ItemizedTableViewController: UITableViewController {
     deinit {
         print("Itemized Table Controller deinitialized")
     }
+    
+    // MARK: FILEPRIVATE FUNCTIONS
     
     fileprivate func configureView() {
     }

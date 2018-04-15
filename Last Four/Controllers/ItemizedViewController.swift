@@ -17,7 +17,7 @@ class ItemizedViewController: UIViewController {
     fileprivate var _ogBorderColor: UIColor?
     fileprivate var _ogInputFieldFrameCenter: CGPoint?
     
-    fileprivate var _items: [Int] = []
+    fileprivate var _items: [Double] = []
     fileprivate var _itemsVisible = false
     fileprivate var _isShowingFromButtonPress = false
     
@@ -116,6 +116,13 @@ class ItemizedViewController: UIViewController {
             _isShowingFromButtonPress = true
         }
     }
+    
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        guard let pageViewController = (parent as? PageViewController) else { return }
+        
+        pageViewController.setViewControllers([pageViewController.orderedSequence[1]], direction: .forward, animated: true, completion: nil)
+    }
+    
 }
 
 // MARK: Number Pad Delegate extension
@@ -228,26 +235,25 @@ extension ItemizedViewController: NumberPadDelegate {
     }
     
     func addItem() {
-        _numberPad?.numberPadDelegate = nil
-        
-        if let text = inputText.text, let sum = Double(text) {
-            Brain.instance.billSum = sum
-            inputText.text = sum.toDollarFormat()
-        } else {
-            inputText.text = Brain.instance.billSum.toDollarFormat()
+        if let text = inputText.text, let item = Double(text) {
+            _items.append(item)
+            _itemsTable?.items = _items
+            _itemsTable?.tableView.reloadData()
+            
+            Brain.instance.billSum = _items.reduce(0, +)
+            print(Brain.instance.billSum)
         }
         
-        hideNumberPad()
-        
-        if _isShowingFromButtonPress {
-            animateItemsTableExpand()
-        } else {
-            hideItemsTable()
-        }
+        inputText.text = ""
     }
     
     func removeLast() {
-        // Not implemented
+        _items.removeLast()
+        _itemsTable?.items = _items
+        _itemsTable?.tableView.reloadData()
+        
+        Brain.instance.billSum = _items.reduce(0, +)
+        print(Brain.instance.billSum)
     }
     
     func enter() {
@@ -260,6 +266,7 @@ extension ItemizedViewController: ItemsTableDelegate {
     func showItemsTable() {
         _itemsTable = utilityStoryboard.instantiateViewController(withIdentifier: ITEMIZED_TABLE_VIEW_CONTROLLER) as? ItemizedTableViewController
         _itemsTable?.itemsTableDelegate = self
+        _itemsTable?.items = _items
         
         _itemsTable?.view.frame.origin.x = inputField.frame.origin.x + 16.0
         _itemsTable?.view.frame.origin.y = inputField.frame.origin.y + inputField.frame.height - 1

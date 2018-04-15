@@ -48,6 +48,7 @@ class NumberPadViewController: UIViewController {
     // MARK: IBACTION FUNCTIONS
     
     @IBAction func removeLastPressed(_ sender: Any) {
+        numberPadDelegate?.removeLast()
     }
     
     @IBAction func cancelPressed(_ sender: Any) {
@@ -59,6 +60,7 @@ class NumberPadViewController: UIViewController {
     }
     
     @IBAction func addItemPressed(_ sender: Any) {
+        numberPadDelegate?.addItem()
     }
     
     @IBAction func enterPressed(_ sender: Any) {

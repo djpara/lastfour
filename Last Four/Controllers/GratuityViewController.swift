@@ -162,7 +162,10 @@ class GratuityViewController: UIViewController {
     }
     
     @IBAction func nextPressed(_ sender: Any) {
-        guard let pageViewController = (parent as? PageViewController) else { return }
+        guard let pageViewController = (parent as? PageViewController), pageViewController.orderedSequence.count > 2 else { // need three
+            notificationCenterDefault.post(NOTIFICATION_REQUEST_CALCULATION)
+            return
+        }
         
         pageViewController.setViewControllers([pageViewController.orderedSequence[2]], direction: .forward, animated: true, completion: nil)
     }
