@@ -10,7 +10,11 @@ import UIKit
 
 class UIMenuItemTableViewCell: UITableViewCell {
     
-    internal var menuItem: MenuItem!
+    internal var menuItem: MenuItem! {
+        didSet {
+            titleLabel.text = menuItem.title ?? ""
+        }
+    }
     
     @IBOutlet weak var titleLabel: UILabel!
     

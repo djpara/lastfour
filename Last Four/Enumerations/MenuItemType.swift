@@ -9,5 +9,5 @@
 import Foundation
 
 enum MenuItemType {
-    case startOver
+    case reset
 }

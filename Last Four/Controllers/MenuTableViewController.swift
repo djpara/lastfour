@@ -16,6 +16,8 @@ class MenuTableViewController: UITableViewController {
     
     // MARK: INTERNAL FUNCTIONS
     
+    internal var menuDelegate: MenuDelegate?
+    
     internal var menuItems: [MenuItem] {
         get {
             return _menuItems
@@ -41,7 +43,7 @@ class MenuTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,7 +54,7 @@ class MenuTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 8
+        return 10
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -62,6 +64,21 @@ class MenuTableViewController: UITableViewController {
         cell.menuItem = menuItems[indexPath.row]
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let menuItem = _menuItems[indexPath.row].type else { return }
+        
+        switch menuItem {
+        case .reset:
+            menuDelegate?.close()
+            notificationCenterDefault.post(NOTIFICATION_YOUR_TOTAL_DONE_PRESSED)
+            break
+        }
     }
 
 }

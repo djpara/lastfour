@@ -30,6 +30,7 @@
 		F547183F20830E690049972E /* UIMenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F547183E20830E690049972E /* UIMenuItemTableViewCell.swift */; };
 		F54718412083113C0049972E /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54718402083113C0049972E /* MenuItem.swift */; };
 		F54718432083117E0049972E /* MenuItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54718422083117E0049972E /* MenuItemType.swift */; };
+		F5471845208330320049972E /* MenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5471844208330320049972E /* MenuDelegate.swift */; };
 		F56D5F56206DAA54002F69E9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56D5F55206DAA54002F69E9 /* Extensions.swift */; };
 		F57715C62069FF8F0019E261 /* NumberPadDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57715C52069FF8F0019E261 /* NumberPadDelegate.swift */; };
 		F57E702A207F1B080012ABB4 /* ItemsTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57E7029207F1B080012ABB4 /* ItemsTableDelegate.swift */; };
@@ -89,6 +90,7 @@
 		F547183E20830E690049972E /* UIMenuItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMenuItemTableViewCell.swift; sourceTree = "<group>"; };
 		F54718402083113C0049972E /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		F54718422083117E0049972E /* MenuItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemType.swift; sourceTree = "<group>"; };
+		F5471844208330320049972E /* MenuDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDelegate.swift; sourceTree = "<group>"; };
 		F56D5F55206DAA54002F69E9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F57715C52069FF8F0019E261 /* NumberPadDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadDelegate.swift; sourceTree = "<group>"; };
 		F57E7029207F1B080012ABB4 /* ItemsTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			children = (
 				F57715C52069FF8F0019E261 /* NumberPadDelegate.swift */,
 				F57E7029207F1B080012ABB4 /* ItemsTableDelegate.swift */,
+				F5471844208330320049972E /* MenuDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				F5457A042066C16B00418626 /* CalculatorType.swift in Sources */,
 				F54579F12066B7C800418626 /* NumberPadViewController.swift in Sources */,
 				F547183A20828DC90049972E /* UIMenuButton.swift in Sources */,
+				F5471845208330320049972E /* MenuDelegate.swift in Sources */,
 				F56D5F56206DAA54002F69E9 /* Extensions.swift in Sources */,
 				F5B72EB62061FF2000EA58DA /* WelcomeViewController.swift in Sources */,
 				F54579F92066B90100418626 /* PeopleTotalViewController.swift in Sources */,

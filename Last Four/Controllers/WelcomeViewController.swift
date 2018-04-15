@@ -11,7 +11,6 @@ import UIKit
 class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var titleLabel                           : UILabel!
-//    @IBOutlet weak var menuButton                           : UICustomButton!
     @IBOutlet weak var menuButton                           : UIView!
     
     @IBOutlet weak var titleYConstraint                     : NSLayoutConstraint!
@@ -20,8 +19,9 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var pageContainerView                    : UIView!
     @IBOutlet weak var layoverContainerView                 : UIView!
     
-    fileprivate weak var _questionSplittingViewController    : QuestionSplittingViewController?
-    fileprivate weak var _yourTotalViewController            : YourTotalViewController?
+    fileprivate weak var _questionSplittingViewController   : QuestionSplittingViewController?
+    fileprivate weak var _yourTotalViewController           : YourTotalViewController?
+    fileprivate weak var _menuTableViewController           : MenuTableViewController?
     
     fileprivate weak var _layoverViewController             : UIViewController?
     
@@ -40,9 +40,12 @@ class WelcomeViewController: UIViewController {
     
     @IBAction func menuButtonPressed(_ sender: Any) {
         print("Menu pressed")
+        if _menuTableViewController == nil {
+            showMenu()
+        } else {
+            hideMenu()
+        }
     }
-    
-    
     
     deinit {
         print("Welcome Controller deinitialized")
@@ -122,6 +125,46 @@ class WelcomeViewController: UIViewController {
         })
     }
     
+    fileprivate func showMenu() {
+        _menuTableViewController = utilityStoryboard.instantiateViewController(withIdentifier: MENU_VIEW_CONTROLLER) as? MenuTableViewController
+        _menuTableViewController?.menuItems = getMenuItems()
+        _menuTableViewController?.menuDelegate = self
+        
+        _menuTableViewController?.view.frame.origin.x = screenWidth
+        
+        let menuWidth = _menuTableViewController?.preferredContentSize.width ?? 150
+        _menuTableViewController?.view.frame.size.width = menuWidth
+        
+        view.insertSubview((_menuTableViewController?.view)!, at: 10)
+        
+        addChildViewController(_menuTableViewController!)
+        parent?.view.addSubview((_menuTableViewController?.view)!)
+        _menuTableViewController?.didMove(toParentViewController: self.parent)
+        
+        UIView.animate(withDuration: 0.25, animations: {
+            self.view.frame.origin.x -= menuWidth
+            self._menuTableViewController?.view.frame.origin.x = screenWidth - menuWidth
+        })
+    }
+    
+    fileprivate func hideMenu() {
+        UIView.animate(withDuration: 0.25, animations: {
+            self._menuTableViewController?.view.frame.origin.x = screenWidth
+            self.view.frame.origin.x += self._menuTableViewController?.preferredContentSize.width ?? 150
+        }, completion: { finished in
+            self._menuTableViewController?.willMove(toParentViewController: nil)
+            self._menuTableViewController?.view.removeFromSuperview()
+            self._menuTableViewController?.removeFromParentViewController()
+            self._menuTableViewController = nil
+        })
+    }
+    
+    fileprivate func getMenuItems() -> [MenuItem] {
+        var items:[MenuItem] = []
+        items.append(MenuItem(type: .reset, title: "Reset"))
+        return items
+    }
+    
     /**
      Loads and displays the total view controller
      */
@@ -175,5 +218,11 @@ class WelcomeViewController: UIViewController {
         pageContainerView.fadeOut(duration: 0.5)
     }
     
+}
+
+extension WelcomeViewController: MenuDelegate {
+    func close() {
+        hideMenu()
+    }
 }
 
