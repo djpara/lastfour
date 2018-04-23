@@ -45,7 +45,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="Split_Check" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="Split" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -65,11 +65,11 @@
                                 <rect key="frame" x="0.0" y="100" width="414" height="636"/>
                                 <color key="backgroundColor" red="0.017987977713346481" green="0.26000535488128662" blue="0.40128949284553528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </containerView>
-                            <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split Check" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA5-RV-Lbb">
-                                <rect key="frame" x="104" y="328" width="206" height="79"/>
+                            <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPL/T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA5-RV-Lbb">
+                                <rect key="frame" x="139.66666666666669" y="328" width="134.66666666666669" height="79"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="134.66999999999999" id="7ds-ya-e4M"/>
                                     <constraint firstAttribute="height" constant="79" id="FGI-bM-9su"/>
-                                    <constraint firstAttribute="width" constant="206" id="Sti-Up-gzg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -77,7 +77,7 @@
                                 <color key="shadowColor" white="1" alpha="0.25109696061643838" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="2"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6z-lW-Cds" customClass="UIMenuButton" customModule="Split_Check" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6z-lW-Cds" customClass="UIMenuButton" customModule="Split" customModuleProvider="target">
                                 <rect key="frame" x="362" y="20" width="32" height="76"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="76" id="rQV-NT-Ubh"/>
@@ -125,7 +125,7 @@
         <!--People Total View Controller-->
         <scene sceneID="weY-Wt-AXk">
             <objects>
-                <viewController storyboardIdentifier="peopleTotalViewController" id="TVC-Dc-isE" customClass="PeopleTotalViewController" customModule="Split_Check" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="peopleTotalViewController" id="TVC-Dc-isE" customClass="PeopleTotalViewController" customModule="Split" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0UJ-gM-xS5"/>
                         <viewControllerLayoutGuide type="bottom" id="Coi-y9-7Bu"/>
@@ -134,7 +134,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZ9-yl-mFV" customClass="UICustomView" customModule="Split_Check" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZ9-yl-mFV" customClass="UICustomView" customModule="Split" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="343" height="529"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -143,7 +143,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wj5-Hr-xR4" customClass="UICustomView" customModule="Split_Check" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wj5-Hr-xR4" customClass="UICustomView" customModule="Split" customModuleProvider="target">
                                 <rect key="frame" x="137.66666666666666" y="253.66666666666663" width="100" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gX0-nI-3x4">
@@ -197,7 +197,7 @@
                                 <color key="textColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzp-qT-gmz" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzp-qT-gmz" customClass="UICustomButton" customModule="Split" customModuleProvider="target">
                                 <rect key="frame" x="59.666666666666657" y="449" width="255.99999999999997" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="NYL-TM-sXt"/>
@@ -263,7 +263,7 @@
         <!--itemizedTableViewController-->
         <scene sceneID="b73-vh-PXH">
             <objects>
-                <viewController storyboardIdentifier="itemizedViewController" title="itemizedTableViewController" id="OU2-jX-YwX" customClass="ItemizedViewController" customModule="Split_Check" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="itemizedViewController" title="itemizedTableViewController" id="OU2-jX-YwX" customClass="ItemizedViewController" customModule="Split" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x5g-LN-7Wu"/>
                         <viewControllerLayoutGuide type="bottom" id="7g3-hM-kM7"/>
@@ -272,7 +272,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8s5-zQ-vKi" customClass="UICustomView" customModule="Split_Check" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8s5-zQ-vKi" customClass="UICustomView" customModule="Split" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="343" height="529"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your items." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ME-Al-mYb">
@@ -285,7 +285,7 @@
                                         <color key="textColor" red="0.017987977709999999" green="0.26000535489999999" blue="0.40128949279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ClI-hY-YEP" customClass="UICustomView" customModule="Split_Check" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ClI-hY-YEP" customClass="UICustomView" customModule="Split" customModuleProvider="target">
                                         <rect key="frame" x="51" y="234" width="240" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o38-K3-edu">
@@ -334,7 +334,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xyB-Of-FN3" userLabel="Next Stack View">
                                         <rect key="frame" x="51" y="429" width="240" height="48"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwb-Yk-vJG" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwb-Yk-vJG" customClass="UICustomButton" customModule="Split" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="116" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="62s-xs-RgN"/>
@@ -358,7 +358,7 @@
                                                     <action selector="showOrderPressed:" destination="OU2-jX-YwX" eventType="touchUpInside" id="xM1-0N-kXu"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMc-hx-3zY" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMc-hx-3zY" customClass="UICustomButton" customModule="Split" customModuleProvider="target">
                                                 <rect key="frame" x="124" y="0.0" width="116" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="6l4-Q6-75J"/>
@@ -437,7 +437,7 @@
         <!--Gratuity View Controller-->
         <scene sceneID="Nmk-CK-846">
             <objects>
-                <viewController storyboardIdentifier="gruatuityViewController" id="KY8-iU-65d" customClass="GratuityViewController" customModule="Split_Check" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gruatuityViewController" id="KY8-iU-65d" customClass="GratuityViewController" customModule="Split" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VJM-Cs-doE"/>
                         <viewControllerLayoutGuide type="bottom" id="SrR-aU-lGV"/>
@@ -446,7 +446,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0by-p6-wnI" customClass="UICustomView" customModule="Split_Check" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0by-p6-wnI" customClass="UICustomView" customModule="Split" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="343" height="529"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Was gratuity included?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQK-Mk-AFW">
@@ -462,7 +462,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="b5R-Hz-IYW">
                                         <rect key="frame" x="121" y="208.66666666666663" width="100" height="112"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSn-1f-4mR" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSn-1f-4mR" customClass="UICustomButton" customModule="Split" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="kDJ-vJ-nHr"/>
@@ -487,7 +487,7 @@
                                                     <action selector="leaveTipPressed:" destination="KY8-iU-65d" eventType="touchUpInside" id="Snb-Pg-NSb"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTQ-Ug-cYs" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTQ-Ug-cYs" customClass="UICustomButton" customModule="Split" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="64.000000000000028" width="100" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="67O-ug-FfT"/>
@@ -521,7 +521,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jlf-Kv-aGq">
                                         <rect key="frame" x="43" y="178" width="256" height="172"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xmf-qi-q1g" customClass="UICustomView" customModule="Split_Check" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xmf-qi-q1g" customClass="UICustomView" customModule="Split" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="256" height="60"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCG-bA-rZA">
@@ -599,7 +599,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cx7-TI-VnW">
                                                 <rect key="frame" x="0.0" y="68" width="256" height="48"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfU-Qa-FDr" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfU-Qa-FDr" customClass="UICustomButton" customModule="Split" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="48"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="80" id="sFc-SQ-epV"/>
@@ -624,7 +624,7 @@
                                                             <action selector="fifteenPressed:" destination="KY8-iU-65d" eventType="touchUpInside" id="e6O-Ao-Sq3"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdW-ZP-tq4" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdW-ZP-tq4" customClass="UICustomButton" customModule="Split" customModuleProvider="target">
                                                         <rect key="frame" x="88" y="0.0" width="80" height="48"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="eWu-yb-9Ao"/>
@@ -648,7 +648,7 @@
                                                             <action selector="eighteenPressed:" destination="KY8-iU-65d" eventType="touchUpInside" id="AiU-3Z-yRJ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsN-iP-AdO" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsN-iP-AdO" customClass="UICustomButton" customModule="Split" customModuleProvider="target">
                                                         <rect key="frame" x="176" y="0.0" width="80" height="48"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="yNf-Ts-bFj"/>
@@ -678,7 +678,7 @@
                                                     <constraint firstItem="rdW-ZP-tq4" firstAttribute="width" secondItem="gfU-Qa-FDr" secondAttribute="width" id="EzB-Gi-1Rl"/>
                                                 </constraints>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75h-IE-cwy" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75h-IE-cwy" customClass="UICustomButton" customModule="Split" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="124" width="256" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="UMB-Wq-2Uv"/>
@@ -717,7 +717,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="K7h-xJ-I3Y">
                                         <rect key="frame" x="121" y="208" width="100" height="112"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRf-hi-Kmr" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRf-hi-Kmr" customClass="UICustomButton" customModule="Split" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="Q5d-Bl-0Ue"/>
@@ -742,7 +742,7 @@
                                                     <action selector="yesPressed:" destination="KY8-iU-65d" eventType="touchUpInside" id="wPT-pL-dcl"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-cd-IAD" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-cd-IAD" customClass="UICustomButton" customModule="Split" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="64" width="100" height="48"/>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                                 <state key="normal" title="No">
@@ -772,7 +772,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lyG-zP-2ZZ" userLabel="Next Stack View">
                                         <rect key="frame" x="43" y="429" width="256" height="48"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uB1-72-1he" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uB1-72-1he" customClass="UICustomButton" customModule="Split" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="124" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="wLc-pN-KDH"/>
@@ -796,7 +796,7 @@
                                                     <action selector="noTipPressed:" destination="KY8-iU-65d" eventType="touchUpInside" id="qNj-oY-EcT"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLA-e5-tcd" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLA-e5-tcd" customClass="UICustomButton" customModule="Split" customModuleProvider="target">
                                                 <rect key="frame" x="132" y="0.0" width="124" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="PNJ-84-Z2Y"/>
@@ -894,7 +894,7 @@
         <!--Your Total View Controller-->
         <scene sceneID="Rib-yE-xbz">
             <objects>
-                <viewController storyboardIdentifier="yourTotalViewController" modalTransitionStyle="crossDissolve" id="VqL-Qa-DpS" customClass="YourTotalViewController" customModule="Split_Check" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="yourTotalViewController" modalTransitionStyle="crossDissolve" id="VqL-Qa-DpS" customClass="YourTotalViewController" customModule="Split" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ofH-pI-4a8"/>
                         <viewControllerLayoutGuide type="bottom" id="Xg6-xF-duu"/>
@@ -903,13 +903,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDP-n8-X1l" customClass="UICustomView" customModule="Split_Check" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDP-n8-X1l" customClass="UICustomView" customModule="Split" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="343" height="529"/>
                                 <subviews>
                                     <stackView opaque="NO" tag="16" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ge3-Kh-0xA">
                                         <rect key="frame" x="43.666666666666657" y="429" width="255.99999999999997" height="48"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hf4-Wz-Iz5" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hf4-Wz-Iz5" customClass="UICustomButton" customModule="Split" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="F4Z-Vs-a98"/>
@@ -933,7 +933,7 @@
                                                     <action selector="backPressed:" destination="VqL-Qa-DpS" eventType="touchUpInside" id="p4M-Nn-iZr"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57Z-0z-D5w" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57Z-0z-D5w" customClass="UICustomButton" customModule="Split" customModuleProvider="target">
                                                 <rect key="frame" x="136" y="0.0" width="120" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="hZL-hl-mJ8"/>
@@ -1019,7 +1019,7 @@
         <!--Bill Sum View Controller-->
         <scene sceneID="QxQ-g5-Hub">
             <objects>
-                <viewController storyboardIdentifier="billTotalViewController" id="Mjs-3y-RO9" customClass="BillSumViewController" customModule="Split_Check" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="billTotalViewController" id="Mjs-3y-RO9" customClass="BillSumViewController" customModule="Split" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Krv-yP-o6x"/>
                         <viewControllerLayoutGuide type="bottom" id="heS-Bj-iXM"/>
@@ -1028,10 +1028,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0h-go-YyQ" customClass="UICustomView" customModule="Split_Check" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0h-go-YyQ" customClass="UICustomView" customModule="Split" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="343" height="529"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gX7-oK-Wch" customClass="UICustomView" customModule="Split_Check" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gX7-oK-Wch" customClass="UICustomView" customModule="Split" customModuleProvider="target">
                                         <rect key="frame" x="51" y="234" width="240" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Orh-2S-MyH">
@@ -1077,7 +1077,7 @@
                                             <outletCollection property="gestureRecognizers" destination="E15-q2-ZjF" appends="YES" id="2sZ-09-Ae9"/>
                                         </connections>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mv1-wa-Hyz" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mv1-wa-Hyz" customClass="UICustomButton" customModule="Split" customModuleProvider="target">
                                         <rect key="frame" x="51" y="429" width="240" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="r5Y-tx-6kc"/>
@@ -1162,7 +1162,7 @@
         <!--Page View Controller-->
         <scene sceneID="qe8-da-9Kr">
             <objects>
-                <pageViewController storyboardIdentifier="pageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="61e-Ix-jEd" customClass="PageViewController" customModule="Split_Check" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="pageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="61e-Ix-jEd" customClass="PageViewController" customModule="Split" customModuleProvider="target" sceneMemberID="viewController">
                     <size key="freeformSize" width="375" height="567"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cho-7E-7gh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1172,7 +1172,7 @@
         <!--Question Splitting View Controller-->
         <scene sceneID="ipR-Fg-Uuc">
             <objects>
-                <viewController storyboardIdentifier="questionSplittingViewController" id="msM-9m-Fsy" customClass="QuestionSplittingViewController" customModule="Split_Check" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="questionSplittingViewController" id="msM-9m-Fsy" customClass="QuestionSplittingViewController" customModule="Split" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7AP-HD-Cxn"/>
                         <viewControllerLayoutGuide type="bottom" id="qh1-wI-fP8"/>
@@ -1181,7 +1181,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Qv-PZ-Pvu" customClass="UICustomView" customModule="Split_Check" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Qv-PZ-Pvu" customClass="UICustomView" customModule="Split" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="343" height="529"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -1203,7 +1203,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Pkx-cL-96d">
                                 <rect key="frame" x="137.66666666666666" y="227.66666666666663" width="100" height="112"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nM-5C-BDE" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nM-5C-BDE" customClass="UICustomButton" customModule="Split" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="7GN-WM-neX"/>
@@ -1228,7 +1228,7 @@
                                             <action selector="buttonPressed:" destination="msM-9m-Fsy" eventType="touchUpInside" id="rhO-DK-X8G"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s85-Gg-R7I" customClass="UICustomButton" customModule="Split_Check" customModuleProvider="target">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s85-Gg-R7I" customClass="UICustomButton" customModule="Split" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="64.000000000000028" width="100" height="48"/>
                                         <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                         <state key="normal" title="No">
