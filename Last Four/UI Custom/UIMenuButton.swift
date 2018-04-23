@@ -66,7 +66,7 @@ class UIMenuButton: UICustomButton {
         return path
     }
     
-    func animatePathChange(for layer: CAShapeLayer, toPath: CGPath) {
+    fileprivate func animatePathChange(for layer: CAShapeLayer, toPath: CGPath) {
         let animation = CABasicAnimation(keyPath: "path")
         animation.duration = 0.25
         animation.fromValue = layer.path
@@ -74,6 +74,21 @@ class UIMenuButton: UICustomButton {
         animation.timingFunction = CAMediaTimingFunction(name: "easeInEaseOut")
         layer.add(animation, forKey: "path")
         layer.path = toPath
+    }
+    
+    // MARK: Internal Functions
+    internal func reset() {
+        animatePathChange(for: _bottomBar, toPath: _ogBottomBarPath)
+        animatePathChange(for: _topBar, toPath: _ogTopBarPath)
+        
+        _menuOpen = false
+    }
+    
+    internal func closeIcon() {
+        animatePathChange(for: _bottomBar, toPath: createMenuX(fromY: bounds.height/2 + 12, toY: bounds.height/2 - 12).cgPath)
+        animatePathChange(for: _topBar, toPath: createMenuX(fromY: bounds.height/2 - 12, toY: bounds.height/2 + 12).cgPath)
+        
+        _menuOpen = true
     }
 
     /**
@@ -83,15 +98,9 @@ class UIMenuButton: UICustomButton {
         super.sendAction(action, to: target, for: event)
 
         if _menuOpen {
-            animatePathChange(for: _bottomBar, toPath: _ogBottomBarPath)
-            animatePathChange(for: _topBar, toPath: _ogTopBarPath)
-            
-            _menuOpen = false
+            reset()
         } else {
-            animatePathChange(for: _bottomBar, toPath: createMenuX(fromY: bounds.height/2 + 12, toY: bounds.height/2 - 12).cgPath)
-            animatePathChange(for: _topBar, toPath: createMenuX(fromY: bounds.height/2 - 12, toY: bounds.height/2 + 12).cgPath)
-            
-            _menuOpen = true
+            closeIcon()
         }
         
     }

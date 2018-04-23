@@ -11,7 +11,7 @@ import UIKit
 class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var titleLabel                           : UILabel!
-    @IBOutlet weak var menuButton                           : UIView!
+    @IBOutlet weak var menuButton                           : UIMenuButton!
     
     @IBOutlet weak var titleYConstraint                     : NSLayoutConstraint!
     @IBOutlet weak var titleXConstraint                     : NSLayoutConstraint!
@@ -39,7 +39,6 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func menuButtonPressed(_ sender: Any) {
-        print("Menu pressed")
         if _menuTableViewController == nil {
             showMenu()
         } else {
@@ -181,6 +180,7 @@ class WelcomeViewController: UIViewController {
      */
     @objc
     fileprivate func processCloseTotalAndRestart() {
+        menuButton.reset()
         pageContainerView.layer.opacity = 0.0
         layoverContainerView.fadeOut(duration: 0.5, completion: { finished in
             self.removeLayoverContainerViewSubviews()
