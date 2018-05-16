@@ -36,6 +36,7 @@ class GratuityViewController: UIViewController {
     @IBOutlet weak var tipButtonsStack: UIStackView!
     @IBOutlet weak var nextStack: UIStackView!
     @IBOutlet weak var leaveTipButton: UIStackView!
+    @IBOutlet weak var nextButton: UICustomButton!
     
     @IBOutlet weak var inputField: UICustomView!
     @IBOutlet weak var tipButtonsStackYConstraint: NSLayoutConstraint!
@@ -51,7 +52,11 @@ class GratuityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
-        // TODO: Add observer to clear and release memory?
+        addObservers()
+        
+        if Preferences.instance.calculatorType == .evenSplit || Preferences.instance.calculatorType == .simpleTip {
+            nextButton.setTitle("Get Total", for: .normal)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -109,6 +114,7 @@ class GratuityViewController: UIViewController {
     }
     
     @IBAction func leaveTipPressed(_ sender: Any) {
+        clear()
         willLeaveTip = true
         animateMessage(TIP_AMOUNT)
         showTipButtons()
@@ -162,7 +168,11 @@ class GratuityViewController: UIViewController {
     }
     
     @IBAction func nextPressed(_ sender: Any) {
-        guard let pageViewController = (parent as? PageViewController), pageViewController.orderedSequence.count > 2 else { // need three
+        
+        guard let pageViewController = parent as? PageViewController else { return }
+        
+        if pageViewController.orderedSequence.count < 3 // need 3
+            || Preferences.instance.calculatorType == .evenSplit {
             notificationCenterDefault.post(NOTIFICATION_REQUEST_CALCULATION)
             return
         }
@@ -174,7 +184,21 @@ class GratuityViewController: UIViewController {
     
     fileprivate func configureViews() {
         _ogBorderColor = inputField.borderColor
-        questionLabel.text = GRATUITY_INCLUDED
+        
+        // Add tip by default if even split or simple tip
+        if Preferences.instance.calculatorType == .evenSplit || Preferences.instance.calculatorType == .simpleTip {
+            willLeaveTip = true
+            animateMessage(TIP_AMOUNT)
+            showTipButtons()
+        } else {
+            questionLabel.text = GRATUITY_INCLUDED
+        }
+        
+    }
+    
+    fileprivate func addObservers() {
+        notificationCenterDefault.removeObserver(self)
+        notificationCenterDefault.addObserver(self, selector: #selector(reset), name: .reset, object: nil)
     }
     
     fileprivate func animateMessage(_ message: String) {
@@ -252,7 +276,14 @@ class GratuityViewController: UIViewController {
         })
     }
     
-    // MARK: INTERNAL FUNCTIONS
+    // MARK: SELECTOR FUNCTIONS
+    
+    @objc
+    fileprivate func reset() {
+        clear()
+        
+        configureViews()
+    }
 }
 
 // MARK: Number Pad Delegate extension

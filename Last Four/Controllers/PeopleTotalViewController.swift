@@ -24,7 +24,9 @@ class PeopleTotalViewController: UIViewController {
     // MARK: OVERRIDE FUNCTIONS
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureViews()
+        addObservers()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,11 +53,20 @@ class PeopleTotalViewController: UIViewController {
     
     @IBAction func calculateTotalPressed(_ sender: Any) {
         notificationCenterDefault.post(NOTIFICATION_REQUEST_CALCULATION)
+        
+        if Preferences.instance.calculatorType == .evenSplit {
+            perform(#selector(navigateToLastPage), with: nil, afterDelay: 0.5)
+        }
     }
     
     // MARK: FILEPRIVATE FUNCTIONS
     fileprivate func configureViews() {
         _ogBorderColor = inputField.borderColor
+    }
+    
+    fileprivate func addObservers() {
+        notificationCenterDefault.removeObserver(self)
+        notificationCenterDefault.addObserver(self, selector: #selector(reset), name: .reset, object: nil)
     }
     
     fileprivate func animateInputFieldUp() {
@@ -77,6 +88,21 @@ class PeopleTotalViewController: UIViewController {
             self.view.layoutIfNeeded()
         })
     }
+
+    // MARK: SELECTOR FUNCTIONS
+
+    @objc
+    fileprivate func navigateToLastPage() {
+        guard let pageViewController = (parent as? PageViewController) else { return }
+        
+        pageViewController.setViewControllers([pageViewController.orderedSequence.last!], direction: .forward, animated: true, completion: nil)
+    }
+    
+    @objc
+    fileprivate func reset() {
+        clear()
+    }
+    
 }
 
 // MARK: Number Pad Delegate extension

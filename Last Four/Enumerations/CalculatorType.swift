@@ -11,4 +11,5 @@ import Foundation
 enum CalculatorType {
     case evenSplit
     case itemizedSplit
+    case simpleTip
 }

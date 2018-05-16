@@ -76,8 +76,11 @@ class MenuTableViewController: UITableViewController {
         switch menuItem {
         case .reset:
             menuDelegate?.close()
-            notificationCenterDefault.post(NOTIFICATION_YOUR_TOTAL_DONE_PRESSED)
+            notificationCenterDefault.post(NOTIFICATION_RESET)
             break
+        case .simpleTip:
+            menuDelegate?.close()
+            notificationCenterDefault.post(NOTIFICATION_SHOW_SIMPLE_TIP)
         }
     }
 

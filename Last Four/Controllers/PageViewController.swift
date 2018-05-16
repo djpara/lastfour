@@ -26,6 +26,13 @@ class PageViewController: UIPageViewController {
         return [itemizedViewController, gratuityViewController]
     }()
     
+    fileprivate lazy var _simpleTipSequence: [UIViewController] = {
+        let billTotalViewController = mainStoryboard.instantiateViewController(withIdentifier: BILL_TOTAL_VIEW_CONTROLLER) as! BillSumViewController
+        let gratuityViewController = mainStoryboard.instantiateViewController(withIdentifier: GRATUITY_VIEW_CONTROLLER) as! GratuityViewController
+        
+        return [billTotalViewController, gratuityViewController]
+    }()
+    
     fileprivate var _orderedSequence: [UIViewController]?
     
     fileprivate var _firstPass = true
@@ -78,6 +85,11 @@ class PageViewController: UIPageViewController {
             }
         case .itemizedSplit:
             _orderedSequence = _itemizedSplitSequence
+            if let sequence = _orderedSequence, let first = sequence.first {
+                setViewControllers([first], direction: .forward, animated: true, completion: nil)
+            }
+        case .simpleTip:
+            _orderedSequence = _simpleTipSequence
             if let sequence = _orderedSequence, let first = sequence.first {
                 setViewControllers([first], direction: .forward, animated: true, completion: nil)
             }

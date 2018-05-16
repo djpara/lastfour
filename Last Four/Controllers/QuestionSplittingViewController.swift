@@ -10,18 +10,9 @@ import UIKit
 
 class QuestionSplittingViewController: UIViewController {
     
-    // MARK: FILEPRIVATE PROPERTIES
-
-    // MARK: INTERNAL PROPERTIES
-    
-    // MARK: IBOUTLET PROPERTIES
-    // TODO: Delete - using only to disable button while app in construction
-    @IBOutlet weak var noButton: UICustomButton!
-    
     // MARK: OVERRIDE FUNCTIONS
     override func viewDidLoad() {
         super.viewDidLoad()
-//        noButton.disable()
     }
     
     deinit {
@@ -38,7 +29,5 @@ class QuestionSplittingViewController: UIViewController {
         
         notificationCenterDefault.post(NOTIFICATION_NEW_CALCULATOR_TYPE_ELECTED)
     }
-    
-    // MARK: FILEPRIVATE FUNCTIONS
     
 }

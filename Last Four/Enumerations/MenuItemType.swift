@@ -10,4 +10,5 @@ import Foundation
 
 enum MenuItemType {
     case reset
+    case simpleTip
 }

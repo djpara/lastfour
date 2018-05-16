@@ -869,6 +869,7 @@
                         <outlet property="inputTextDollar" destination="lr0-Hp-PbV" id="vUW-B9-pOY"/>
                         <outlet property="inputTextPercent" destination="61G-dr-hCO" id="Jkx-WD-0Ix"/>
                         <outlet property="leaveTipButton" destination="b5R-Hz-IYW" id="wrA-FH-t6E"/>
+                        <outlet property="nextButton" destination="hLA-e5-tcd" id="bFV-fB-1kt"/>
                         <outlet property="nextStack" destination="lyG-zP-2ZZ" id="p6W-N9-udO"/>
                         <outlet property="percentSign" destination="bQG-nO-xXd" id="Xyf-Qy-3Ub"/>
                         <outlet property="questionLabel" destination="PQK-Mk-AFW" id="9Eg-os-CwI"/>
@@ -1009,6 +1010,7 @@
                     </view>
                     <size key="freeformSize" width="375" height="567"/>
                     <connections>
+                        <outlet property="backButton" destination="hf4-Wz-Iz5" id="PMn-QQ-9C5"/>
                         <outlet property="totalLabel" destination="3L8-pM-8yG" id="rAK-pX-BE5"/>
                     </connections>
                 </viewController>
@@ -1269,9 +1271,6 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="375" height="567"/>
-                    <connections>
-                        <outlet property="noButton" destination="s85-Gg-R7I" id="sRH-Zz-Fse"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5St-DF-2al" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

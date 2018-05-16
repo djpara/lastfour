@@ -97,7 +97,7 @@
 		F57E702B207F23AB0012ABB4 /* TableViewCellIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellIdentifiers.swift; sourceTree = "<group>"; };
 		F5876FBA2063509000806F48 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F5876FBC2063532C00806F48 /* UICustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomButton.swift; sourceTree = "<group>"; };
-		F5B72EB02061FF2000EA58DA /* Split Check.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Split Check.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5B72EB02061FF2000EA58DA /* Split.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Split.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B72EB32061FF2000EA58DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5B72EB52061FF2000EA58DA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		F5B72EB82061FF2000EA58DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,10 +105,10 @@
 		F5B72EBD2061FF2000EA58DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5B72EC02061FF2000EA58DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5B72EC22061FF2000EA58DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F5B72EC72061FF2000EA58DA /* Split CheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Split CheckTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5B72EC72061FF2000EA58DA /* SplitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B72ECB2061FF2000EA58DA /* Last_FourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Last_FourTests.swift; sourceTree = "<group>"; };
 		F5B72ECD2061FF2000EA58DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F5B72ED22061FF2000EA58DA /* Split CheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Split CheckUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5B72ED22061FF2000EA58DA /* SplitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B72ED62061FF2000EA58DA /* Last_FourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Last_FourUITests.swift; sourceTree = "<group>"; };
 		F5B72ED82061FF2000EA58DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5CC11CD2064C00B0082109B /* QuestionSplittingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionSplittingViewController.swift; sourceTree = "<group>"; };
@@ -248,9 +248,9 @@
 		F5B72EB12061FF2000EA58DA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F5B72EB02061FF2000EA58DA /* Split Check.app */,
-				F5B72EC72061FF2000EA58DA /* Split CheckTests.xctest */,
-				F5B72ED22061FF2000EA58DA /* Split CheckUITests.xctest */,
+				F5B72EB02061FF2000EA58DA /* Split.app */,
+				F5B72EC72061FF2000EA58DA /* SplitTests.xctest */,
+				F5B72ED22061FF2000EA58DA /* SplitUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -291,9 +291,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F5B72EAF2061FF2000EA58DA /* Split Check */ = {
+		F5B72EAF2061FF2000EA58DA /* Split */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5B72EDB2061FF2000EA58DA /* Build configuration list for PBXNativeTarget "Split Check" */;
+			buildConfigurationList = F5B72EDB2061FF2000EA58DA /* Build configuration list for PBXNativeTarget "Split" */;
 			buildPhases = (
 				F5B72EAC2061FF2000EA58DA /* Sources */,
 				F5B72EAD2061FF2000EA58DA /* Frameworks */,
@@ -304,14 +304,14 @@
 			);
 			dependencies = (
 			);
-			name = "Split Check";
+			name = Split;
 			productName = "Last Four";
-			productReference = F5B72EB02061FF2000EA58DA /* Split Check.app */;
+			productReference = F5B72EB02061FF2000EA58DA /* Split.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F5B72EC62061FF2000EA58DA /* Split CheckTests */ = {
+		F5B72EC62061FF2000EA58DA /* SplitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5B72EDE2061FF2000EA58DA /* Build configuration list for PBXNativeTarget "Split CheckTests" */;
+			buildConfigurationList = F5B72EDE2061FF2000EA58DA /* Build configuration list for PBXNativeTarget "SplitTests" */;
 			buildPhases = (
 				F5B72EC32061FF2000EA58DA /* Sources */,
 				F5B72EC42061FF2000EA58DA /* Frameworks */,
@@ -322,14 +322,14 @@
 			dependencies = (
 				F5B72EC92061FF2000EA58DA /* PBXTargetDependency */,
 			);
-			name = "Split CheckTests";
+			name = SplitTests;
 			productName = "Last FourTests";
-			productReference = F5B72EC72061FF2000EA58DA /* Split CheckTests.xctest */;
+			productReference = F5B72EC72061FF2000EA58DA /* SplitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F5B72ED12061FF2000EA58DA /* Split CheckUITests */ = {
+		F5B72ED12061FF2000EA58DA /* SplitUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5B72EE12061FF2000EA58DA /* Build configuration list for PBXNativeTarget "Split CheckUITests" */;
+			buildConfigurationList = F5B72EE12061FF2000EA58DA /* Build configuration list for PBXNativeTarget "SplitUITests" */;
 			buildPhases = (
 				F5B72ECE2061FF2000EA58DA /* Sources */,
 				F5B72ECF2061FF2000EA58DA /* Frameworks */,
@@ -340,9 +340,9 @@
 			dependencies = (
 				F5B72ED42061FF2000EA58DA /* PBXTargetDependency */,
 			);
-			name = "Split CheckUITests";
+			name = SplitUITests;
 			productName = "Last FourUITests";
-			productReference = F5B72ED22061FF2000EA58DA /* Split CheckUITests.xctest */;
+			productReference = F5B72ED22061FF2000EA58DA /* SplitUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -374,7 +374,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F5B72EAB2061FF2000EA58DA /* Build configuration list for PBXProject "Split Check" */;
+			buildConfigurationList = F5B72EAB2061FF2000EA58DA /* Build configuration list for PBXProject "Split" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -387,9 +387,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F5B72EAF2061FF2000EA58DA /* Split Check */,
-				F5B72EC62061FF2000EA58DA /* Split CheckTests */,
-				F5B72ED12061FF2000EA58DA /* Split CheckUITests */,
+				F5B72EAF2061FF2000EA58DA /* Split */,
+				F5B72EC62061FF2000EA58DA /* SplitTests */,
+				F5B72ED12061FF2000EA58DA /* SplitUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -501,12 +501,12 @@
 /* Begin PBXTargetDependency section */
 		F5B72EC92061FF2000EA58DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F5B72EAF2061FF2000EA58DA /* Split Check */;
+			target = F5B72EAF2061FF2000EA58DA /* Split */;
 			targetProxy = F5B72EC82061FF2000EA58DA /* PBXContainerItemProxy */;
 		};
 		F5B72ED42061FF2000EA58DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F5B72EAF2061FF2000EA58DA /* Split Check */;
+			target = F5B72EAF2061FF2000EA58DA /* Split */;
 			targetProxy = F5B72ED32061FF2000EA58DA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -663,7 +663,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Parad.Last-FourTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Split Check.app/Split Check";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Split.app/Split";
 			};
 			name = Debug;
 		};
@@ -678,7 +678,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Parad.Last-FourTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Split Check.app/Split Check";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Split.app/Split";
 			};
 			name = Release;
 		};
@@ -713,7 +713,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F5B72EAB2061FF2000EA58DA /* Build configuration list for PBXProject "Split Check" */ = {
+		F5B72EAB2061FF2000EA58DA /* Build configuration list for PBXProject "Split" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5B72ED92061FF2000EA58DA /* Debug */,
@@ -722,7 +722,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5B72EDB2061FF2000EA58DA /* Build configuration list for PBXNativeTarget "Split Check" */ = {
+		F5B72EDB2061FF2000EA58DA /* Build configuration list for PBXNativeTarget "Split" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5B72EDC2061FF2000EA58DA /* Debug */,
@@ -731,7 +731,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5B72EDE2061FF2000EA58DA /* Build configuration list for PBXNativeTarget "Split CheckTests" */ = {
+		F5B72EDE2061FF2000EA58DA /* Build configuration list for PBXNativeTarget "SplitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5B72EDF2061FF2000EA58DA /* Debug */,
@@ -740,7 +740,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5B72EE12061FF2000EA58DA /* Build configuration list for PBXNativeTarget "Split CheckUITests" */ = {
+		F5B72EE12061FF2000EA58DA /* Build configuration list for PBXNativeTarget "SplitUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5B72EE22061FF2000EA58DA /* Debug */,

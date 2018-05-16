@@ -34,7 +34,9 @@ class ItemizedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureViews()
+        addObservers()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,6 +51,11 @@ class ItemizedViewController: UIViewController {
     
     fileprivate func configureViews() {
         _ogBorderColor = inputField.borderColor
+    }
+    
+    fileprivate func addObservers() {
+        notificationCenterDefault.removeObserver(self)
+        notificationCenterDefault.addObserver(self, selector: #selector(reset), name: .reset, object: nil)
     }
     
     fileprivate func animateInputFieldUp() {
@@ -86,6 +93,17 @@ class ItemizedViewController: UIViewController {
         UIView.animate(withDuration: 0.5, animations: {
             self._itemsTable?.view.frame.size.height =  self.view.frame.height - (self._numberPad?.preferredContentSize.height ?? 116) - (self._itemsTable?.view.frame.origin.y ?? 87) - 16
         })
+    }
+    
+    
+    // MARK: Selector functions
+    
+    @objc
+    fileprivate func reset() {
+        clear()
+        _items.removeAll()
+        _itemsTable?.items = _items
+        _itemsTable?.tableView.reloadData()
     }
     
     // MARK: IBACTION FUNCTIONS

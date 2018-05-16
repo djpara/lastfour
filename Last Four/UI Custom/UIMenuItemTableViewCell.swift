@@ -10,12 +10,27 @@ import UIKit
 
 class UIMenuItemTableViewCell: UITableViewCell {
     
+    // MARK: Internal properties
+    
     internal var menuItem: MenuItem! {
         didSet {
             titleLabel.text = menuItem.title ?? ""
         }
     }
     
-    @IBOutlet weak var titleLabel: UILabel!
+    // MARK: IBOutlet properties
+    
+    @IBOutlet fileprivate weak var titleLabel: UILabel!
+    
+    // MARK: Override functions
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.clear
+        selectedBackgroundView = backgroundView
+        
+    }
     
 }

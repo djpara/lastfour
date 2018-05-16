@@ -54,7 +54,8 @@ class WelcomeViewController: UIViewController {
     fileprivate func addObservers() {
         notificationCenterDefault.addObserver(self, selector: #selector(hideLayoverContainerView), name: .newCalculatorTypeElected, object: nil)
         notificationCenterDefault.addObserver(self, selector: #selector(processNewTotalRequest), name: .requestCalculation, object: nil)
-        notificationCenterDefault.addObserver(self, selector: #selector(processCloseTotalAndRestart), name: .yourTotalDonePressed, object: nil)
+        notificationCenterDefault.addObserver(self, selector: #selector(processCloseTotalAndRestart), name: .reset, object: nil)
+        notificationCenterDefault.addObserver(self, selector: #selector(toggleTipCalculator), name: .showSimpleTip, object: nil)
         notificationCenterDefault.addObserver(self, selector: #selector(processCloseTotal), name: .yourTotalBackPressed, object: nil)
     }
     
@@ -115,13 +116,18 @@ class WelcomeViewController: UIViewController {
     /**
      Restarts the application at a clean slate
      */
-    fileprivate func restartApplication() {
+    fileprivate func restartApplication(calculatorTypeNeeded: Bool) {
         Brain.instance.clear()
-        _calculatorTypeElectionNeeded = true
-        configureLayoverView()
-        layoverContainerView.fadeIn(duration: 0.5, completion: { finished in
-            self.pageContainerView.fadeIn(duration: 0.0)
-        })
+        _calculatorTypeElectionNeeded = calculatorTypeNeeded
+        
+        if _calculatorTypeElectionNeeded {
+            configureLayoverView()
+            layoverContainerView.fadeIn(duration: 0.5, completion: { finished in
+                self.pageContainerView.fadeIn(duration: 0.0)
+            })
+        } else {
+            notificationCenterDefault.post(NOTIFICATION_NEW_CALCULATOR_TYPE_ELECTED)
+        }
     }
     
     fileprivate func showMenu() {
@@ -161,6 +167,7 @@ class WelcomeViewController: UIViewController {
     fileprivate func getMenuItems() -> [MenuItem] {
         var items:[MenuItem] = []
         items.append(MenuItem(type: .reset, title: "Reset"))
+        items.append(MenuItem(type: .simpleTip, title: "Simple Tip"))
         return items
     }
     
@@ -185,7 +192,21 @@ class WelcomeViewController: UIViewController {
         layoverContainerView.fadeOut(duration: 0.5, completion: { finished in
             self.removeLayoverContainerViewSubviews()
             self._layoverViewController?.removeFromParentViewController()
-            self.restartApplication()
+            self.restartApplication(calculatorTypeNeeded: true)
+        })
+    }
+    
+    /**
+     Starts the app with the total amount request, pending tip
+     */
+    @objc
+    fileprivate func toggleTipCalculator() {
+        menuButton.reset()
+        Preferences.instance.calculatorType = .simpleTip
+        layoverContainerView.fadeOut(duration: 0.5, completion: { finished in
+            self.removeLayoverContainerViewSubviews()
+            self._layoverViewController?.removeFromParentViewController()
+            self.restartApplication(calculatorTypeNeeded: false)
         })
     }
     

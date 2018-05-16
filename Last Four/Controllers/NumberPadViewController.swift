@@ -87,6 +87,8 @@ class NumberPadViewController: UIViewController {
             showEvenSplitButtons()
         case .itemizedSplit:
             showItemizedSplitButtons()
+        case .simpleTip:
+            showEvenSplitButtons()
         }
         
         utilityButtons.forEach { button in

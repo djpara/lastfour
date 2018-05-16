@@ -25,6 +25,7 @@ class BillSumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
+        addObservers()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,6 +60,11 @@ class BillSumViewController: UIViewController {
         _ogBorderColor = inputField.borderColor
     }
     
+    fileprivate func addObservers() {
+        notificationCenterDefault.removeObserver(self)
+        notificationCenterDefault.addObserver(self, selector: #selector(clear), name: .reset, object: nil)
+    }
+    
     fileprivate func animateInputFieldUp() {
         // Bring inputfield up a bit
         inputField.borderColor = ASTRONAUT_BLUE
@@ -90,6 +96,13 @@ class BillSumViewController: UIViewController {
                        animations: {
             self.inputField.borderColor = ASTRONAUT_BLUE
         }, completion: nil)
+    }
+    
+    // MARK: SELECTOR FUNCTIONS
+    
+    @objc
+    fileprivate func reset() {
+        clear()
     }
     
 }

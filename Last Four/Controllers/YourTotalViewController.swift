@@ -11,9 +11,13 @@ import UIKit
 class YourTotalViewController: UIViewController {
 
     @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var backButton: UICustomButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if Preferences.instance.calculatorType == .evenSplit {
+            backButton.setTitle("Add Tip", for: .normal)
+        }
     }
     
     deinit {
@@ -25,6 +29,6 @@ class YourTotalViewController: UIViewController {
     }
     
     @IBAction func closePressed(_ sender: Any) {
-        notificationCenterDefault.post(NOTIFICATION_YOUR_TOTAL_DONE_PRESSED)
+        notificationCenterDefault.post(NOTIFICATION_RESET)
     }
 }
