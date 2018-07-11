@@ -49,7 +49,7 @@ class BillSumViewController: UIViewController {
         inputText.text?.removeLast()
     }
     
-    @IBAction func nextPressed(_ sender: Any) {
+    @IBAction func nextPressed() {
         guard let pageViewController = (parent as? PageViewController) else { return }
         
         pageViewController.setViewControllers([pageViewController.orderedSequence[1]], direction: .forward, animated: true, completion: nil)
@@ -204,6 +204,10 @@ extension BillSumViewController: NumberPadDelegate {
         
         hideNumberPad()
         animateInputFieldDown()
+        
+        if Preferences.instance.calculatorType == .simpleTip {
+            nextPressed()
+        }
     }
     
     func close() {
