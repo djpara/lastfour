@@ -95,7 +95,6 @@ class ItemizedViewController: UIViewController {
         })
     }
     
-    
     // MARK: Selector functions
     
     @objc

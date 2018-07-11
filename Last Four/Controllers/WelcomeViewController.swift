@@ -76,8 +76,8 @@ class WelcomeViewController: UIViewController {
      */
     fileprivate func repositionTitle() {
         
-        let newYConstantDiff = ((screenHeight / 2) - 56)
-        let newXConstantDiff = (screenWidth/2) - (titleLabel.intrinsicContentSize.width/2) - 16
+        let newYConstantDiff = ((view.frame.height / 2) - 56)
+        let newXConstantDiff = (view.frame.width/2) - (titleLabel.intrinsicContentSize.width/2) - 16
         
         UIView.animate(withDuration: 0.75, delay: 1.0, options: .curveEaseInOut, animations: {
             self.titleYConstraint.constant -= newYConstantDiff
