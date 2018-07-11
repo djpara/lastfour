@@ -54,7 +54,14 @@ class MenuTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
+        if section == 0 {
+            return 20
+        }
+        return 0
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -82,6 +89,18 @@ class MenuTableViewController: UITableViewController {
             menuDelegate?.close()
             notificationCenterDefault.post(NOTIFICATION_SHOW_SIMPLE_TIP)
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = UIColor.darkText
+        return view
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = UIColor.darkText
+        return view
     }
 
 }
