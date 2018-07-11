@@ -492,6 +492,7 @@
                     <value key="contentSizeForViewInPopover" type="size" width="375" height="260"/>
                     <size key="freeformSize" width="375" height="260"/>
                     <connections>
+                        <outlet property="addItemButton" destination="gtC-KV-gpC" id="u33-it-Khy"/>
                         <outletCollection property="itemizedSplitButtons" destination="Esz-GV-s9U" collectionClass="NSMutableArray" id="Lg6-kZ-bQc"/>
                         <outletCollection property="itemizedSplitButtons" destination="gtC-KV-gpC" collectionClass="NSMutableArray" id="1mv-w4-FHy"/>
                         <outletCollection property="evenSplitButtons" destination="Q8Q-AE-Nkp" collectionClass="NSMutableArray" id="Do2-ou-MMx"/>

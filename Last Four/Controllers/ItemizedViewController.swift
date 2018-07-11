@@ -110,6 +110,8 @@ class ItemizedViewController: UIViewController {
     
     @IBAction func inputFieldPressed(_ sender: Any) {
         guard _numberPad == nil else { return }
+        clear()
+        
         showNumberPad()
         messageLabel.fadeOut(duration: 0.25)
         
