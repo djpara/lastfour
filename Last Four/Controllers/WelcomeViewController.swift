@@ -101,7 +101,7 @@ class WelcomeViewController: UIViewController {
         
         guard let layoverViewController = _layoverViewController, let lcView = layoverViewController.view else { return }
         
-        addChildViewController(layoverViewController)
+        addChild(layoverViewController)
         
         lcView.frame = layoverContainerView.bounds
         layoverContainerView.addSubview(lcView)
@@ -142,9 +142,9 @@ class WelcomeViewController: UIViewController {
         
         view.insertSubview((_menuTableViewController?.view)!, at: 10)
         
-        addChildViewController(_menuTableViewController!)
+        addChild(_menuTableViewController!)
         parent?.view.addSubview((_menuTableViewController?.view)!)
-        _menuTableViewController?.didMove(toParentViewController: self.parent)
+        _menuTableViewController?.didMove(toParent: self.parent)
         
         UIView.animate(withDuration: 0.25, animations: {
             self.view.frame.origin.x -= menuWidth
@@ -157,9 +157,9 @@ class WelcomeViewController: UIViewController {
             self._menuTableViewController?.view.frame.origin.x = screenWidth
             self.view.frame.origin.x += self._menuTableViewController?.preferredContentSize.width ?? 150
         }, completion: { finished in
-            self._menuTableViewController?.willMove(toParentViewController: nil)
+            self._menuTableViewController?.willMove(toParent: nil)
             self._menuTableViewController?.view.removeFromSuperview()
-            self._menuTableViewController?.removeFromParentViewController()
+            self._menuTableViewController?.removeFromParent()
             self._menuTableViewController = nil
         })
     }
@@ -191,7 +191,7 @@ class WelcomeViewController: UIViewController {
         pageContainerView.layer.opacity = 0.0
         layoverContainerView.fadeOut(duration: 0.5, completion: { finished in
             self.removeLayoverContainerViewSubviews()
-            self._layoverViewController?.removeFromParentViewController()
+            self._layoverViewController?.removeFromParent()
             self.restartApplication(calculatorTypeNeeded: true)
         })
     }
@@ -205,7 +205,7 @@ class WelcomeViewController: UIViewController {
         Preferences.instance.calculatorType = .simpleTip
         layoverContainerView.fadeOut(duration: 0.5, completion: { finished in
             self.removeLayoverContainerViewSubviews()
-            self._layoverViewController?.removeFromParentViewController()
+            self._layoverViewController?.removeFromParent()
             self.restartApplication(calculatorTypeNeeded: false)
         })
     }
@@ -217,7 +217,7 @@ class WelcomeViewController: UIViewController {
     fileprivate func processCloseTotal() {
         layoverContainerView.fadeOut(duration: 0.5, completion: { finished in
             self.removeLayoverContainerViewSubviews()
-            self._layoverViewController?.removeFromParentViewController()
+            self._layoverViewController?.removeFromParent()
         })
     }
     /**
@@ -227,7 +227,7 @@ class WelcomeViewController: UIViewController {
     fileprivate func hideLayoverContainerView() {
         layoverContainerView.fadeOut(duration: 0.5, completion: { finished in
             self.removeLayoverContainerViewSubviews()
-            self._layoverViewController?.removeFromParentViewController()
+            self._layoverViewController?.removeFromParent()
         })
     }
     

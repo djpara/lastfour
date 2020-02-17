@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import Last_Four
 
 class Last_FourTests: XCTestCase {
     

@@ -39,7 +39,7 @@ class UIMenuButton: UICustomButton {
         shapeLayer.strokeColor = WHITE.cgColor
         shapeLayer.lineWidth = 3
         shapeLayer.path = path.cgPath
-        shapeLayer.lineCap = kCALineCapRound
+        shapeLayer.lineCap = CAShapeLayerLineCap.round
         
         layer.addSublayer(shapeLayer)
         
@@ -71,7 +71,7 @@ class UIMenuButton: UICustomButton {
         animation.duration = 0.25
         animation.fromValue = layer.path
         animation.toValue = toPath
-        animation.timingFunction = CAMediaTimingFunction(name: "easeInEaseOut")
+        animation.timingFunction = CAMediaTimingFunction(name: convertToCAMediaTimingFunctionName("easeInEaseOut"))
         layer.add(animation, forKey: "path")
         layer.path = toPath
     }
@@ -105,4 +105,9 @@ class UIMenuButton: UICustomButton {
         
     }
         
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToCAMediaTimingFunctionName(_ input: String) -> CAMediaTimingFunctionName {
+	return CAMediaTimingFunctionName(rawValue: input)
 }

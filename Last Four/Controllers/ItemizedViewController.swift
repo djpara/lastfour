@@ -157,9 +157,9 @@ extension ItemizedViewController: NumberPadDelegate {
         
         view.insertSubview((_numberPad?.view)!, at: 10)
         
-        addChildViewController(_numberPad!)
+        addChild(_numberPad!)
         view.addSubview((_numberPad?.view)!)
-        _numberPad?.didMove(toParentViewController: self)
+        _numberPad?.didMove(toParent: self)
         
         UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
             let target = self.view.frame.height - (self._numberPad?.preferredContentSize.height ?? 0)
@@ -172,9 +172,9 @@ extension ItemizedViewController: NumberPadDelegate {
             let target = self.view.frame.height + (self._numberPad?.preferredContentSize.height ?? 0)
             self._numberPad?.view.frame.origin.y = target
         }) { finished in
-            self._numberPad?.willMove(toParentViewController: nil)
+            self._numberPad?.willMove(toParent: nil)
             self._numberPad?.view.removeFromSuperview()
-            self._numberPad?.removeFromParentViewController()
+            self._numberPad?.removeFromParent()
             self._numberPad = nil
         }
     }
@@ -299,9 +299,9 @@ extension ItemizedViewController: ItemsTableDelegate {
         
         view.insertSubview((_itemsTable?.view)!, at: 10)
         
-        addChildViewController(_itemsTable!)
+        addChild(_itemsTable!)
         view.addSubview((_itemsTable?.view)!)
-        _itemsTable?.didMove(toParentViewController: self)
+        _itemsTable?.didMove(toParent: self)
         
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
             self._itemsTable?.view.frame.size.height =  self.view.frame.height - (self._numberPad?.preferredContentSize.height ?? 116) - (self._itemsTable?.view.frame.origin.y ?? 87) - 16
@@ -316,9 +316,9 @@ extension ItemizedViewController: ItemsTableDelegate {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
             self._itemsTable?.view.frame.size.height = 0
         }) { finished in
-            self._itemsTable?.willMove(toParentViewController: nil)
+            self._itemsTable?.willMove(toParent: nil)
             self._itemsTable?.view.removeFromSuperview()
-            self._itemsTable?.removeFromParentViewController()
+            self._itemsTable?.removeFromParent()
             self._itemsTable = nil
             self.animateInputFieldDown()
             self.messageLabel.fadeIn(duration: 0.25, delay: 0.25)

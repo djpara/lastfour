@@ -116,9 +116,9 @@ extension PeopleTotalViewController: NumberPadDelegate {
         
         view.insertSubview((_numberPad?.view)!, at: 10)
         
-        addChildViewController(_numberPad!)
+        addChild(_numberPad!)
         view.addSubview((_numberPad?.view)!)
-        _numberPad?.didMove(toParentViewController: self)
+        _numberPad?.didMove(toParent: self)
         
         UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
             let target = self.view.frame.height - (self._numberPad?.preferredContentSize.height ?? 0)
@@ -131,9 +131,9 @@ extension PeopleTotalViewController: NumberPadDelegate {
             let target = self.view.frame.height + (self._numberPad?.preferredContentSize.height ?? 0)
             self._numberPad?.view.frame.origin.y = target
         }) { finished in
-            self._numberPad?.willMove(toParentViewController: nil)
+            self._numberPad?.willMove(toParent: nil)
             self._numberPad?.view.removeFromSuperview()
-            self._numberPad?.removeFromParentViewController()
+            self._numberPad?.removeFromParent()
             self._numberPad = nil
         }
     }

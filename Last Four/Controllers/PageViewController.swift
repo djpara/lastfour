@@ -107,7 +107,7 @@ class PageViewController: UIPageViewController {
 extension PageViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
             
-        guard let index = _orderedSequence?.index(of: viewController) else { return nil }
+        guard let index = _orderedSequence?.firstIndex(of: viewController) else { return nil }
         
         let previousIndex = index - 1
         
@@ -120,7 +120,7 @@ extension PageViewController: UIPageViewControllerDelegate, UIPageViewController
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
-        guard let index = _orderedSequence?.index(of: viewController) else { return nil }
+        guard let index = _orderedSequence?.firstIndex(of: viewController) else { return nil }
         
         let nextIndex = index + 1
         
