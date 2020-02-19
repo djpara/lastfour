@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zl7-0r-5Dv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="yzz-JX-CAd">
+            <objects>
+                <viewController id="XMa-f6-6Fu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="933-dd-edE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="4wU-6Y-Sag"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="gfk-W1-4dB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uRd-F1-jGs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="69"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="Tj5-p9-07m">
+            <objects>
+                <viewController id="Zl7-0r-5Dv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tJC-f4-Kat">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="SPRegalBlue"/>
+                        <viewLayoutGuide key="safeArea" id="ip0-XF-kEQ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="0VL-Ye-a3H"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="alU-1R-xey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="-579"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="vYD-5l-pLs">
+            <objects>
+                <tabBarController id="xRV-m3-CB7" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qPY-Hm-Ubq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Zl7-0r-5Dv" kind="relationship" relationship="viewControllers" id="QyZ-Ea-Kcl"/>
+                        <segue destination="XMa-f6-6Fu" kind="relationship" relationship="viewControllers" id="aQf-j1-jRv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zvl-eu-ySw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-888" y="-255"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="SPRegalBlue">
+            <color red="0.0" green="0.25490196078431371" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
